@@ -8,146 +8,160 @@
   <em>"Where Innovation Meets Web Technology"</em>
 </p>
 
-[![Competition Status](https://img.shields.io/badge/Status-Registration%20Open-success?style=for-the-badge&logo=eventstore)](https://forms.gle/5QWPv4pqVaXKXz3i7)
-[![Platform](https://img.shields.io/badge/Platform-Web%20Application-blue?style=for-the-badge&logo=googlechrome)](https://github.com/axis-competition/axis-2026)
-[![Backend](https://img.shields.io/badge/Tech-PHP%20%7C%20MySQL-777BB4?style=for-the-badge&logo=php)](https://github.com/axis-competition/axis-2026)
-[![Level](https://img.shields.io/badge/Target-Mahasiswa%20S1%20Nasional-orange?style=for-the-badge&logo=dependabot)](https://github.com/axis-competition/axis-2026)
+[![Status](https://img.shields.io/badge/Status-Registration_Open-success?style=for-the-badge&logo=github)](https://forms.gle/5QWPv4pqVaXKXz3i7)
+[![Website](https://img.shields.io/badge/Website-axis--2026-black?style=for-the-badge&logo=googlechrome)](https://axis-competition.github.io/axis-2026/)
+[![Guidebook](https://img.shields.io/badge/Guidebook-Online_Reader-black?style=for-the-badge&logo=gitbook)](https://axis-competition.github.io/axis-2026/guidebook.html)
+[![Tech Stack](https://img.shields.io/badge/Stack-PHP_%7C_MySQL-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://github.com/axis-competition/axis-2026)
+[![Target](https://img.shields.io/badge/Peserta-Mahasiswa_S1-black?style=for-the-badge&logo=academia)](https://github.com/axis-competition/axis-2026)
 
----
+<br>
 
-### 🏆 Tema Kompetisi
-> **"Empowering Organizations & Digital Enterprises through Resilient Web Architectures"**
+> **Tema Resmi:**  
+> *"Empowering Organizations & Digital Enterprises through Resilient Web Architectures"*
+
+<br>
+
+[🌐 **Website Resmi**](https://axis-competition.github.io/axis-2026/) &nbsp;•&nbsp; 
+[📖 **Buku Panduan (Web)**](https://axis-competition.github.io/axis-2026/guidebook.html) &nbsp;•&nbsp; 
+[📘 **Buku Panduan (Markdown)**](./GUIDEBOOK.md) &nbsp;•&nbsp; 
+[📦 **Template Submisi**](https://github.com/axis-competition/submission-template) &nbsp;•&nbsp; 
+[💬 **WhatsApp Panitia**](https://wa.me/6285181079659)
 
 </div>
 
 ---
 
-## 📌 Navigasi Cepat
-- 🌐 **[Portal Resmi Kompetisi (Website)](https://axis-competition.github.io/axis-2026/)**
-- 📖 **[Guidebook Peserta Format Web (guidebook.html)](./guidebook.html)**
-- 📘 **[Guidebook Peserta Format Markdown (GUIDEBOOK.md)](./GUIDEBOOK.md)**
-- 📦 **[Template Repositori Pengumpulan (submission-template)](https://github.com/axis-competition/submission-template)**
-- 📝 **[Form Pendaftaran Resmi](https://forms.gle/5QWPv4pqVaXKXz3i7)** *(Dibuka 20 - 30 November 2026)*
-- 📤 **[Form Pengumpulan Karya](https://forms.gle/z6LmuzqaYRqVUZaNA)** *(Batas: 9 Desember 2026 pukul 23.59 WIB)*
-- 💬 **Narahubung Resmi (WhatsApp)**: **[+62 851-8107-9659](https://wa.me/6285181079659)**
+## 📌 Tautan Penting Kegiatan
+
+| Kebutuhan | Tautan Akses Langsung | Keterangan |
+| :--- | :--- | :--- |
+| 🌐 **Landing Page Kompetisi** | [axis-competition.github.io/axis-2026](https://axis-competition.github.io/axis-2026/) | Portal utama interaktif AXIS 2026 |
+| 📖 **Web Guidebook Resmi** | [axis-competition.github.io/axis-2026/guidebook.html](https://axis-competition.github.io/axis-2026/guidebook.html) | Panduan lengkap (siap cetak PDF / `Ctrl+P`) |
+| 📝 **Form Pendaftaran** | [forms.gle/5QWPv4pqVaXKXz3i7](https://forms.gle/5QWPv4pqVaXKXz3i7) | Pendaftaran tim dibuka 20 - 30 November 2026 |
+| 📤 **Form Pengumpulan Karya** | [forms.gle/z6LmuzqaYRqVUZaNA](https://forms.gle/z6LmuzqaYRqVUZaNA) | Batas akhir pengumpulan: 9 Desember 2026 (23.59 WIB) |
+| 📦 **Template Repositori** | [github.com/axis-competition/submission-template](https://github.com/axis-competition/submission-template) | Template resmi struktur folder & README karya peserta |
+| 💬 **Layanan Informasi (WA)** | [+62 851-8107-9659](https://wa.me/6285181079659) | Narahubung resmi panitia pelaksana |
 
 ---
 
 ## 💡 Sekilas Tentang AXIS 2026
 
-**AXIS 2026** merupakan cabang kompetisi pengembangan aplikasi web berskala nasional dalam rangkaian kegiatan **GALAKSI 2026**. Kompetisi ini menguji dan mengapresiasi kemampuan mahasiswa dalam:
-1. **Analisis Kebutuhan**: Memahami persoalan riil organisasi dan merumuskan solusi komputasional yang tepat sasaran.
-2. **Perancangan Arsitektur**: Merancang struktur data relasional (MySQL), alur proses bisnis (BPMN/Flowchart), dan modularitas sistem.
-3. **Kualitas Rekayasa Web**: Mengimplementasikan antarmuka interaktif yang responsif, manajemen data terintegrasi, dan keamanan dasar menggunakan ekosistem **PHP & MySQL**.
+**AXIS 2026** *(Application eXcellence in Information Systems)* merupakan cabang kompetisi rekayasa aplikasi web berskala nasional dalam perhelatan akbar **GALAKSI 2026**.
+
+Kompetisi ini menantang mahasiswa untuk membangun solusi sistem informasi berbasis web yang tangguh (*resilient*), berorientasi pada pemecahan masalah riil di dunia industri maupun tata kelola organisasi, serta memiliki standar arsitektur perangkat lunak yang andal.
+
+### Aspek Kunci Kompetisi:
+1. **Analisis Kebutuhan**: Ketajaman identifikasi masalah operasional dan perumusan fitur komputasional yang relevan.
+2. **Perancangan Arsitektur**: Rancangan database relasional MySQL yang terstruktur, alur proses bisnis (*Flowchart / BPMN*), dan modularitas sistem.
+3. **Kualitas Rekayasa Web**: Penerapan ekosistem wajib **PHP & MySQL** dengan antarmuka responsif, operasi CRUD yang aman, dan hak akses berbasis peran (*RBAC*).
 
 ---
 
 ## 👥 Ketentuan Tim Peserta
-- Mahasiswa aktif program **Sarjana (S1)** dari PTN/PTS di seluruh Indonesia (semua program studi).
-- Setiap tim terdiri dari **2 sampai 4 orang** dari perguruan tinggi yang sama (boleh lintas prodi & angkatan).
-- Setiap peserta hanya boleh tergabung dalam **1 tim**, dan setiap tim hanya mengajukan **1 karya**.
-- Biaya pendaftaran: **Rp50.000,-** per tim.
+
+| Aspek | Rincian Ketentuan |
+| :--- | :--- |
+| **Sasaran Peserta** | Mahasiswa aktif jenjang Sarjana (S1) PTN/PTS se-Indonesia (semua jurusan/program studi) |
+| **Komposisi Tim** | **2 sampai 4 orang** dari perguruan tinggi yang sama (diperbolehkan lintas jurusan & angkatan) |
+| **Peran Tim** | Satu orang anggota ditunjuk sebagai **Ketua Tim** |
+| **Batasan Partisipasi** | 1 mahasiswa hanya terdaftar dalam 1 tim; 1 tim hanya boleh mengajukan 1 karya |
+| **Biaya Pendaftaran** | **Rp50.000,-** per tim |
+| **Orisinalitas** | Karya wajib orisinal, bukan hasil plagiasi, dan belum pernah memenangkan kompetisi serupa |
 
 ---
 
 ## 🎯 Kategori Studi Kasus
-Peserta wajib memilih salah satu dari tiga lintasan studi kasus berikut:
 
-| Kategori | Fokus Utama | Contoh Tantangan Studi Kasus |
-| :--- | :--- | :--- |
-| **Kategori A**<br>*(Business & Enterprise Digitalization)* | Digitalisasi proses bisnis, operasional terpadu, dan manajemen data komersial. | Web manajemen operasional terintegrasi: katalog produk, pencatatan transaksi, dan pergerakan persediaan/stok untuk mereduksi kesalahan pencatatan. |
-| **Kategori B**<br>*(Organizational Management & Governance)* | Tata kelola organisasi, administrasi terpusat, pengajuan layanan publik/internal, dan transparansi. | Web administrasi organisasi: portal pengajuan izin/surat/layanan, sistem persetujuan berjenjang (*approval workflow*), dan pelacakan status transparan. |
-| **Kategori C**<br>*(Collaborative Digital Enterprise Platform)* | Kolaborasi tim, manajemen aktivitas terdistribusi, dan pengaturan hak akses peran. | Web manajemen proyek & kolaborasi: pembagian tugas (*task assignment*), pemantauan progres (*progress tracking*), dan kontrol akses berbasis peran (*RBAC*). |
+Peserta wajib memilih salah satu dari 3 (tiga) lintasan studi kasus berikut:
+
+| Kategori | Tema Lintasan | Ruang Lingkup & Contoh Solusi |
+| :---: | :--- | :--- |
+| **A** | **Business & Enterprise Digitalization** | Digitalisasi proses bisnis komersial: katalog barang, pencatatan transaksi pembelian/penjualan, integrasi stok persediaan, dan laporan operasional terpadu. |
+| **B** | **Organizational Management & Governance** | Tata kelola administrasi internal/publik: portal pengajuan surat/layanan, verifikasi dokumen, alur persetujuan berjenjang (*approval flow*), dan pelacakan status permohonan transparan. |
+| **C** | **Collaborative Digital Enterprise Platform** | Platform kerja kolaboratif tim: pembagian penugasan (*task assignment*), pemantauan progres proyek (*progress tracking*), dan kontrol akses menu berbasis peran pengguna (*RBAC*). |
 
 ---
 
-## ⚙️ Ketentuan Teknis & Standar Minimum
+## ⚙️ Ketentuan Teknologi & Standar Minimum
 
 ```
-Stack Wajib:
+Stack Teknologi Wajib:
 ├── Backend  : PHP (Native atau Framework: Laravel, CodeIgniter, Symfony, dll)
-├── Database : MySQL / MariaDB (Relasional, CRUD terstruktur, data validation)
-└── Frontend : HTML5, CSS3, JavaScript (Bebas: Tailwind, Bootstrap, Vue, React, dll)
+├── Database : MySQL / MariaDB (Relasional, integritas data CRUD, validasi input)
+└── Frontend : HTML5, CSS3, JavaScript (Bebas: Tailwind CSS, Bootstrap, Vue, React, dll)
 ```
 
-### Standar Minimum Aplikasi:
-- 🌐 **Live Deployment**: Website dihosting publik dan aktif selama periode penjurian (10-11 Desember 2026).
-- ⚙️ **Fungsional & Interaktif**: Fitur utama berjalan nyata dari hulu ke hilir (bukan sekadar prototipe statis).
-- 📱 **Responsif**: Tampilan antarmuka nyaman digunakan pada resolusi *desktop* maupun *mobile*.
-- 🗄️ **Integrasi MySQL & CRUD**: Mengimplementasikan manipulasi data Create, Read, Update, Delete secara konsisten.
-- 🔐 **Autentikasi & Multi-Role**: Memiliki sistem login dengan minimal **2 peran pengguna** (misal: *Admin* dan *User*) dengan batasan hak akses menu yang berbeda.
-- 🛡️ **Keamanan Dasar**: Dilengkapi validasi input (*sanitization*), pencegahan SQL injection/XSS dasar, dan penanganan error yang baik.
+### Standar Wajib Aplikasi:
+- 🌐 **Live Deployment**: Website aktif pada URL publik (hosting/VPS/PaaS gratis/berbayar) selama masa penjurian.
+- ⚙️ **Fungsionalitas Nyata**: Seluruh fitur utama berjalan dari hulu ke hilir (bukan sekadar prototipe UI statis).
+- 📱 **Responsif Lintas Perangkat**: Antarmuka nyaman diakses dan adaptif pada resolusi desktop maupun smartphone.
+- 🗄️ **Operasi Database Penuh**: Implementasi CRUD (*Create, Read, Update, Delete*) terintegrasi MySQL.
+- 🔐 **Autentikasi Multi-Role**: Sistem otentikasi login dengan minimal **2 peran pengguna berbeda** (misal: *Admin* & *User/Staff*).
+- 🛡️ **Keamanan Dasar**: Dilengkapi sanitasi input, proteksi SQL Injection/XSS dasar, dan penanganan pesan error yang rapi.
 
 ---
 
-## 📦 Berkas Luaran yang Wajib Dikumpulkan
+## 📦 Berkas Pengumpulan Karya
 
-Saat pengumpulan karya, tim wajib menyerahkan:
+Saat batas akhir submisi, setiap tim wajib mengumpulkan **3 (tiga) berkas luaran**:
 
-1. **📄 Dokumen Ringkasan Karya (PDF 5-7 Halaman)**:
-   - Sesuai dengan [Lampiran A Guidebook](./GUIDEBOOK.md#lampiran-a-rancangan-struktur-dokumen-ringkasan). Memuat identitas tim, latar belakang masalah, analisis kebutuhan, proses bisnis, arsitektur & ERD basis data, tech stack, dan tangkapan layar UI.
-2. **🌐 Tautan Live Deployment & Repositori GitHub**:
-   - URL website aktif yang dapat diuji juri secara langsung.
-   - URL repositori GitHub dengan file `README.md` berstandar resmi (lihat [Template README Peserta](./templates/TEMPLATE_README_PESERTA.md)).
-   - Akun uji coba (*demo credentials*) minimal 2 role.
-3. **🎥 Video Demonstrasi Aplikasi (Maksimal 3 Menit)**:
-   - Video memperlihatkan simulasi fitur nyata di website yang berjalan.
-   - Menjelaskan masalah $\rightarrow$ solusi $\rightarrow$ demo fungsi utama $\rightarrow$ manfaat bagi target pengguna.
-   - Tautan video dapat diakses publik / unlisted (YouTube / Google Drive).
+1. **📄 Dokumen Ringkasan Karya (PDF 5 - 7 Halaman)**
+   - Mengikuti panduan format pada [Lampiran A GUIDEBOOK.md](./GUIDEBOOK.md#lampiran-a-rancangan-struktur-dokumen-ringkasan).
+   - Memuat: identitas tim, latar belakang masalah, profil pengguna, alur proses bisnis, diagram arsitektur, ERD basis data MySQL, spesifikasi teknologi, dan tangkapan layar antarmuka aplikasi.
+
+2. **🌐 Tautan Live Deployment & Repositori GitHub**
+   - **Tautan Live Web**: URL website aktif yang siap diuji fungsionalitasnya oleh dewan juri.
+   - **Tautan Repositori GitHub**: Repositori kode publik yang dibuat menggunakan template resmi [submission-template](https://github.com/axis-competition/submission-template).
+   - **Akun Pengujian (Demo)**: Disertakan minimal 2 akun uji coba (username & password) untuk akses juri.
+
+3. **🎥 Video Demonstrasi Aplikasi (Maksimal 3 Menit)**
+   - Video memperlihatkan simulasi fitur nyata pada live website.
+   - Menggambarkan alur: identifikasi masalah $\rightarrow$ pengenalan solusi $\rightarrow$ demo fitur unggulan $\rightarrow$ dampak manfaat bagi pengguna.
+   - Diunggah ke YouTube / Google Drive dengan status akses publik atau *unlisted*.
 
 ---
 
-## 📅 Jadwal Penting (Timeline)
+## 📅 Jadwal Pelaksanaan (Timeline)
 
-```mermaid
-timeline
-    title Timeline Pelaksanaan AXIS 2026
-    20 November 2026 : Publikasi Lomba Resmi
-    20 - 30 November 2026 : Periode Pendaftaran Tim
-    20 Nov - 9 Des 2026 : Pengembangan Aplikasi Web & Pengumpulan Berkas
-    9 Desember 2026 (23.59 WIB) : Batas Akhir Submit Karya
-    10 - 11 Desember 2026 : Sesi Penjurian oleh Dewan Juri
-    12 Desember 2026 : Acara Puncak & Pengumuman Pemenang
-```
-
-| Tahapan | Jadwal | Keterangan |
-| :--- | :--- | :--- |
-| **Publikasi Lomba** | 20 November 2026 | Pembukaan sosialisasi kompetisi |
-| **Pendaftaran Peserta** | **20 - 30 November 2026** | Mengisi [Form Pendaftaran](https://forms.gle/5QWPv4pqVaXKXz3i7) |
-| **Pengembangan & Submit** | **20 Nov - 9 Des 2026** | Batas pengumpulan: **9 Desember 2026, 23.59 WIB** |
-| **Penjurian** | 10 - 11 Desember 2026 | Penilaian menyeluruh oleh tim juri |
-| **Pengumuman Juara** | **Sabtu, 12 Desember 2026** | Diumumkan pada Acara Puncak GALAKSI 2026 |
+| No | Tahapan Kegiatan | Rentang Waktu | Deskripsi Pelaksanaan |
+| :-: | :--- | :--- | :--- |
+| **01** | **Publikasi Lomba Resmi** | 20 November 2026 | Pembukaan sosialisasi kompetisi AXIS 2026 & rilis berkas panduan |
+| **02** | **Periode Pendaftaran Tim** | **20 - 30 November 2026** | Pengisian formulir pendaftaran & pembayaran registrasi Rp50.000,- |
+| **03** | **Pengembangan & Submisi Karya** | **20 Nov - 9 Des 2026** | Masa pengerjaan karya (Deadline: **9 Desember 2026, 23.59 WIB**) |
+| **04** | **Proses Penjurian** | **10 - 11 Desember 2026** | Evaluasi komprehensif live web, source code, dokumen PDF & video |
+| **05** | **Pengumuman Juara** | **Sabtu, 12 Desember 2026** | Pengumuman pemenang pada Acara Puncak perhelatan GALAKSI 2026 |
 
 ---
 
 ## ⚖️ Aspek & Bobot Penilaian
 
-| Aspek Penilaian | Bobot | Indikator Utama |
+| Aspek Penilaian | Bobot | Indikator Utama Evaluasi Dewan Juri |
 | :--- | :---: | :--- |
-| **Fungsionalitas & Implementasi Website** | **35%** | Kelengkapan fitur utama, operasi CRUD, autentikasi multi-role, stabilitas error handling, dan kebersihan implementasi kode. |
-| **Analisis Kebutuhan & Perancangan Sistem** | **30%** | Ketajaman identifikasi masalah, relevansi solusi, perancangan proses bisnis (Flowchart/BPMN), dan diagram arsitektur/ERD basis data. |
-| **UI/UX dan Responsivitas Website** | **20%** | Kemudahan penggunaan (*usability*), konsistensi desain, navigasi yang intuitif, dan keandalan responsif di mobile & desktop. |
-| **Inovasi, Manfaat, dan Kelayakan Solusi** | **15%** | Kreativitas gagasan, urgensi manfaat bagi organisasi, potensi implementasi nyata, efisiensi kerja, dan keberlanjutan sistem. |
+| **Fungsionalitas & Implementasi** | **35%** | Kelengkapan fitur utama, integritas operasi CRUD, relasi basis data MySQL, autentikasi multi-role, error handling, dan kebersihan kode. |
+| **Analisis Kebutuhan & Desain Sistem** | **30%** | Ketajaman analisis masalah, relevansi solusi, perancangan proses bisnis (Flowchart), diagram arsitektur sistem, dan desain ERD MySQL. |
+| **UI/UX & Responsivitas Antarmuka** | **20%** | Kemudahan penggunaan (*usability*), konsistensi desain UI, navigasi intuitif, serta adaptasi layout responsif di desktop & mobile. |
+| **Inovasi & Kelayakan Solusi** | **15%** | Orisinalitas nilai tambah, dampak efisiensi nyata pada operasional organisasi/usaha, dan potensi keberlanjutan pengembangan. |
 
 ---
 
-## 🗂️ Berkas & Sumber Daya Resmi
+## 🗂️ Berkas & Sumber Daya Resmi Repositori
 
-- **[index.html](./index.html)** - Landing page animasi bertema galaksi & coding IT (Live di [GitHub Pages](https://axis-competition.github.io/axis-2026/))
-- **[guidebook.html](./guidebook.html)** - Buku panduan lengkap versi web & siap cetak PDF
-- **[GUIDEBOOK.md](./GUIDEBOOK.md)** - Buku panduan lengkap versi Markdown
-- **[submission-template](https://github.com/axis-competition/submission-template)** - Repositori template resmi untuk pengumpulan karya peserta
+- **[index.html](./index.html)**: Kode sumber landing page kompetisi (Akses online di [GitHub Pages](https://axis-competition.github.io/axis-2026/)).
+- **[guidebook.html](./guidebook.html)**: Buku panduan lengkap format web interaktif dan siap cetak PDF (`Ctrl + P`).
+- **[GUIDEBOOK.md](./GUIDEBOOK.md)**: Dokumen buku panduan lengkap format Markdown.
+- **[submission-template](https://github.com/axis-competition/submission-template)**: Repositori template resmi untuk pengumpulan karya peserta.
+
+---
+
+## 📞 Kanal Informasi & Kontak Panitia
+
+Jika Anda membutuhkan informasi lebih lanjut mengenai teknis atau regulasi kompetisi, silakan menghubungi:
+- **WhatsApp Narahubung**: [**+62 851-8107-9659**](https://wa.me/6285181079659)
+- **Email / Media Sosial**: Terkoneksi dengan kanal informasi resmi panitia **GALAKSI 2026**
+- **Penyelenggara**: Panitia Pelaksana AXIS 2026 - *National Web Development Competition*
 
 ---
 
-## 📞 Kontak & Media Informasi
-
-Jika tim Anda memiliki pertanyaan atau kendala seputar teknis kompetisi, silakan menghubungi panitia melalui:
-- **WhatsApp Panitia**: [+62 851-8107-9659](https://wa.me/6285181079659)
-- **Email / Instagram**: Terkoneksi dengan kanal resmi **GALAKSI 2026**
-- **Organized by**: Tim Pelaksana AXIS 2026 | National Web Development Competition
-
----
 <div align="center">
-  <small>© 2026 Application eXcellence in Information Systems ( AXIS )</small>
+  <p>© 2026 Application eXcellence in Information Systems ( AXIS )</p>
 </div>
