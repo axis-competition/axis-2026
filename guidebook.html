@@ -3,710 +3,566 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guidebook Peserta AXIS 2026 — National Web Development Competition</title>
+  <title>Guidebook Peserta — AXIS 2026 | GALAKSI 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --primary: #1e3a8a;
-      --primary-dark: #172554;
-      --primary-light: #3b82f6;
-      --secondary: #0d9488;
-      --accent: #f59e0b;
-      --text: #1e293b;
-      --text-muted: #64748b;
-      --bg: #f8fafc;
-      --card-bg: #ffffff;
-      --border: #e2e8f0;
-      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --bg: #000000;
+      --surface: rgba(255, 255, 255, 0.03);
+      --border: rgba(255, 255, 255, 0.1);
+      --border-hover: rgba(255, 255, 255, 0.2);
+      --white: #ffffff;
+      --g1: #f5f5f5;
+      --g2: #e5e5e5;
+      --g3: #d4d4d4;
+      --g4: #a3a3a3;
+      --g5: #737373;
+      --g6: #525252;
+      --g8: #262626;
+      --g9: #171717;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.8;
       padding: 0;
     }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.65;
-      color: var(--text);
-      background-color: var(--bg);
-      padding: 2rem 1rem;
+    p {
+      text-align: justify;
+      color: var(--g3);
+      margin-bottom: 1.15rem;
     }
 
-    .container {
-      max-width: 900px;
+    .material-symbols-rounded {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+      font-size: 1.25rem;
+    }
+
+    .wrap {
+      max-width: 820px;
       margin: 0 auto;
-      background: var(--card-bg);
-      padding: 3.5rem 3rem;
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
+      padding: 3rem 2rem 5rem;
     }
 
-    /* Header / Cover Hero */
-    .header {
-      text-align: center;
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 2.5rem;
-      margin-bottom: 2.5rem;
+    a {
+      color: var(--white);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: opacity 0.2s;
     }
+    a:hover { opacity: 0.8; }
 
-    .event-badge {
-      display: inline-block;
-      background: #eff6ff;
-      color: var(--primary);
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 0.4rem 1rem;
-      border-radius: 9999px;
-      border: 1px solid #bfdbfe;
-      margin-bottom: 1rem;
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      color: var(--white);
+      letter-spacing: -0.02em;
     }
 
     h1 {
-      font-size: 2.6rem;
-      font-weight: 800;
-      color: var(--primary-dark);
-      letter-spacing: -0.025em;
+      font-size: 2.4rem;
+      font-weight: 700;
       margin-bottom: 0.5rem;
     }
 
-    .subtitle {
-      font-size: 1.25rem;
-      color: var(--secondary);
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-    }
-
-    .event-parent {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      font-weight: 500;
-      margin-bottom: 1.25rem;
-    }
-
-    .theme-box {
-      background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
-      border-left: 5px solid var(--primary-light);
-      padding: 1.25rem 1.5rem;
-      border-radius: 8px;
-      margin: 1.5rem 0;
-      text-align: left;
-    }
-
-    .theme-box h4 {
-      color: var(--primary);
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.25rem;
-    }
-
-    .theme-box p {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-      font-style: italic;
-    }
-
-    .action-bar {
-      display: flex;
-      gap: 0.75rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.65rem 1.25rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.92rem;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #ffffff;
-      border: 1px solid var(--primary);
-    }
-    .btn-primary:hover {
-      background: var(--primary-dark);
-    }
-
-    .btn-secondary {
-      background: #f1f5f9;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-    .btn-secondary:hover {
-      background: #e2e8f0;
-    }
-
-    /* Section Headings */
     h2 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 700;
-      color: var(--primary-dark);
-      margin-top: 2.75rem;
+      margin-top: 3.5rem;
       margin-bottom: 1.25rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 0.65rem;
+      border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.65rem;
     }
 
     h3 {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 600;
-      color: var(--primary);
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       margin-bottom: 0.75rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-      color: var(--text);
+      color: var(--g2);
     }
 
     ul, ol {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.35rem;
       padding-left: 1.6rem;
+      color: var(--g3);
     }
 
     li {
       margin-bottom: 0.5rem;
+      text-align: justify;
     }
 
-    /* Tables */
+    strong { color: var(--white); }
+    em { color: var(--g4); }
+
+    code {
+      font-family: var(--font-mono);
+      background: var(--g9);
+      border: 1px solid var(--border);
+      color: var(--g2);
+      padding: 0.2rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.88em;
+    }
+
+    pre {
+      background: var(--g9);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--g3);
+      overflow-x: auto;
+      line-height: 1.6;
+      margin: 1.25rem 0;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin: 1.5rem 0;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
 
     th, td {
-      border: 1px solid var(--border);
-      padding: 0.75rem 1rem;
+      padding: 0.85rem 1.15rem;
       text-align: left;
+      border-bottom: 1px solid var(--border);
     }
 
     th {
-      background: #f8fafc;
-      color: var(--primary-dark);
+      font-family: var(--font-mono);
+      color: var(--g5);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       font-weight: 600;
+      background: rgba(255, 255, 255, 0.02);
     }
 
-    tr:nth-child(even) {
-      background: #fafbfc;
+    td { color: var(--g3); }
+
+    blockquote {
+      border-left: 3px solid var(--white);
+      padding: 0.85rem 1.25rem;
+      margin: 1.35rem 0;
+      color: var(--g2);
+      font-style: italic;
+      background: var(--surface);
+      border-radius: 0 8px 8px 0;
+      text-align: justify;
     }
 
-    /* Track Cards */
-    .track-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-      margin: 1.5rem 0;
+    .header {
+      text-align: center;
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
     }
 
-    @media (min-width: 640px) {
-      .track-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.35rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--g3);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.25rem;
     }
 
-    .track-card {
-      background: #f8fafc;
+    .header .sub {
+      color: var(--g5);
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .back-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--g4);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--white); }
+
+    .btn-print {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--g3);
+      padding: 0.45rem 0.95rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-print:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--border-hover);
+      color: var(--white);
+    }
+
+    .toc {
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 1.25rem;
-      transition: transform 0.2s, box-shadow 0.2s;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
     }
 
-    .track-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
-    }
-
-    .track-badge {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 0.25rem 0.6rem;
-      border-radius: 6px;
+    .toc h3 {
+      margin-top: 0;
+      color: var(--g5);
+      font-size: 0.82rem;
       text-transform: uppercase;
-      margin-bottom: 0.75rem;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
     }
 
-    .badge-a { background: #dbeafe; color: #1e40af; }
-    .badge-b { background: #dcfce7; color: #166534; }
-    .badge-c { background: #fef3c7; color: #92400e; }
-
-    .track-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-      margin-bottom: 0.5rem;
-      line-height: 1.35;
+    .toc ol {
+      margin-bottom: 0;
+      padding-left: 1.3rem;
     }
 
-    .track-desc {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.5;
+    .toc li {
+      margin-bottom: 0.35rem;
+      text-align: left;
     }
 
-    /* Alert / Callout Box */
-    .callout {
-      background: #f0fdf4;
-      border-left: 4px solid var(--secondary);
-      padding: 1rem 1.25rem;
-      border-radius: 6px;
-      margin: 1.25rem 0;
-      font-size: 0.95rem;
+    .toc a {
+      color: var(--g3);
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+    .toc a:hover {
+      color: var(--white);
+      text-decoration: underline;
     }
 
-    .callout-info {
-      background: #f0f9ff;
-      border-left: 4px solid var(--primary-light);
-    }
-
-    .callout-warning {
-      background: #fffbeb;
-      border-left: 4px solid var(--accent);
-    }
-
-    /* Checklist */
     .checklist {
       list-style: none;
       padding-left: 0;
     }
 
     .checklist li {
-      position: relative;
-      padding-left: 2rem;
-      margin-bottom: 0.65rem;
-    }
-
-    .checklist li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--secondary);
-      font-weight: bold;
-      background: #ccfbf1;
-      width: 1.35rem;
-      height: 1.35rem;
-      border-radius: 50%;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--g3);
+      text-align: left;
     }
 
-    /* Code & Mono blocks */
-    pre, code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    .checklist .material-symbols-rounded {
+      font-size: 1.15rem;
+      color: var(--g4);
+      flex-shrink: 0;
+      margin-top: 2px;
     }
 
-    pre {
-      background: #0f172a;
-      color: #f8fafc;
-      padding: 1.25rem;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-size: 0.88rem;
-      margin: 1rem 0;
+    .card-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.25rem 0;
     }
 
-    code:not(pre code) {
-      background: #f1f5f9;
-      color: #b91c1c;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      font-size: 0.9em;
+    @media (max-width: 600px) {
+      .wrap { padding: 2rem 1.25rem; }
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.3rem; }
     }
 
-    /* Print Styles */
     @media print {
-      body {
-        background: #ffffff;
-        padding: 0;
-      }
-      .container {
-        border: none;
-        box-shadow: none;
-        padding: 0;
-        max-width: 100%;
-      }
-      .action-bar, .no-print {
-        display: none !important;
-      }
-      h2 {
-        page-break-before: always;
-      }
-      h1, h2, h3 {
-        color: #000000 !important;
-      }
-      a {
-        text-decoration: underline;
-        color: #000000 !important;
-      }
-      .track-card {
-        border: 1px solid #cccccc;
-      }
+      body { background: white !important; color: black !important; }
+      h1, h2, h3, strong { color: #000 !important; }
+      p, li, td { color: #333 !important; text-align: justify !important; }
+      th { color: #666 !important; background: #f5f5f5 !important; }
+      table, th, td { border-color: #ddd !important; }
+      pre { background: #f9f9f9 !important; border-color: #ddd !important; color: #111 !important; }
+      blockquote { border-left-color: #000 !important; background: #fafafa !important; color: #222 !important; }
+      .back-nav, .badge, .btn-print { display: none !important; }
+      .wrap { padding: 0 !important; max-width: 100% !important; }
     }
   </style>
 </head>
 <body>
+<div class="wrap">
 
-  <div class="container">
-    
-    <!-- Cover / Header -->
-    <header class="header">
-      <div class="event-badge">National Web Development Competition</div>
-      <h1>AXIS 2026</h1>
-      <div class="subtitle">Application eXcellence in Information Systems</div>
-      <div class="event-parent">Kegiatan Induk: <strong>GALAKSI 2026</strong> | <em>"Where Innovation Meets Web Technology"</em></div>
-      
-      <div class="theme-box">
-        <h4>Tema Utama Kompetisi</h4>
-        <p>"Empowering Organizations & Digital Enterprises through Resilient Web Architectures"</p>
-      </div>
+  <div class="back-nav">
+    <a href="./" class="back-link">
+      <span class="material-symbols-rounded">arrow_back</span> Kembali ke Beranda
+    </a>
+    <button onclick="window.print()" class="btn-print">
+      <span class="material-symbols-rounded">print</span> Cetak / Simpan PDF
+    </button>
+  </div>
 
-      <div class="action-bar no-print">
-        <a href="https://forms.gle/5QWPv4pqVaXKXz3i7" target="_blank" class="btn btn-primary">📝 Form Pendaftaran Resmi</a>
-        <a href="https://forms.gle/z6LmuzqaYRqVUZaNA" target="_blank" class="btn btn-secondary">📤 Form Pengumpulan Karya</a>
-        <button onclick="window.print()" class="btn btn-secondary">🖨️ Cetak / Simpan PDF</button>
-      </div>
-    </header>
+  <div class="header">
+    <div class="badge">
+      <span class="material-symbols-rounded">menu_book</span> Guidebook Resmi Peserta
+    </div>
+    <h1>AXIS 2026</h1>
+    <div class="sub">Application eXcellence in Information Systems<br>National Web Development Competition — GALAKSI 2026</div>
+    <blockquote style="text-align:center;border-left:none;border-top:1px solid var(--border);border-bottom:1px solid var(--border);border-radius:0;margin-top:1.5rem;">
+      <strong style="color:var(--g2);">"Empowering Organizations & Digital Enterprises through Resilient Web Architectures"</strong>
+    </blockquote>
+  </div>
 
-    <!-- Table of Contents -->
-    <section>
-      <h3>📑 Daftar Isi Panduan</h3>
-      <ul>
-        <li><a href="#profil">1. Profil dan Tujuan Kompetisi</a></li>
-        <li><a href="#ketentuan-tim">2. Sasaran Peserta dan Ketentuan Tim</a></li>
-        <li><a href="#kategori">3. Tema dan Kategori Studi Kasus</a></li>
-        <li><a href="#teknis">4. Ketentuan Teknis Pengembangan Website</a></li>
-        <li><a href="#luaran">5. Luaran dan Berkas yang Wajib Dikumpulkan</a></li>
-        <li><a href="#pendaftaran">6. Pendaftaran, Mekanisme & Jadwal</a></li>
-        <li><a href="#penilaian">7. Sistem Penilaian</a></li>
-        <li><a href="#etika">8. Etika dan Ketentuan Umum</a></li>
-        <li><a href="#penutup">9. Penutup</a></li>
-        <li><a href="#lampiran-a">Lampiran A. Panduan Dokumen Ringkasan (5–7 Halaman)</a></li>
-        <li><a href="#lampiran-b">Lampiran B. Checklist Kesiapan Pengumpulan</a></li>
-        <li><a href="#lampiran-c">Lampiran C. Format Lembar Informasi Tim & Karya</a></li>
-      </ul>
-    </section>
+  <nav class="toc">
+    <h3><span class="material-symbols-rounded">toc</span> Daftar Isi Panduan</h3>
+    <ol>
+      <li><a href="#s1">Profil dan Tujuan Kompetisi</a></li>
+      <li><a href="#s2">Sasaran Peserta dan Ketentuan Tim</a></li>
+      <li><a href="#s3">Tema dan Kategori Studi Kasus</a></li>
+      <li><a href="#s4">Ketentuan Teknis Pengembangan Website</a></li>
+      <li><a href="#s5">Luaran dan Berkas yang Wajib Dikumpulkan</a></li>
+      <li><a href="#s6">Pendaftaran dan Mekanisme Pengumpulan</a></li>
+      <li><a href="#s7">Sistem Penilaian</a></li>
+      <li><a href="#s8">Etika dan Ketentuan Umum</a></li>
+      <li><a href="#s9">Penutup</a></li>
+      <li><a href="#la">Lampiran A — Panduan Dokumen Ringkasan PDF</a></li>
+      <li><a href="#lb">Lampiran B — Checklist Kesiapan Pengumpulan</a></li>
+      <li><a href="#lc">Lampiran C — Format Lembar Informasi Tim & Karya</a></li>
+    </ol>
+  </nav>
 
-    <!-- 1. Profil -->
-    <section id="profil">
-      <h2>1. Profil dan Tujuan Kompetisi</h2>
-      <p><strong>AXIS 2026</strong> merupakan cabang kompetisi pengembangan aplikasi web tingkat nasional dalam rangkaian acara <strong>GALAKSI 2026</strong>. Kompetisi ini mengintegrasikan kemampuan analisis kebutuhan, perancangan arsitektur sistem perangkat lunak, implementasi teknologi web yang tangguh (<em>resilient</em>), serta penciptaan produk digital yang relevan dan aplikatif bagi organisasi maupun dunia usaha.</p>
-      
-      <h3>Tujuan Kompetisi:</h3>
-      <ol>
-        <li>Mengembangkan kreativitas dan keterampilan mahasiswa dalam rekayasa aplikasi web modern.</li>
-        <li>Mendorong inovasi digital untuk memecahkan persoalan nyata di dunia usaha dan organisasi.</li>
-        <li>Mengasah kemampuan analisis kebutuhan bisnis, perancangan arsitektur sistem, dan integritas data.</li>
-        <li>Meningkatkan standar aplikasi web mahasiswa: fungsional penuh, responsif, andal, dan berorientasi pengguna (UX).</li>
-        <li>Menjadi wadah kolaborasi, jejaring, dan unjuk bakat mahasiswa sistem informasi dan informatika se-Indonesia.</li>
-      </ol>
-    </section>
+  <!-- 1 -->
+  <h2 id="s1"><span class="material-symbols-rounded">flag</span> 1. Profil dan Tujuan Kompetisi</h2>
+  <p><strong>AXIS 2026</strong> merupakan cabang kompetisi pengembangan aplikasi web tingkat nasional dalam rangkaian acara <strong>GALAKSI 2026</strong>. Kompetisi ini mengintegrasikan kemampuan analisis kebutuhan, perancangan arsitektur sistem, implementasi teknologi web yang tangguh (<em>resilient</em>), serta penciptaan solusi digital yang aplikatif dan relevan bagi organisasi maupun dunia usaha.</p>
+  
+  <h3>Tujuan Kompetisi:</h3>
+  <ul>
+    <li>Mengembangkan kreativitas dan keterampilan mahasiswa dalam rekayasa aplikasi web modern.</li>
+    <li>Mendorong inovasi digital untuk memecahkan persoalan nyata di dunia usaha dan organisasi.</li>
+    <li>Mengasah kemampuan analisis kebutuhan bisnis, perancangan arsitektur sistem, dan integritas data.</li>
+    <li>Meningkatkan standar kualitas aplikasi web: fungsional penuh, responsif lintas perangkat, andal, dan ramah pengguna (UX).</li>
+    <li>Menjadi wadah kolaborasi, jejaring, dan unjuk bakat mahasiswa tingkat nasional se-Indonesia.</li>
+  </ul>
 
-    <!-- 2. Ketentuan Tim -->
-    <section id="ketentuan-tim">
-      <h2>2. Sasaran Peserta dan Ketentuan Tim</h2>
-      <ul>
-        <li><strong>Sasaran</strong>: Mahasiswa aktif program <strong>Sarjana (S1)</strong> dari Perguruan Tinggi Negeri maupun Swasta di seluruh Indonesia, tanpa batasan program studi.</li>
-        <li><strong>Jumlah Anggota</strong>: Setiap tim terdiri dari <strong>2 sampai 4 orang mahasiswa aktif S1</strong>.</li>
-        <li><strong>Asal Kampus</strong>: Anggota tim boleh berasal dari angkatan dan program studi yang berbeda, namun wajib dari <strong>perguruan tinggi yang sama</strong>.</li>
-        <li><strong>Karya Tunggal</strong>: Setiap tim hanya diperbolehkan mendaftarkan 1 (satu) karya aplikasi web.</li>
-        <li><strong>Kepesertaan Tunggal</strong>: Setiap mahasiswa hanya diperbolehkan tergabung dalam 1 (satu) tim.</li>
-        <li><strong>Orisinalitas</strong>: Karya harus orisinal, belum pernah memenangkan kompetisi sejenis, dan mematuhi hak kekayaan intelektual (HKI).</li>
-      </ul>
-    </section>
+  <h3>Identitas Kompetisi:</h3>
+  <table>
+    <tr><th>Komponen</th><th>Rincian Resmi</th></tr>
+    <tr><td><strong>Nama Kompetisi</strong></td><td>AXIS 2026 (Application eXcellence in Information Systems)</td></tr>
+    <tr><td><strong>Bidang Kompetisi</strong></td><td>National Web Development Competition</td></tr>
+    <tr><td><strong>Tagline</strong></td><td><em>"Where Innovation Meets Web Technology"</em></td></tr>
+    <tr><td><strong>Kegiatan Induk</strong></td><td>GALAKSI 2026</td></tr>
+    <tr><td><strong>Skala Kompetisi</strong></td><td>Nasional — Perguruan Tinggi se-Indonesia</td></tr>
+  </table>
 
-    <!-- 3. Kategori Studi Kasus -->
-    <section id="kategori">
-      <h2>3. Tema dan Kategori Studi Kasus</h2>
-      <p>Setiap tim <strong>wajib memilih 1 (satu) dari 3 (tiga) kategori</strong> berikut:</p>
+  <!-- 2 -->
+  <h2 id="s2"><span class="material-symbols-rounded">groups</span> 2. Sasaran Peserta dan Ketentuan Tim</h2>
+  <ul>
+    <li>Terbuka bagi mahasiswa aktif jenjang <strong>Sarjana (S1)</strong> dari Perguruan Tinggi Negeri (PTN) maupun Swasta (PTS) di seluruh Indonesia tanpa batasan program studi.</li>
+    <li>Setiap tim terdiri dari <strong>2 hingga 4 orang mahasiswa aktif S1</strong> dari perguruan tinggi yang sama (boleh lintas fakultas, program studi, maupun angkatan).</li>
+    <li>Salah satu anggota tim bertindak sebagai <strong>Ketua Tim</strong>.</li>
+    <li>Setiap mahasiswa hanya boleh terdaftar dalam <strong>1 (satu) tim</strong>, dan setiap tim hanya boleh mendaftarkan <strong>1 (satu) karya aplikasi web</strong>.</li>
+    <li>Karya yang diajukan wajib orisinal, belum pernah memenangkan kompetisi sejenis sebelumnya, dan tidak melanggar hak kekayaan intelektual (HKI) pihak ketiga.</li>
+    <li>Biaya registrasi: <strong>Rp50.000,-</strong> per tim.</li>
+  </ul>
 
-      <div class="track-grid">
-        <div class="track-card">
-          <span class="track-badge badge-a">Kategori A</span>
-          <div class="track-title">Business & Enterprise Digitalization</div>
-          <div class="track-desc">
-            <strong>Fokus:</strong> Digitalisasi proses bisnis, operasional, dan transaksi enterprise/UKM.<br><br>
-            <strong>Tantangan:</strong> Kembangkan aplikasi web manajemen operasional bisnis yang mengintegrasikan pengelolaan produk, transaksi, dan persediaan (inventory) untuk efisiensi kerja & akurasi pencatatan.
-          </div>
-        </div>
+  <!-- 3 -->
+  <h2 id="s3"><span class="material-symbols-rounded">category</span> 3. Tema dan Kategori Studi Kasus</h2>
+  <p>Setiap tim peserta <strong>wajib memilih 1 (satu) dari 3 (tiga) kategori</strong> studi kasus di bawah ini sebagai fokus solusi web yang dibangun:</p>
 
-        <div class="track-card">
-          <span class="track-badge badge-b">Kategori B</span>
-          <div class="track-title">Organizational Management & Governance</div>
-          <div class="track-desc">
-            <strong>Fokus:</strong> Administrasi organisasi, tata kelola sumber daya, dan transparansi proses kerja.<br><br>
-            <strong>Tantangan:</strong> Kembangkan aplikasi web administrasi organisasi yang mencakup pengajuan layanan/dokumen, proses persetujuan bertingkat (approval workflow), dan pemantauan status secara transparan.
-          </div>
-        </div>
+  <div class="card-box">
+    <h3>Kategori A — Business & Enterprise Digitalization</h3>
+    <p><strong>Fokus:</strong> Digitalisasi proses bisnis, operasional komersial, pencatatan transaksi terintegrasi, dan manajemen persediaan pada lingkungan organisasi bisnis atau UKM.</p>
+    <blockquote>Kembangkan aplikasi web manajemen operasional bisnis yang mengintegrasikan pengelolaan katalog produk, pencatatan transaksi penjualan/pembelian, dan pergerakan persediaan (inventory) untuk meningkatkan efektivitas kerja serta mengurangi kesalahan pencatatan.</blockquote>
+  </div>
 
-        <div class="track-card">
-          <span class="track-badge badge-c">Kategori C</span>
-          <div class="track-title">Collaborative Digital Enterprise Platform</div>
-          <div class="track-desc">
-            <strong>Fokus:</strong> Platform kolaborasi tim, pembagian penugasan, dan integrasi peran pengguna.<br><br>
-            <strong>Tantangan:</strong> Kembangkan aplikasi web manajemen proyek dan kolaborasi dengan fitur pembagian tugas, pemantauan progres real-time, dan kontrol hak akses berbasis peran (RBAC).
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="card-box">
+    <h3>Kategori B — Organizational Management & Governance</h3>
+    <p><strong>Fokus:</strong> Tata kelola administrasi organisasi, manajemen pelayanan internal/eksternal, alur persetujuan berkas (approval workflow), dan transparansi operasional.</p>
+    <blockquote>Kembangkan aplikasi web manajemen administrasi organisasi yang mencakup pengajuan layanan atau permohonan berkas, proses persetujuan berjenjang (multi-level approval), dan pemantauan status secara transparan.</blockquote>
+  </div>
 
-    <!-- 4. Ketentuan Teknis -->
-    <section id="teknis">
-      <h2>4. Ketentuan Teknis Pengembangan Website</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Komponen</th>
-            <th>Ketentuan Teknologi</th>
-            <th>Keterangan</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Backend (Wajib)</strong></td>
-            <td><strong>PHP</strong> (Native atau Framework)</td>
-            <td>Boleh Native PHP, Laravel, CodeIgniter, Symfony, dll.</td>
-          </tr>
-          <tr>
-            <td><strong>Database (Wajib)</strong></td>
-            <td><strong>MySQL</strong> / MariaDB</td>
-            <td>Relasional, validasi input terintegrasi, operasi CRUD.</td>
-          </tr>
-          <tr>
-            <td><strong>Frontend</strong></td>
-            <td>HTML5, CSS3, JavaScript</td>
-            <td>Bebas: Tailwind CSS, Bootstrap, jQuery, Vue/React, dll.</td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="card-box">
+    <h3>Kategori C — Collaborative Digital Enterprise Platform</h3>
+    <p><strong>Fokus:</strong> Platform kolaborasi tim kerja, pembagian penugasan, pelacakan progres, dan pengaturan kontrol akses peran pengguna.</p>
+    <blockquote>Kembangkan aplikasi web manajemen proyek dan kolaborasi dengan fitur pembagian tugas (task assignment), pemantauan progres pekerjaan, serta pengaturan hak akses berdasarkan peran pengguna.</blockquote>
+  </div>
 
-      <div class="callout callout-info">
-        <strong>Catatan Juri:</strong> Pemilihan framework modern tidak serta-merta menambah nilai secara otomatis. Penilaian berpusat pada stabilitas arsitektur, kerapian kode, fungsionalitas fitur, serta kesesuaian implementasi dengan masalah pengguna.
-      </div>
+  <!-- 4 -->
+  <h2 id="s4"><span class="material-symbols-rounded">code</span> 4. Ketentuan Teknis Pengembangan Website</h2>
+  <table>
+    <tr><th>Lapisan Sistem</th><th>Spesifikasi Teknologi</th><th>Ketentuan</th></tr>
+    <tr><td><strong>Backend (Wajib)</strong></td><td>PHP</td><td>Native PHP atau Framework (Laravel, CodeIgniter, Symfony, dll).</td></tr>
+    <tr><td><strong>Database (Wajib)</strong></td><td>MySQL / MariaDB</td><td>Relasional, validasi input terintegrasi, operasi CRUD konsisten.</td></tr>
+    <tr><td><strong>Frontend</strong></td><td>HTML5, CSS3, JavaScript</td><td>Bebas: Tailwind CSS, Bootstrap, jQuery, Vue, React, dll.</td></tr>
+  </table>
 
-      <h3>Standar Minimum Aplikasi:</h3>
-      <ol>
-        <li><strong>Akses Online Publik:</strong> Dapat diakses secara lancar melalui tautan hosting publik selama proses penjurian.</li>
-        <li><strong>Fungsional Penuh:</strong> Fitur inti bekerja nyata dari input sampai output (bukan sekadar prototipe statis).</li>
-        <li><strong>Interaktif & Dinamis:</strong> Pengguna dapat berinteraksi secara aktif dengan basis data MySQL.</li>
-        <li><strong>Responsif:</strong> Tampilan antarmuka beradaptasi proporsional pada desktop dan mobile.</li>
-        <li><strong>CRUD Lengkap:</strong> Memiliki alur Create, Read, Update, Delete yang sesuai logika bisnis.</li>
-        <li><strong>Autentikasi & Multi-Role:</strong> Memiliki login dengan minimal <strong>2 peran pengguna berbeda</strong> dengan pembatasan hak akses yang tegas.</li>
-        <li><strong>Keamanan Dasar:</strong> Menerapkan sanitasi input (proteksi SQL injection & XSS dasar) dan error handling.</li>
-      </ol>
-    </section>
+  <h3>Standar Minimum Aplikasi:</h3>
+  <ol>
+    <li><strong>Live Deployment:</strong> Website dideploy pada hosting publik dan dapat diakses dewan juri selama periode penjurian berlangsung.</li>
+    <li><strong>Fungsional Penuh:</strong> Fitur inti bekerja nyata dari hulu ke hilir (bukan prototipe statis atau sekadar mockup visual).</li>
+    <li><strong>Interaktif & Dinamis:</strong> Pengguna dapat berinteraksi secara aktif melakukan manipulasi data dengan basis data MySQL.</li>
+    <li><strong>Desain Responsif:</strong> Antarmuka beradaptasi proporsional dan nyaman digunakan pada perangkat desktop maupun smartphone.</li>
+    <li><strong>Operasi CRUD Lengkap:</strong> Menyediakan alur Create, Read, Update, Delete data yang berfungsi sesuai proses bisnis.</li>
+    <li><strong>Multi-Role RBAC:</strong> Memiliki sistem autentikasi login dengan minimal <strong>2 peran pengguna berbeda</strong> dengan pembatasan hak akses yang tegas.</li>
+    <li><strong>Keamanan Dasar:</strong> Menerapkan sanitasi input dasar (pencegahan SQL Injection dan XSS) serta penanganan kesalahan sistem (*error handling*).</li>
+    <li><strong>Kepatuhan Lisensi:</strong> Menggunakan aset dan pustaka sumber terbuka (*open source*) yang mematuhi ketentuan lisensi yang sah.</li>
+  </ol>
 
-    <!-- 5. Luaran dan Berkas -->
-    <section id="luaran">
-      <h2>5. Luaran dan Berkas yang Wajib Dikumpulkan</h2>
-      <ol>
-        <li><strong>Dokumen Ringkasan Karya (PDF 5–7 Halaman):</strong> Berisi identitas tim, latar belakang masalah, target pengguna, proses bisnis (flowchart), arsitektur & ERD basis data, tech-stack, dan tangkapan layar antarmuka.</li>
-        <li><strong>Tautan Deployment Online & Repositori GitHub:</strong>
-          <ul>
-            <li>URL live website yang aktif.</li>
-            <li>URL repositori GitHub publik yang memuat source code dan file <code>README.md</code> lengkap (deskripsi, spesifikasi, panduan install lokal, dan kredensial akun uji coba juri).</li>
-          </ul>
-        </li>
-        <li><strong>Video Demonstrasi (Maks. 3 Menit):</strong> Memperlihatkan simulasi fitur nyata di website yang berjalan, alur bisnis, dan manfaat solusi bagi pengguna (diunggah ke YouTube/Google Drive).</li>
-      </ol>
-    </section>
+  <!-- 5 -->
+  <h2 id="s5"><span class="material-symbols-rounded">inventory_2</span> 5. Luaran dan Berkas yang Wajib Dikumpulkan</h2>
+  
+  <h3>5.1 Dokumen Ringkasan Karya (PDF 5–7 Halaman)</h3>
+  <p>Format file PDF tunggal berukuran tepat 5 sampai 7 halaman yang memuat identitas tim, latar belakang masalah, identifikasi target pengguna, perancangan alur proses bisnis (flowchart), arsitektur sistem, skema ERD basis data MySQL, spesifikasi teknologi, dan tangkapan layar antarmuka utama.</p>
 
-    <!-- 6. Pendaftaran & Mekanisme -->
-    <section id="pendaftaran">
-      <h2>6. Pendaftaran dan Mekanisme Pengumpulan</h2>
-      
-      <table>
-        <tbody>
-          <tr>
-            <td><strong>Biaya Pendaftaran</strong></td>
-            <td><strong>Rp50.000,-</strong> per tim</td>
-          </tr>
-          <tr>
-            <td><strong>Tautan Pendaftaran</strong></td>
-            <td><a href="https://forms.gle/5QWPv4pqVaXKXz3i7" target="_blank">https://forms.gle/5QWPv4pqVaXKXz3i7</a></td>
-          </tr>
-          <tr>
-            <td><strong>Tautan Pengumpulan</strong></td>
-            <td><a href="https://forms.gle/z6LmuzqaYRqVUZaNA" target="_blank">https://forms.gle/z6LmuzqaYRqVUZaNA</a></td>
-          </tr>
-          <tr>
-            <td><strong>Narahubung (WhatsApp)</strong></td>
-            <td><a href="https://wa.me/6285181079659" target="_blank">+62 851-8107-9659</a></td>
-          </tr>
-        </tbody>
-      </table>
+  <h3>5.2 Tautan Live Deployment & Repositori GitHub</h3>
+  <ul>
+    <li>URL website aktif yang telah dipublikasikan dan siap diuji langsung oleh juri.</li>
+    <li>URL repositori GitHub publik yang menggunakan struktur standar dari <a href="https://github.com/axis-competition/submission-template" target="_blank">submission-template</a>.</li>
+    <li>Akun uji coba juri (*demo credentials*) minimal untuk 2 role pengguna berbeda.</li>
+  </ul>
 
-      <h3>Jadwal Penting Kompetisi (Timeline):</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Tahapan Kegiatan</th>
-            <th>Waktu Pelaksanaan</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Publikasi Lomba</td>
-            <td>Jumat, 20 November 2026</td>
-          </tr>
-          <tr>
-            <td><strong>Periode Pendaftaran</strong></td>
-            <td><strong>20 – 30 November 2026</strong></td>
-          </tr>
-          <tr>
-            <td><strong>Pengembangan & Pengumpulan Karya</strong></td>
-            <td><strong>20 November – 9 Desember 2026 (23.59 WIB)</strong></td>
-          </tr>
-          <tr>
-            <td>Masa Penjurian</td>
-            <td>10 – 11 Desember 2026</td>
-          </tr>
-          <tr>
-            <td><strong>Acara Puncak & Pengumuman Juara</strong></td>
-            <td><strong>Sabtu, 12 Desember 2026</strong></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+  <h3>5.3 Video Demonstrasi (Maksimal 3 Menit)</h3>
+  <p>Video rekaman yang memperlihatkan simulasi fitur nyata pada website yang berjalan (bukan slide show presentasi). Menjelaskan rumusan masalah, solusi yang dibangun, simulasi alur proses bisnis dari sudut pandang pengguna, dan manfaat nyata solusi. Diunggah ke platform YouTube / Google Drive dengan status akses Publik atau Unlisted.</p>
 
-    <!-- 7. Penilaian -->
-    <section id="penilaian">
-      <h2>7. Sistem Penilaian</h2>
-      <p>Penilaian karya dilakukan secara komprehensif oleh dewan juri ahli dengan total bobot 100%:</p>
+  <!-- 6 -->
+  <h2 id="s6"><span class="material-symbols-rounded">calendar_month</span> 6. Pendaftaran dan Mekanisme Pengumpulan</h2>
+  <table>
+    <tr><th>Butir Informasi</th><th>Keterangan Resmi</th></tr>
+    <tr><td><strong>Biaya Registrasi</strong></td><td>Rp50.000,- per tim</td></tr>
+    <tr><td><strong>Formulir Pendaftaran</strong></td><td><a href="https://forms.gle/5QWPv4pqVaXKXz3i7" target="_blank">https://forms.gle/5QWPv4pqVaXKXz3i7</a></td></tr>
+    <tr><td><strong>Formulir Pengumpulan</strong></td><td><a href="https://forms.gle/z6LmuzqaYRqVUZaNA" target="_blank">https://forms.gle/z6LmuzqaYRqVUZaNA</a></td></tr>
+    <tr><td><strong>Template Submission</strong></td><td><a href="https://github.com/axis-competition/submission-template" target="_blank">github.com/axis-competition/submission-template</a></td></tr>
+    <tr><td><strong>Narahubung WhatsApp</strong></td><td><a href="https://wa.me/6285181079659" target="_blank">+62 851-8107-9659</a></td></tr>
+  </table>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Aspek Penilaian</th>
-            <th>Bobot</th>
-            <th>Kriteria Evaluasi</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Fungsionalitas & Implementasi Website</strong></td>
-            <td><strong>35%</strong></td>
-            <td>Kelengkapan fungsi utama, integrasi MySQL & CRUD, sistem autentikasi multi-role, stabilitas error handling, dan keandalan sistem.</td>
-          </tr>
-          <tr>
-            <td><strong>Analisis Kebutuhan & Perancangan Sistem</strong></td>
-            <td><strong>30%</strong></td>
-            <td>Ketepatan identifikasi masalah, kejelasan target pengguna, alur proses bisnis (Flowchart), arsitektur sistem, dan desain ERD basis data.</td>
-          </tr>
-          <tr>
-            <td><strong>UI/UX dan Responsivitas</strong></td>
-            <td><strong>20%</strong></td>
-            <td>Kemudahan penggunaan (usability), konsistensi antarmuka, kejelasan navigasi, kenyamanan pengalaman pengguna, dan adaptasi desktop-mobile.</td>
-          </tr>
-          <tr>
-            <td><strong>Inovasi, Manfaat & Kelayakan</strong></td>
-            <td><strong>15%</strong></td>
-            <td>Kreativitas solusi, dampak efisiensi nyata pada organisasi, potensi adopsi operasional, dan keberlanjutan sistem.</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+  <h3>Jadwal Pelaksanaan Kompetisi:</h3>
+  <table>
+    <tr><th>Tahapan Kegiatan</th><th>Jadwal Pelaksanaan</th></tr>
+    <tr><td>Publikasi Lomba Resmi</td><td>Jumat, 20 November 2026</td></tr>
+    <tr><td><strong>Periode Pendaftaran</strong></td><td><strong>20 – 30 November 2026</strong></td></tr>
+    <tr><td><strong>Pengembangan & Submit Karya</strong></td><td><strong>20 Nov – 9 Des 2026, 23.59 WIB</strong></td></tr>
+    <tr><td>Masa Penjurian</td><td>10 – 11 Desember 2026</td></tr>
+    <tr><td><strong>Acara Puncak & Awarding</strong></td><td><strong>Sabtu, 12 Desember 2026</strong></td></tr>
+  </table>
 
-    <!-- 8. Etika -->
-    <section id="etika">
-      <h2>8. Etika dan Ketentuan Umum</h2>
-      <ul>
-        <li><strong>Orisinalitas:</strong> Karya wajib orisinal. Penggunaan framework/library open-source diperbolehkan sesuai lisensinya. Plagiarisme akan langsung berakibat diskualifikasi.</li>
-        <li><strong>Kesesuaian Kategori:</strong> Fitur yang dibangun harus selaras dengan kategori studi kasus yang dipilih.</li>
-        <li><strong>Aksesibilitas Pengujian:</strong> URL hosting, repositori GitHub, dan video wajib dapat diakses publik selama masa penjurian (10–11 Desember 2026).</li>
-        <li><strong>Keputusan Juri:</strong> Keputusan dewan juri bersifat mutlak dan tidak dapat diganggu gugat.</li>
-      </ul>
-    </section>
+  <!-- 7 -->
+  <h2 id="s7"><span class="material-symbols-rounded">analytics</span> 7. Sistem Penilaian</h2>
+  <p>Evaluasi karya dilakukan secara objektif oleh dewan juri ahli dengan total bobot 100%:</p>
+  <table>
+    <tr><th>Aspek Evaluasi</th><th>Bobot</th><th>Kriteria Penilaian Utama</th></tr>
+    <tr><td><strong>Fungsionalitas & Implementasi</strong></td><td><strong>35%</strong></td><td>Kelengkapan fungsi inti, integritas data MySQL, operasi CRUD, autentikasi multi-role, stabilitas error handling, dan kerapian struktur kode.</td></tr>
+    <tr><td><strong>Analisis & Perancangan Sistem</strong></td><td><strong>30%</strong></td><td>Ketajaman identifikasi masalah, relevansi solusi, alur proses bisnis (Flowchart/BPMN), arsitektur perangkat lunak, dan diagram ERD basis data.</td></tr>
+    <tr><td><strong>UI/UX dan Responsivitas</strong></td><td><strong>20%</strong></td><td>Kemudahan penggunaan (usability), konsistensi desain antarmuka, kejelasan sistem navigasi, dan adaptasi layout pada desktop & mobile.</td></tr>
+    <tr><td><strong>Inovasi, Manfaat & Kelayakan</strong></td><td><strong>15%</strong></td><td>Orisinalitas gagasan pembeda, dampak nyata pada efisiensi kerja organisasi, potensi adopsi operasional, dan skalabilitas sistem.</td></tr>
+  </table>
 
-    <!-- 9. Penutup -->
-    <section id="penutup">
-      <h2>9. Penutup</h2>
-      <p>AXIS 2026 diharapkan dapat menjadi wadah pembuktian talenta mahasiswa Indonesia dalam menghadirkan arsitektur web yang inovatif, fungsional, dan bernilai guna bagi masyarakat dan dunia usaha.</p>
-      <div class="callout">
-        <strong>"Where Innovation Meets Web Technology"</strong> — Selamat berkarya dan tunjukkan performa terbaik tim Anda!
-      </div>
-    </section>
+  <!-- 8 -->
+  <h2 id="s8"><span class="material-symbols-rounded">gavel</span> 8. Etika dan Ketentuan Umum</h2>
+  <ul>
+    <li><strong>Orisinalitas Mutlak:</strong> Karya harus merupakan kreasi orisinal tim peserta. Penggunaan framework dan library open-source wajib mematuhi ketentuan lisensi masing-masing. Segala bentuk plagiarisme akan berakibat diskualifikasi langsung.</li>
+    <li><strong>Kesesuaian Kategori:</strong> Aplikasi harus konsisten menjawab persoalan pada kategori studi kasus yang dipilih.</li>
+    <li><strong>Aksesibilitas Penjurian:</strong> Seluruh tautan (live deployment, GitHub, dan video) wajib dapat dibuka publik tanpa kendala selama masa penjurian (10–11 Desember 2026).</li>
+    <li><strong>Keputusan Juri:</strong> Bersifat <strong>final, independen, dan tidak dapat diganggu gugat</strong> oleh pihak manapun.</li>
+  </ul>
 
-    <!-- Lampiran A -->
-    <section id="lampiran-a">
-      <h2>Lampiran A: Rekomendasi Struktur Dokumen Ringkasan (5–7 Halaman)</h2>
-      <ul>
-        <li><strong>Halaman 1:</strong> Identitas Tim, Kategori Lomba, & Executive Summary (Ringkasan Masalah dan Solusi).</li>
-        <li><strong>Halaman 2:</strong> Latar Belakang Masalah, User Persona, serta Tujuan & Manfaat Aplikasi.</li>
-        <li><strong>Halaman 3:</strong> Proses Bisnis & Diagram Alur Kerja (Flowchart / Activity Diagram).</li>
-        <li><strong>Halaman 4:</strong> Arsitektur Sistem & Perancangan Basis Data (Diagram ERD & Relasi Tabel MySQL).</li>
-        <li><strong>Halaman 5:</strong> Matriks Fitur & Hak Akses Berdasarkan Peran (Role-Based Access Control).</li>
-        <li><strong>Halaman 6:</strong> Spesifikasi Teknologi & Dokumentasi Tangkapan Layar (UI Screenshot Desktop & Mobile).</li>
-        <li><strong>Halaman 7:</strong> Kesimpulan, Analisis Keberlanjutan Sistem, serta Tautan Live URL, GitHub & Video Demo.</li>
-      </ul>
-    </section>
+  <!-- 9 -->
+  <h2 id="s9"><span class="material-symbols-rounded">verified</span> 9. Penutup</h2>
+  <p>AXIS 2026 diselenggarakan untuk menjadi panggung apresiasi talenta rekayasa perangkat lunak mahasiswa Indonesia. Melalui integrasi analisis kebutuhan yang komprehensif dan implementasi web yang tangguh, kompetisi ini diharapkan melahirkan solusi digital yang siap mendukung kemajuan organisasi dan dunia usaha.</p>
+  <blockquote><strong>"Where Innovation Meets Web Technology"</strong> — Selamat berkarya dan tunjukkan performa terbaik tim Anda di GALAKSI 2026!</blockquote>
 
-    <!-- Lampiran B -->
-    <section id="lampiran-b">
-      <h2>Lampiran B: Checklist Kesiapan Pengumpulan</h2>
-      <ul class="checklist">
-        <li>Tim beranggotakan 2 sampai 4 mahasiswa aktif S1 perguruan tinggi yang sama.</li>
-        <li>Seluruh anggota tim hanya terdaftar di satu tim kompetisi.</li>
-        <li>Aplikasi dibangun menggunakan teknologi wajib: PHP dan basis data MySQL.</li>
-        <li>Fitur utama berfungsi penuh (bukan sekadar tampilan prototipe statis).</li>
-        <li>Fitur Create, Read, Update, Delete (CRUD) berjalan dan tervalidasi dengan benar.</li>
-        <li>Autentikasi aktif dengan minimal 2 peran pengguna (roles) berhak akses berbeda.</li>
-        <li>Tampilan web responsif di layar komputer (desktop) maupun ponsel (mobile).</li>
-        <li>Website telah dideploy online dan URL dapat diakses juri secara publik.</li>
-        <li>Repositori GitHub dapat diakses publik dan memiliki file <code>README.md</code> lengkap.</li>
-        <li>Akun demonstrasi (username & password) telah disediakan untuk setiap peran.</li>
-        <li>Dokumen ringkasan dalam format PDF berjumlah tepat 5 sampai 7 halaman.</li>
-        <li>Video demonstrasi berdurasi maksimal 3 menit dan tautan dapat diputar publik.</li>
-      </ul>
-    </section>
+  <!-- LAMPIRAN A -->
+  <h2 id="la"><span class="material-symbols-rounded">article</span> Lampiran A — Panduan Dokumen Ringkasan PDF (5–7 Halaman)</h2>
+  <ul>
+    <li><strong>Halaman 1:</strong> Identitas tim, kategori lomba yang dipilih, dan executive summary (ringkasan masalah dan solusi).</li>
+    <li><strong>Halaman 2:</strong> Latar belakang masalah operasional riil, profil target pengguna (*user persona*), serta tujuan dan manfaat solusi.</li>
+    <li><strong>Halaman 3:</strong> Perancangan proses bisnis sebelum vs sesudah sistem ada, disertai diagram alur kerja visual (Flowchart / Activity Diagram).</li>
+    <li><strong>Halaman 4:</strong> Diagram arsitektur perangkat lunak (Client-Server-Database) dan skema relasi basis data (ERD MySQL) beserta kamus data ringkas.</li>
+    <li><strong>Halaman 5:</strong> Matriks hak akses menu/aksi untuk masing-masing peran pengguna (*RBAC*) serta uraian fitur-fitur kunci.</li>
+    <li><strong>Halaman 6:</strong> Spesifikasi teknologi (*tech stack*) dan tangkapan layar antarmuka utama (desktop dan mobile) disertai keterangan fungsi.</li>
+    <li><strong>Halaman 7:</strong> Kesimpulan pencapaian solusi, rencana keberlanjutan sistem (*scalability*), serta tautan Live URL, GitHub, Video Demo, dan akun demo juri.</li>
+  </ul>
 
-    <!-- Lampiran C -->
-    <section id="lampiran-c">
-      <h2>Lampiran C: Format Lembar Informasi Tim dan Karya</h2>
-      <pre>
+  <!-- LAMPIRAN B -->
+  <h2 id="lb"><span class="material-symbols-rounded">checklist</span> Lampiran B — Checklist Kesiapan Pengumpulan</h2>
+  <ul class="checklist">
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Tim terdiri atas 2 sampai 4 mahasiswa aktif jenjang S1 dari perguruan tinggi yang sama.</li>
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Setiap anggota tim tidak terdaftar di tim lain pada kompetisi AXIS 2026.</li>
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Tim memilih satu kategori studi kasus yang sesuai (Kategori A / B / C).</li>
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Website dibangun menggunakan backend PHP (Native atau Framework) dan basis data MySQL.</li>
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Fitur utama sistem berfungsi penuh dari awal hingga selesai (bukan prototipe statis).</li>
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Fitur CRUD (Create, Read, Update, Delete) berjalan normal dan terintegrasi ke basis data MySQL.</li>
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Memiliki sistem autentikasi login dengan minimal 2 peran pengguna berbeda hak akses (RBAC).</li>
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Tampilan website responsif dan nyaman digunakan pada desktop maupun smartphone.</li>
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Website telah dideploy online dan URL publik dapat diakses tanpa hambatan.</li>
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Repositori GitHub bersifat publik dan menggunakan template resmi submission-template.</li>
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Kredensial akun uji coba juri (username dan password) telah disediakan untuk setiap peran.</li>
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Dokumen ringkasan dalam format PDF berjumlah tepat 5 sampai 7 halaman.</li>
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Video demonstrasi berdurasi maksimal 3 menit dan link video dapat diputar secara publik/unlisted.</li>
+    <li><span class="material-symbols-rounded">check_box_outline_blank</span> Seluruh tautan telah dicek dan dapat dibuka melalui mode Incognito / Private browser.</li>
+  </ul>
+
+  <!-- LAMPIRAN C -->
+  <h2 id="lc"><span class="material-symbols-rounded">assignment</span> Lampiran C — Format Lembar Informasi Tim dan Karya</h2>
+  <pre>
 1.  Nama Tim                     : [Nama Tim]
-2.  Asal Perguruan Tinggi        : [Nama Universitas / Institut / PTN / PTS]
-3.  Nama Ketua Tim               : [Nama Ketua] (NIM: __________)
-4.  Nama Anggota 2               : [Nama Anggota 2] (NIM: __________)
-5.  Nama Anggota 3 (jika ada)    : [Nama Anggota 3] (NIM: __________)
-6.  Nama Anggota 4 (jika ada)    : [Nama Anggota 4] (NIM: __________)
+2.  Asal Perguruan Tinggi        : [Nama Perguruan Tinggi / Universitas]
+3.  Nama Ketua Tim               : [Nama Lengkap Ketua] (NIM: __________)
+4.  Nama Anggota 2               : [Nama Lengkap Anggota 2] (NIM: __________)
+5.  Nama Anggota 3 (jika ada)    : [Nama Lengkap Anggota 3] (NIM: __________)
+6.  Nama Anggota 4 (jika ada)    : [Nama Lengkap Anggota 4] (NIM: __________)
 7.  Program Studi                : [Program Studi]
-8.  Judul Karya                  : [Judul Website / Aplikasi]
+8.  Judul Karya                  : [Judul Karya Aplikasi Web]
 9.  Kategori Studi Kasus         : [Kategori A / B / C]
 10. Tautan Aplikasi (Live URL)   : https://...
 11. Tautan Repositori GitHub     : https://github.com/...
-12. Tautan Video Demonstrasi     : https://... (Maks. 3 Menit)
-13. Akun Demonstrasi (Demo Login):
-    - Role 1 (Admin/Pengelola)   : Username: [...] | Password: [...]
-    - Role 2 (Staff/User)        : Username: [...] | Password: [...]
-14. Ringkasan Masalah & Solusi   : [2-3 Kalimat padat]
-15. Fitur-Fitur Utama            : [Daftar 3-5 fitur unggulan]</pre>
-    </section>
+12. Tautan Video Demonstrasi     : https://... (Maksimal 3 Menit)
+13. Akun Demonstrasi (Login)     :
+    - Peran 1 (Admin/Pengelola)  : Username: [...] | Password: [...]
+    - Peran 2 (Staff/User)       : Username: [...] | Password: [...]
+14. Ringkasan Masalah & Solusi   : [2-3 Kalimat mengenai masalah dan solusi website Anda]
+15. Fitur Utama Aplikasi         :
+    - [Fitur 1]
+    - [Fitur 2]
+    - [Fitur 3]</pre>
 
-  </div>
-
+  <footer style="margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--border);text-align:center;color:var(--g6);font-size:.82rem">
+    <p>Panitia Pelaksana <strong>AXIS 2026</strong> — National Web Development Competition</p>
+    <p>Rangkaian Kegiatan Resmi GALAKSI 2026 — Universitas Islam Negeri Sultan Syarif Kasim Riau</p>
+  </footer>
+</div>
 </body>
 </html>

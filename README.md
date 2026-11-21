@@ -23,13 +23,12 @@
 ---
 
 ## 📌 Navigasi Cepat
-- 📖 **[Guidebook Peserta Format Markdown (GUIDEBOOK.md)](./GUIDEBOOK.md)**
-- 🌐 **[Portal Interaktif & Versi Cetak PDF (index.html)](./index.html)**
+- 🌐 **[Portal Resmi Kompetisi (Website)](https://axis-competition.github.io/axis-2026/)**
+- 📖 **[Guidebook Peserta Format Web (guidebook.html)](./guidebook.html)**
+- 📘 **[Guidebook Peserta Format Markdown (GUIDEBOOK.md)](./GUIDEBOOK.md)**
+- 📦 **[Template Repositori Pengumpulan (submission-template)](https://github.com/axis-competition/submission-template)**
 - 📝 **[Form Pendaftaran Resmi](https://forms.gle/5QWPv4pqVaXKXz3i7)** *(Dibuka 20 – 30 November 2026)*
 - 📤 **[Form Pengumpulan Karya](https://forms.gle/z6LmuzqaYRqVUZaNA)** *(Batas: 9 Desember 2026 pukul 23.59 WIB)*
-- 📑 **[Template README Peserta](./templates/TEMPLATE_README_PESERTA.md)**
-- 📋 **[Template Dokumen Ringkasan PDF](./templates/PANDUAN_DOKUMEN_RINGKASAN.md)**
-- 📄 **[Template Lembar Informasi Karya](./templates/TEMPLATE_LEMBAR_INFORMASI_KARYA.md)**
 - 💬 **Narahubung Resmi (WhatsApp)**: **[+62 851-8107-9659](https://wa.me/6285181079659)**
 
 ---
@@ -132,18 +131,12 @@ timeline
 
 ---
 
-## 🗂️ Struktur Repositori Resmi
+## 🗂️ Berkas & Sumber Daya Resmi
 
-```
-axis-2026/
-├── README.md                           # Berkas ini (Halaman Utama Repositori)
-├── GUIDEBOOK.md                        # Buku Panduan Resmi Lengkap AXIS 2026
-├── guidebook.html                      # Tampilan Web & Print-Ready PDF Guidebook
-└── templates/                          # Template & Berkas Pendukung Peserta
-    ├── TEMPLATE_README_PESERTA.md      # Template README untuk repo karya peserta
-    ├── TEMPLATE_LEMBAR_INFORMASI_KARYA.md # Template info tim & tautan pengumpulan
-    └── PANDUAN_DOKUMEN_RINGKASAN.md    # Panduan penyusunan ringkasan PDF (5-7 hal)
-```
+- **[index.html](./index.html)** — Landing page animasi bertema galaksi & coding IT (Live di [GitHub Pages](https://axis-competition.github.io/axis-2026/))
+- **[guidebook.html](./guidebook.html)** — Buku panduan lengkap versi web & siap cetak PDF
+- **[GUIDEBOOK.md](./GUIDEBOOK.md)** — Buku panduan lengkap versi Markdown
+- **[submission-template](https://github.com/axis-competition/submission-template)** — Repositori template resmi untuk pengumpulan karya peserta
 
 ---
 

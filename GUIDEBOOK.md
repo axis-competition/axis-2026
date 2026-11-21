@@ -189,7 +189,7 @@ Setiap tim wajib mengumpulkan **3 (tiga) komponen luaran utama**:
 
 ### 🌐 2. Tautan Live Deployment & Repositori GitHub
 * **Live Deployment**: Website dapat diakses juri secara publik tanpa kendala jaringan privat/localhost.
-* **Repositori GitHub**: Repositori berstatus publik yang memuat source code rapi dan file `README.md` berstandar resmi (lihat template di folder `templates/`).
+* **Repositori GitHub**: Repositori berstatus publik yang memuat source code rapi dan file `README.md` berstandar resmi (gunakan template resmi di [axis-competition/submission-template](https://github.com/axis-competition/submission-template)).
 * **Akun Demonstrasi**: Menyediakan minimal 2 pasang username/password untuk masing-masing peran pengguna di formulir dan file README.
 
 ### 🎥 3. Video Demonstrasi Aplikasi (Maksimal 3 Menit)
