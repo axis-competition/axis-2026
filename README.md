@@ -149,5 +149,5 @@ Jika tim Anda memiliki pertanyaan atau kendala seputar teknis kompetisi, silakan
 
 ---
 <div align="center">
-  <small>© 2026 AXIS — Application eXcellence in Information Systems | GALAKSI 2026. All rights reserved.</small>
+  <small>© 2026 Application eXcellence in Information Systems ( AXIS )</small>
 </div>

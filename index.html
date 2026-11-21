@@ -21,7 +21,7 @@
     }
     html { scroll-behavior: smooth; }
     body { font-family: var(--font-body); background: var(--bg); color: var(--white); line-height: 1.7; overflow-x: hidden; }
-    p { text-align: justify; }
+    p { text-align: center; }
     .material-symbols-rounded { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
 
     /* ===== STARFIELD ===== */
@@ -193,18 +193,22 @@
 
     /* ===== TRACKS ===== */
     .tracks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .tracks-grid .glass-card { text-align: center; display: flex; flex-direction: column; align-items: center; }
     .track-icon {
-      width: 44px; height: 44px; border-radius: 10px;
+      width: 48px; height: 48px; border-radius: 12px;
       background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
-      display: flex; align-items: center; justify-content: center; margin-bottom: 1.15rem;
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 1.15rem;
     }
-    .track-icon .material-symbols-rounded { font-size: 1.35rem; color: var(--g3); }
+    .track-icon .material-symbols-rounded { font-size: 1.4rem; color: var(--g3); }
     .track-label {
       font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase;
-      letter-spacing: 0.1em; color: var(--g5); margin-bottom: 0.45rem;
+      letter-spacing: 0.1em; color: var(--g5); margin-bottom: 0.45rem; text-align: center;
     }
-    .track-name { font-family: var(--font-display); font-size: 1.08rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--g1); }
-    .track-desc { font-size: 0.87rem; color: var(--g5); line-height: 1.6; }
+    .track-name {
+      font-family: var(--font-display); font-size: 1.12rem; font-weight: 700;
+      margin-bottom: 0.75rem; color: var(--g1); text-align: center; line-height: 1.35;
+    }
+    .track-desc { font-size: 0.87rem; color: var(--g5); line-height: 1.65; text-align: center !important; }
 
     /* ===== TECH ===== */
     .tech-row { display: flex; gap: 1.15rem; justify-content: center; flex-wrap: wrap; }
@@ -225,11 +229,12 @@
 
     /* ===== DELIVERABLES ===== */
     .dlv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-    .dlv-num { font-family: var(--font-mono); font-size: 0.68rem; color: var(--g6); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.7rem; }
-    .dlv-icon { margin-bottom: 0.85rem; }
-    .dlv-icon .material-symbols-rounded { font-size: 1.5rem; color: var(--g4); }
-    .dlv-title { font-family: var(--font-display); font-weight: 700; font-size: 1.02rem; margin-bottom: 0.5rem; }
-    .dlv-desc { font-size: 0.87rem; color: var(--g5); line-height: 1.6; }
+    .dlv-grid .glass-card { text-align: center; }
+    .dlv-num { font-family: var(--font-mono); font-size: 0.68rem; color: var(--g6); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.7rem; text-align: center; }
+    .dlv-icon { margin: 0 auto 0.85rem; display: flex; justify-content: center; }
+    .dlv-icon .material-symbols-rounded { font-size: 1.6rem; color: var(--g4); }
+    .dlv-title { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; text-align: center; }
+    .dlv-desc { font-size: 0.87rem; color: var(--g5); line-height: 1.65; text-align: center !important; }
 
     /* ===== TIMELINE ===== */
     .timeline { position: relative; max-width: 630px; margin: 0 auto; }
@@ -249,11 +254,12 @@
 
     /* ===== SCORING ===== */
     .score-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
-    .score-pct { font-family: var(--font-display); font-size: 2.4rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--white); }
-    .score-name { font-family: var(--font-display); font-weight: 700; font-size: 0.98rem; margin-bottom: 0.45rem; }
-    .score-bar { height: 3px; background: var(--g9); border-radius: 3px; margin-bottom: 0.8rem; overflow: hidden; }
+    .score-grid .glass-card { text-align: center; }
+    .score-pct { font-family: var(--font-display); font-size: 2.4rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--white); text-align: center; }
+    .score-name { font-family: var(--font-display); font-weight: 700; font-size: 0.98rem; margin-bottom: 0.45rem; text-align: center; }
+    .score-bar { height: 3px; background: var(--g9); border-radius: 3px; margin: 0 auto 0.8rem; overflow: hidden; max-width: 160px; }
     .score-bar-fill { height: 100%; border-radius: 3px; background: white; }
-    .score-desc { font-size: 0.84rem; color: var(--g5); line-height: 1.55; }
+    .score-desc { font-size: 0.84rem; color: var(--g5); line-height: 1.55; text-align: center !important; }
 
     /* ===== INFO TABLE ===== */
     .info-table { width: 100%; border-collapse: collapse; }
@@ -508,7 +514,9 @@ DB::table('users')
     </div>
   </section>
 
-  <footer><p>Panitia Pelaksana <strong>AXIS 2026</strong> — National Web Development Competition</p><p style="margin-top:.25rem">GALAKSI 2026 — UIN Sultan Syarif Kasim Riau</p></footer>
+  <footer>
+    <p style="text-align:center;">&copy; 2026 Application eXcellence in Information Systems ( AXIS )</p>
+  </footer>
 
   <script>
     // STARFIELD

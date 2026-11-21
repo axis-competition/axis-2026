@@ -340,5 +340,5 @@ Selamat berinovasi dan raih prestasi terbaik tim Anda di panggung nasional GALAK
 
 ---
 <div align="center">
-  <small><b>Panitia Pelaksana AXIS 2026 | National Web Development Competition</b><br/>Kegiatan Resmi GALAKSI 2026 — Universitas Islam Negeri Sultan Syarif Kasim Riau</small>
+  <small>© 2026 Application eXcellence in Information Systems ( AXIS )</small>
 </div>
