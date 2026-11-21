@@ -3,858 +3,1262 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AXIS 2026 — Guidebook Resmi | National Web Development Competition</title>
+  <title>AXIS 2026 — National Web Development Competition | GALAKSI 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
+    /* ========== RESET & ROOT ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #0b0f19;
-      --surface: #111827;
-      --surface-card: #1e293b;
-      --border: #334155;
-      --primary: #3b82f6;
-      --primary-hover: #2563eb;
-      --accent: #10b981;
-      --warning: #f59e0b;
-      --text: #f8fafc;
+      --bg-deep: #030014;
+      --bg-dark: #0a0a1a;
+      --surface: rgba(15, 15, 35, 0.7);
+      --glass: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --primary: #7c3aed;
+      --primary-glow: rgba(124, 58, 237, 0.4);
+      --accent: #06b6d4;
+      --accent-glow: rgba(6, 182, 212, 0.3);
+      --green: #10b981;
+      --green-glow: rgba(16, 185, 129, 0.3);
+      --pink: #ec4899;
+      --orange: #f59e0b;
+      --text: #f1f5f9;
       --text-muted: #94a3b8;
-      --font-main: 'Plus Jakarta Sans', sans-serif;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    html { scroll-behavior: smooth; }
     body {
-      font-family: var(--font-main);
-      background-color: var(--bg);
+      font-family: var(--font-body);
+      background: var(--bg-deep);
       color: var(--text);
       line-height: 1.7;
-      scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
-    /* Container & Layout */
-    .app-layout {
+    /* ========== STARFIELD BACKGROUND ========== */
+    #starfield {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ========== BINARY RAIN CANVAS ========== */
+    #binary-rain {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.12;
+    }
+
+    /* ========== NEBULA GRADIENTS ========== */
+    .nebula {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .nebula-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+      top: -200px; right: -150px;
+      animation: nebulaDrift1 20s ease-in-out infinite;
+    }
+    .nebula-2 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      bottom: -100px; left: -150px;
+      animation: nebulaDrift2 25s ease-in-out infinite;
+    }
+    .nebula-3 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 70%);
+      top: 50%; left: 40%;
+      animation: nebulaDrift3 18s ease-in-out infinite;
+    }
+    @keyframes nebulaDrift1 {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-60px, 40px) scale(1.15); }
+    }
+    @keyframes nebulaDrift2 {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(50px, -30px) scale(1.1); }
+    }
+    @keyframes nebulaDrift3 {
+      0%, 100% { transform: translate(0, 0) scale(0.9); opacity: 0.5; }
+      50% { transform: translate(-40px, 20px) scale(1.05); opacity: 1; }
+    }
+
+    /* ========== FLOATING CODE SNIPPETS ========== */
+    .floating-code {
+      position: fixed;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: rgba(124, 58, 237, 0.2);
+      white-space: pre;
+      pointer-events: none;
+      z-index: 1;
+      animation: floatCode 30s linear infinite;
+      line-height: 1.4;
+    }
+    .floating-code:nth-child(2) { color: rgba(6, 182, 212, 0.15); animation-duration: 35s; animation-delay: -5s; }
+    .floating-code:nth-child(3) { color: rgba(16, 185, 129, 0.15); animation-duration: 40s; animation-delay: -12s; }
+    .floating-code:nth-child(4) { color: rgba(236, 72, 153, 0.12); animation-duration: 28s; animation-delay: -8s; }
+    @keyframes floatCode {
+      0% { transform: translateY(100vh) rotate(-2deg); opacity: 0; }
+      5% { opacity: 1; }
+      95% { opacity: 1; }
+      100% { transform: translateY(-120vh) rotate(2deg); opacity: 0; }
+    }
+
+    /* ========== NAVBAR ========== */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
       display: flex;
-      min-height: 100vh;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(20px) saturate(180%);
+      background: rgba(3, 0, 20, 0.6);
+      border-bottom: 1px solid var(--glass-border);
+      transition: all 0.3s;
     }
-
-    /* Sidebar Navigation */
-    .sidebar {
-      width: 290px;
-      background: var(--surface);
-      border-right: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      height: 100vh;
-      overflow-y: auto;
-      padding: 2rem 1.25rem;
-      flex-shrink: 0;
+    .navbar.scrolled {
+      padding: 0.65rem 2rem;
+      background: rgba(3, 0, 20, 0.85);
     }
-
-    .brand {
+    .nav-brand {
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      margin-bottom: 2rem;
-      padding-bottom: 1.25rem;
-      border-bottom: 1px solid var(--border);
+      text-decoration: none;
     }
-
-    .brand-logo {
-      width: 42px;
-      height: 42px;
+    .nav-logo {
+      width: 40px; height: 40px;
       background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      font-size: 1.25rem;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
       color: white;
-      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+      box-shadow: 0 0 20px var(--primary-glow);
+      position: relative;
     }
-
-    .brand-title {
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: -0.02em;
+    .nav-logo::after {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      z-index: -1;
+      opacity: 0.5;
+      filter: blur(6px);
+      animation: logoPulse 3s ease-in-out infinite;
+    }
+    @keyframes logoPulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.05); }
+    }
+    .nav-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
       color: white;
     }
-
-    .brand-subtitle {
-      font-size: 0.75rem;
+    .nav-sub {
+      font-size: 0.7rem;
       color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
     }
-
-    .nav-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .nav-item a {
+    .nav-links {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
-      padding: 0.65rem 0.85rem;
-      border-radius: 8px;
+      gap: 0.25rem;
+      list-style: none;
+    }
+    .nav-links a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       font-weight: 500;
+      padding: 0.5rem 0.85rem;
+      border-radius: 8px;
       transition: all 0.2s;
     }
+    .nav-links a:hover { color: white; background: rgba(255,255,255,0.06); }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--primary), #9333ea) !important;
+      color: white !important;
+      padding: 0.5rem 1.15rem !important;
+      font-weight: 600 !important;
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+    .nav-cta:hover { box-shadow: 0 0 30px var(--primary-glow); transform: translateY(-1px); }
 
-    .nav-item a:hover {
-      background: rgba(255, 255, 255, 0.06);
-      color: white;
+    /* ========== HERO ========== */
+    .hero-section {
+      position: relative;
+      z-index: 10;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 5rem;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(124, 58, 237, 0.12);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      color: #c4b5fd;
+      padding: 0.45rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      animation: fadeSlideUp 0.8s ease-out 0.2s both;
+    }
+    .hero-eyebrow .dot {
+      width: 8px; height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: dotPulse 2s ease-in-out infinite;
+      box-shadow: 0 0 8px var(--green-glow);
+    }
+    @keyframes dotPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 1rem;
+      animation: fadeSlideUp 0.8s ease-out 0.4s both;
+    }
+    .hero-title .gradient-text {
+      background: linear-gradient(135deg, #c084fc 0%, var(--accent) 50%, var(--green) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% auto;
+      animation: gradientShift 5s ease-in-out infinite;
+    }
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% center; }
+      50% { background-position: 100% center; }
+    }
+    .hero-subtitle {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin-bottom: 2.5rem;
+      animation: fadeSlideUp 0.8s ease-out 0.6s both;
     }
 
-    /* Main Content */
-    .content {
-      flex: 1;
-      padding: 3rem 4rem;
-      max-width: 980px;
-    }
-
-    /* Hero Banner */
-    .hero {
-      background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(16, 185, 129, 0.1) 100%);
-      border: 1px solid rgba(59, 130, 246, 0.3);
+    /* Theme Banner in Hero */
+    .theme-glass {
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
       border-radius: 16px;
-      padding: 2.75rem;
-      margin-bottom: 3rem;
+      padding: 1.75rem 2.5rem;
+      max-width: 720px;
+      margin-bottom: 2.5rem;
+      animation: fadeSlideUp 0.8s ease-out 0.8s both;
       position: relative;
       overflow: hidden;
     }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(59, 130, 246, 0.15);
-      border: 1px solid rgba(59, 130, 246, 0.4);
-      color: #93c5fd;
-      padding: 0.35rem 0.9rem;
-      border-radius: 9999px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 1.25rem;
+    .theme-glass::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary), var(--accent), transparent);
     }
-
-    .hero h1 {
-      font-size: 2.75rem;
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 0.75rem;
-      background: linear-gradient(to right, #ffffff, #cbd5e1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-tagline {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      margin-bottom: 1.75rem;
-    }
-
-    .theme-banner {
-      background: rgba(15, 23, 42, 0.85);
-      border-left: 4px solid var(--accent);
-      padding: 1.15rem 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-    }
-
     .theme-label {
-      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.15em;
       color: var(--accent);
-      font-weight: 700;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.5rem;
     }
-
     .theme-text {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #f1f5f9;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #e2e8f0;
       font-style: italic;
+      line-height: 1.5;
     }
 
-    .btn-group {
+    /* Hero CTA Buttons */
+    .hero-actions {
       display: flex;
-      gap: 0.85rem;
+      gap: 1rem;
       flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeSlideUp 0.8s ease-out 1s both;
     }
-
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.4rem;
-      border-radius: 10px;
+      gap: 0.6rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 12px;
       font-weight: 600;
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       text-decoration: none;
-      transition: all 0.2s;
+      transition: all 0.3s;
       cursor: pointer;
+      border: none;
+      position: relative;
+      overflow: hidden;
     }
-
-    .btn-primary {
-      background: var(--primary);
+    .btn-glow {
+      background: linear-gradient(135deg, var(--primary), #9333ea);
       color: white;
-      border: 1px solid var(--primary);
+      box-shadow: 0 0 30px var(--primary-glow), inset 0 1px 0 rgba(255,255,255,0.1);
     }
-    .btn-primary:hover {
-      background: var(--primary-hover);
-      transform: translateY(-1px);
+    .btn-glow:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 50px var(--primary-glow), 0 10px 40px rgba(124,58,237,0.3);
     }
-
-    .btn-secondary {
-      background: var(--surface-card);
+    .btn-glow::after {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%);
+      animation: btnShine 4s ease-in-out infinite;
+    }
+    @keyframes btnShine {
+      0% { transform: translateX(-100%) rotate(45deg); }
+      30%, 100% { transform: translateX(100%) rotate(45deg); }
+    }
+    .btn-glass {
+      background: var(--glass);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
       color: var(--text);
-      border: 1px solid var(--border);
     }
-    .btn-secondary:hover {
-      background: #334155;
+    .btn-glass:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.15);
+      transform: translateY(-2px);
     }
 
-    /* Headings & Content */
-    h2 {
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: white;
-      margin-top: 3.5rem;
+    /* ========== SCROLL INDICATOR ========== */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      animation: fadeSlideUp 0.8s ease-out 1.2s both;
+    }
+    .scroll-mouse {
+      width: 24px; height: 38px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      position: relative;
+    }
+    .scroll-mouse::after {
+      content: '';
+      position: absolute;
+      top: 6px; left: 50%;
+      transform: translateX(-50%);
+      width: 3px; height: 8px;
+      background: var(--accent);
+      border-radius: 3px;
+      animation: scrollDot 2s ease-in-out infinite;
+    }
+    @keyframes scrollDot {
+      0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+      100% { transform: translateX(-50%) translateY(14px); opacity: 0; }
+    }
+    .scroll-text {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ========== SECTION WRAPPER ========== */
+    .section {
+      position: relative;
+      z-index: 10;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+    .section-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* ========== GLASS CARDS ========== */
+    .glass-card {
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(255,255,255,0.15);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    }
+
+    /* ========== CATEGORY TRACK CARDS ========== */
+    .tracks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .track-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .track-card .track-glow {
+      position: absolute;
+      width: 150px; height: 150px;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0;
+      transition: opacity 0.4s;
+      top: -30px; right: -30px;
+    }
+    .track-card:hover .track-glow { opacity: 1; }
+    .track-card-a .track-glow { background: var(--primary-glow); }
+    .track-card-b .track-glow { background: var(--green-glow); }
+    .track-card-c .track-glow { background: var(--accent-glow); }
+    .track-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
       margin-bottom: 1.25rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--border);
+    }
+    .track-card-a .track-icon { background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3); }
+    .track-card-b .track-icon { background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); }
+    .track-card-c .track-icon { background: rgba(6,182,212,0.15); border: 1px solid rgba(6,182,212,0.3); }
+    .track-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+    .track-card-a .track-label { color: #c4b5fd; }
+    .track-card-b .track-label { color: #6ee7b7; }
+    .track-card-c .track-label { color: #67e8f9; }
+    .track-name {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: white;
+    }
+    .track-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ========== TECH STACK SECTION ========== */
+    .tech-row {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .tech-pill {
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      padding: 1.15rem 1.75rem;
+      transition: all 0.3s;
+      min-width: 200px;
     }
-
-    h3 {
-      font-size: 1.3rem;
+    .tech-pill:hover {
+      border-color: var(--primary);
+      box-shadow: 0 0 25px var(--primary-glow);
+      transform: translateY(-3px);
+    }
+    .tech-icon {
+      font-size: 2rem;
+    }
+    .tech-name {
+      font-family: var(--font-display);
       font-weight: 700;
-      color: #e2e8f0;
+      font-size: 1.05rem;
+    }
+    .tech-role {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ========== TIMELINE ========== */
+    .timeline {
+      position: relative;
+      max-width: 700px;
+      margin: 2.5rem auto 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary), var(--accent), var(--green));
+    }
+    .tl-item {
+      display: flex;
+      gap: 1.75rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .tl-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 2px solid var(--bg-deep);
+      box-shadow: 0 0 12px var(--primary-glow);
+      flex-shrink: 0;
+      margin-top: 0.4rem;
+      position: relative;
+      left: 19px;
+      z-index: 2;
+    }
+    .tl-item:nth-child(2) .tl-dot { background: var(--accent); box-shadow: 0 0 12px var(--accent-glow); }
+    .tl-item:nth-child(3) .tl-dot { background: var(--pink); box-shadow: 0 0 12px rgba(236,72,153,0.4); }
+    .tl-item:nth-child(4) .tl-dot { background: var(--orange); box-shadow: 0 0 12px rgba(245,158,11,0.4); }
+    .tl-item:nth-child(5) .tl-dot { background: var(--green); box-shadow: 0 0 12px var(--green-glow); }
+    .tl-content {
+      padding-left: 0.5rem;
+    }
+    .tl-date {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+    .tl-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+    .tl-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* ========== SCORING SECTION ========== */
+    .score-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
       margin-top: 2rem;
-      margin-bottom: 0.85rem;
     }
-
-    p {
-      margin-bottom: 1.15rem;
-      color: #cbd5e1;
+    .score-card {
+      position: relative;
     }
-
-    ul, ol {
-      margin-bottom: 1.5rem;
-      padding-left: 1.6rem;
-      color: #cbd5e1;
-    }
-
-    li {
+    .score-pct {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
       margin-bottom: 0.5rem;
     }
-
-    /* Tables */
-    .table-wrapper {
-      overflow-x: auto;
-      margin: 1.75rem 0;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 0.92rem;
-    }
-
-    th, td {
-      padding: 0.9rem 1.15rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    th {
-      background: #1e293b;
-      color: white;
+    .score-card:nth-child(1) .score-pct { color: #c084fc; }
+    .score-card:nth-child(2) .score-pct { color: #67e8f9; }
+    .score-card:nth-child(3) .score-pct { color: #6ee7b7; }
+    .score-card:nth-child(4) .score-pct { color: #fbbf24; }
+    .score-name {
+      font-family: var(--font-display);
       font-weight: 700;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
     }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    tr:hover td {
-      background: rgba(255, 255, 255, 0.02);
-    }
-
-    /* Category Cards Grid */
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-
-    .cat-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.25s ease;
-    }
-
-    .cat-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--primary);
-      box-shadow: 0 12px 24px -10px rgba(59, 130, 246, 0.25);
-    }
-
-    .cat-badge {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 800;
-      padding: 0.3rem 0.75rem;
-      border-radius: 6px;
+    .score-bar {
+      height: 4px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 4px;
       margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .score-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 1.5s ease;
+    }
+    .score-card:nth-child(1) .score-bar-fill { width: 35%; background: linear-gradient(90deg, #7c3aed, #c084fc); }
+    .score-card:nth-child(2) .score-bar-fill { width: 30%; background: linear-gradient(90deg, #0891b2, #67e8f9); }
+    .score-card:nth-child(3) .score-bar-fill { width: 20%; background: linear-gradient(90deg, #059669, #6ee7b7); }
+    .score-card:nth-child(4) .score-bar-fill { width: 15%; background: linear-gradient(90deg, #d97706, #fbbf24); }
+    .score-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ========== DELIVERABLES ========== */
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .dlv-number {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--primary);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .badge-a { background: rgba(59, 130, 246, 0.2); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.4); }
-    .badge-b { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4); }
-    .badge-c { background: rgba(245, 158, 11, 0.2); color: #fde68a; border: 1px solid rgba(245, 158, 11, 0.4); }
-
-    .cat-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: white;
+      letter-spacing: 0.1em;
       margin-bottom: 0.75rem;
-      line-height: 1.3;
     }
-
-    .cat-body {
+    .dlv-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.65rem;
+    }
+    .dlv-desc {
       font-size: 0.88rem;
       color: var(--text-muted);
       line-height: 1.6;
     }
 
-    /* Callout & Alerts */
-    .callout {
-      background: rgba(30, 41, 59, 0.7);
-      border-left: 4px solid var(--primary);
-      border-radius: 8px;
-      padding: 1.25rem 1.5rem;
-      margin: 1.75rem 0;
+    /* ========== INFO TABLE ========== */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+    .info-table th, .info-table td {
+      padding: 1rem 1.25rem;
+      text-align: left;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .info-table th {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+    .info-table td {
       font-size: 0.95rem;
     }
+    .info-table a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .info-table a:hover { color: white; }
 
-    .callout-success {
-      border-left-color: var(--accent);
-      background: rgba(6, 78, 59, 0.2);
+    /* ========== CTA FOOTER ========== */
+    .cta-section {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 5rem 2rem 6rem;
+    }
+    .cta-box {
+      max-width: 750px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(6,182,212,0.08));
+      border: 1px solid rgba(124,58,237,0.25);
+      border-radius: 24px;
+      padding: 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary), var(--accent), transparent);
+    }
+    .cta-title {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .cta-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
     }
 
-    /* Checklist interactive */
-    .interactive-check {
-      list-style: none;
-      padding-left: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
+    /* ========== FOOTER ========== */
+    footer {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--glass-border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
     }
 
-    .interactive-check li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 0.85rem 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      user-select: none;
-      transition: all 0.2s;
+    /* ========== ANIMATIONS ========== */
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .interactive-check li:hover {
-      border-color: var(--primary);
-      background: rgba(59, 130, 246, 0.05);
-    }
-
-    .interactive-check input[type="checkbox"] {
-      width: 1.15rem;
-      height: 1.15rem;
-      margin-top: 0.2rem;
-      accent-color: var(--accent);
-      cursor: pointer;
-    }
-
-    /* Pre & Code */
-    pre {
-      background: #030712;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.25rem;
-      font-family: var(--font-mono);
-      font-size: 0.88rem;
-      color: #e2e8f0;
-      overflow-x: auto;
-      margin: 1.25rem 0;
-    }
-
-    code:not(pre code) {
-      font-family: var(--font-mono);
-      background: rgba(255, 255, 255, 0.1);
-      color: #93c5fd;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      font-size: 0.88em;
-    }
-
-    /* Print styles */
-    @media print {
-      body {
-        background: #ffffff !important;
-        color: #000000 !important;
-      }
-      .sidebar, .btn-group, .no-print {
-        display: none !important;
-      }
-      .content {
-        padding: 0 !important;
-        max-width: 100% !important;
-      }
-      .hero {
-        background: none !important;
-        border: 1px solid #ccc !important;
-        padding: 1.5rem !important;
-      }
-      h1, h2, h3 {
-        color: #000000 !important;
-        -webkit-text-fill-color: initial !important;
-      }
-      p, li, td, th {
-        color: #111111 !important;
-      }
-      table, th, td {
-        border-color: #cccccc !important;
-      }
-    }
-
-    /* Responsive */
+    /* ========== RESPONSIVE ========== */
     @media (max-width: 860px) {
-      .app-layout {
-        flex-direction: column;
-      }
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        padding: 1.25rem;
-      }
-      .content {
-        padding: 2rem 1.25rem;
-      }
-      .hero {
-        padding: 1.75rem;
-      }
-      .hero h1 {
-        font-size: 2rem;
-      }
+      .tracks-grid, .score-grid, .deliverables-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: clamp(2.2rem, 8vw, 4rem); }
+      .nav-links { display: none; }
+      .section { padding: 3rem 1.25rem; }
+      .cta-box { padding: 2rem; }
+    }
+    @media (max-width: 600px) {
+      .tech-row { flex-direction: column; align-items: stretch; }
+    }
+
+    /* ========== PRINT ========== */
+    @media print {
+      body { background: white !important; color: black !important; }
+      .navbar, #starfield, #binary-rain, .nebula, .floating-code, .scroll-indicator { display: none !important; }
+      .glass-card, .cta-box { background: #f5f5f5 !important; border: 1px solid #ddd !important; backdrop-filter: none !important; }
+      * { color: #111 !important; -webkit-text-fill-color: initial !important; }
     }
   </style>
 </head>
 <body>
 
-  <div class="app-layout">
-    
-    <!-- Sidebar -->
-    <aside class="sidebar no-print">
-      <div class="brand">
-        <div class="brand-logo">A</div>
+  <!-- Background Effects -->
+  <canvas id="starfield"></canvas>
+  <canvas id="binary-rain"></canvas>
+  <div class="nebula nebula-1"></div>
+  <div class="nebula nebula-2"></div>
+  <div class="nebula nebula-3"></div>
+
+  <!-- Floating Code Snippets -->
+  <div class="floating-code" style="left: 5%; top: 0;">$app = new Laravel;
+Route::get('/', fn()
+  => view('dashboard'));
+DB::table('users')
+  ->where('role','admin')
+  ->get();</div>
+  <div class="floating-code" style="left: 75%; top: 0;">CREATE TABLE projects (
+  id INT PRIMARY KEY,
+  title VARCHAR(255),
+  status ENUM('active'),
+  created_at TIMESTAMP
+);</div>
+  <div class="floating-code" style="left: 40%; top: 0;">&lt;div class="container"&gt;
+  &lt;nav class="navbar"&gt;
+    {{ $slot }}
+  &lt;/nav&gt;
+  @yield('content')
+&lt;/div&gt;</div>
+  <div class="floating-code" style="left: 88%; top: 0;">function validate($req) {
+  return $req->validate([
+    'email' => 'required',
+    'name'  => 'string|max:50'
+  ]);
+}</div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-brand">
+      <div class="nav-logo">A</div>
+      <div>
+        <div class="nav-title">AXIS 2026</div>
+        <div class="nav-sub">GALAKSI 2026</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#tracks">Kategori</a></li>
+      <li><a href="#tech">Teknis</a></li>
+      <li><a href="#timeline">Jadwal</a></li>
+      <li><a href="#scoring">Penilaian</a></li>
+      <li><a href="./GUIDEBOOK.md">Guidebook</a></li>
+      <li><a href="https://forms.gle/5QWPv4pqVaXKXz3i7" target="_blank" class="nav-cta">Daftar Sekarang</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      National Web Development Competition — GALAKSI 2026
+    </div>
+
+    <h1 class="hero-title">
+      <span class="gradient-text">AXIS</span> 2026
+    </h1>
+
+    <p class="hero-subtitle">
+      Application eXcellence in Information Systems — Kompetisi rekayasa aplikasi web tingkat nasional untuk mahasiswa S1 se-Indonesia.
+    </p>
+
+    <div class="theme-glass">
+      <div class="theme-label">// tema_kompetisi.config</div>
+      <div class="theme-text">"Empowering Organizations & Digital Enterprises through Resilient Web Architectures"</div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="https://forms.gle/5QWPv4pqVaXKXz3i7" target="_blank" class="btn btn-glow">📝 Form Pendaftaran</a>
+      <a href="https://forms.gle/z6LmuzqaYRqVUZaNA" target="_blank" class="btn btn-glass">📤 Pengumpulan Karya</a>
+      <a href="https://wa.me/6285181079659" target="_blank" class="btn btn-glass">💬 WhatsApp Panitia</a>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"></div>
+      <span class="scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <!-- KATEGORI -->
+  <section class="section" id="tracks">
+    <div class="section-header reveal">
+      <div class="section-badge">// 01 &mdash; studi_kasus</div>
+      <h2 class="section-title">Pilih Kategori Studi Kasus</h2>
+      <p class="section-desc">Setiap tim wajib memilih satu dari tiga lintasan studi kasus berikut sebagai fondasi solusi aplikasi web yang dikembangkan.</p>
+    </div>
+
+    <div class="tracks-grid">
+      <div class="glass-card track-card track-card-a reveal">
+        <div class="track-glow"></div>
+        <div class="track-icon">🏢</div>
+        <div class="track-label">Kategori A</div>
+        <div class="track-name">Business & Enterprise Digitalization</div>
+        <div class="track-desc">Digitalisasi operasional bisnis, manajemen katalog produk, pencatatan transaksi penjualan/pembelian, dan pemantauan persediaan (inventory) secara terintegrasi.</div>
+      </div>
+      <div class="glass-card track-card track-card-b reveal">
+        <div class="track-glow"></div>
+        <div class="track-icon">🏛️</div>
+        <div class="track-label">Kategori B</div>
+        <div class="track-name">Organizational Management & Governance</div>
+        <div class="track-desc">Administrasi organisasi, portal pengajuan layanan/dokumen, alur persetujuan berjenjang (multi-level approval), dan pelacakan status proses secara transparan.</div>
+      </div>
+      <div class="glass-card track-card track-card-c reveal">
+        <div class="track-glow"></div>
+        <div class="track-icon">👥</div>
+        <div class="track-label">Kategori C</div>
+        <div class="track-name">Collaborative Digital Enterprise Platform</div>
+        <div class="track-desc">Manajemen proyek kolaboratif, task board & assignment, pelacakan progres pekerjaan, dan kontrol hak akses pengguna berbasis peran (RBAC).</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="section" id="tech">
+    <div class="section-header reveal">
+      <div class="section-badge">// 02 &mdash; tech_stack</div>
+      <h2 class="section-title">Ketentuan Teknologi Wajib</h2>
+      <p class="section-desc">Semua tim wajib menggunakan ekosistem teknologi berikut. Framework modern diperbolehkan namun bukan penentu nilai otomatis.</p>
+    </div>
+
+    <div class="tech-row reveal">
+      <div class="tech-pill">
+        <div class="tech-icon">🐘</div>
         <div>
-          <div class="brand-title">AXIS 2026</div>
-          <div class="brand-subtitle">GALAKSI 2026</div>
+          <div class="tech-name">PHP</div>
+          <div class="tech-role">Backend — Wajib</div>
         </div>
       </div>
-
-      <nav>
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#hero">🏠 Beranda & Tema</a></li>
-          <li class="nav-item"><a href="#profil">🎯 1. Profil & Tujuan</a></li>
-          <li class="nav-item"><a href="#ketentuan-tim">👥 2. Ketentuan Tim S1</a></li>
-          <li class="nav-item"><a href="#kategori">📂 3. Kategori Studi Kasus</a></li>
-          <li class="nav-item"><a href="#teknis">⚙️ 4. Ketentuan Teknis</a></li>
-          <li class="nav-item"><a href="#luaran">📦 5. Berkas Luaran</a></li>
-          <li class="nav-item"><a href="#pendaftaran">📅 6. Jadwal & Pendaftaran</a></li>
-          <li class="nav-item"><a href="#penilaian">⚖️ 7. Sistem Penilaian</a></li>
-          <li class="nav-item"><a href="#etika">🛡️ 8. Etika & Regulasi</a></li>
-          <li class="nav-item"><a href="#checklist">✅ Lampiran Checklist</a></li>
-          <li class="nav-item"><a href="#format-tim">📋 Lampiran Info Tim</a></li>
-        </ul>
-      </nav>
-
-      <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border);">
-        <button onclick="window.print()" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem;">
-          🖨️ Cetak / Simpan PDF
-        </button>
+      <div class="tech-pill">
+        <div class="tech-icon">🗄️</div>
+        <div>
+          <div class="tech-name">MySQL</div>
+          <div class="tech-role">Database — Wajib</div>
+        </div>
       </div>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="content">
-
-      <!-- Hero Section -->
-      <header id="hero" class="hero">
-        <div class="hero-badge">🌟 National Web Development Competition</div>
-        <h1>AXIS 2026</h1>
-        <div class="hero-tagline">Application eXcellence in Information Systems — GALAKSI 2026</div>
-
-        <div class="theme-banner">
-          <div class="theme-label">Tema Resmi Kompetisi</div>
-          <div class="theme-text">“Empowering Organizations & Digital Enterprises through Resilient Web Architectures”</div>
+      <div class="tech-pill">
+        <div class="tech-icon">🎨</div>
+        <div>
+          <div class="tech-name">HTML / CSS / JS</div>
+          <div class="tech-role">Frontend — Bebas</div>
         </div>
+      </div>
+    </div>
 
-        <div class="btn-group no-print">
-          <a href="https://forms.gle/5QWPv4pqVaXKXz3i7" target="_blank" class="btn btn-primary">📝 Form Pendaftaran</a>
-          <a href="https://forms.gle/z6LmuzqaYRqVUZaNA" target="_blank" class="btn btn-secondary">📤 Form Pengumpulan Karya</a>
-          <a href="https://wa.me/6285181079659" target="_blank" class="btn btn-secondary">💬 WhatsApp Panitia</a>
-        </div>
-      </header>
-
-      <!-- 1. Profil -->
-      <section id="profil">
-        <h2>🎯 1. Profil dan Tujuan Kompetisi</h2>
-        <p><strong>AXIS 2026</strong> merupakan cabang kompetisi rekayasa aplikasi web berskala nasional dalam perhelatan <strong>GALAKSI 2026</strong>. Kompetisi ini menguji integrasi antara analisis kebutuhan yang tajam, arsitektur perangkat lunak yang tangguh (<em>resilient</em>), serta penciptaan solusi berbasis web yang relevan bagi dunia usaha dan tata kelola organisasi.</p>
-        
-        <div class="callout">
-          <strong>Visi AXIS 2026:</strong> Membentuk talenta digital muda yang tidak hanya mampu melakukan <em>coding</em>, namun juga memiliki pemahaman bisnis mendalam dan kemampuan merancang arsitektur sistem yang andal dan aman.
-        </div>
-
-        <h3>Tujuan Pokok Kompetisi:</h3>
-        <ul>
-          <li><strong>Kreativitas & Keterampilan:</strong> Menempa kompetensi mahasiswa dalam rekayasa aplikasi web modern.</li>
-          <li><strong>Inovasi Aplikatif:</strong> Melahirkan purwarupa fungsional yang menjawab persoalan nyata di dunia usaha.</li>
-          <li><strong>Harmonisasi Desain & Kode:</strong> Mengasah sinkronisasi antara analisis proses bisnis, normalisasi basis data, dan fungsionalitas sistem.</li>
-          <li><strong>Standar Mutu Perangkat Lunak:</strong> Menghasilkan aplikasi yang fungsional penuh, responsif, dan mengedepankan kenyamanan pengguna (UX).</li>
+    <div style="margin-top: 3rem;">
+      <div class="glass-card reveal" style="max-width: 700px; margin: 0 auto;">
+        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); margin-bottom: 1rem;">// standar_minimum.requirements</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+          <li style="display: flex; align-items: flex-start; gap: 0.65rem; color: #cbd5e1;">
+            <span style="color: var(--green); font-size: 1.1rem;">✓</span> Website aktif pada URL publik selama periode penjurian
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 0.65rem; color: #cbd5e1;">
+            <span style="color: var(--green); font-size: 1.1rem;">✓</span> Fitur utama berjalan nyata (bukan prototipe statis)
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 0.65rem; color: #cbd5e1;">
+            <span style="color: var(--green); font-size: 1.1rem;">✓</span> CRUD terintegrasi MySQL dengan validasi input
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 0.65rem; color: #cbd5e1;">
+            <span style="color: var(--green); font-size: 1.1rem;">✓</span> Autentikasi login dengan minimal 2 role pengguna (RBAC)
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 0.65rem; color: #cbd5e1;">
+            <span style="color: var(--green); font-size: 1.1rem;">✓</span> Responsif desktop & smartphone + keamanan dasar
+          </li>
         </ul>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <!-- 2. Ketentuan Tim -->
-      <section id="ketentuan-tim">
-        <h2>👥 2. Sasaran Peserta dan Ketentuan Tim</h2>
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Ketentuan</th>
-                <th>Syarat Resmi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Jenjang Pendidikan</strong></td>
-                <td>Mahasiswa aktif program <strong>Sarjana (S1)</strong> PTN/PTS se-Indonesia (semua program studi).</td>
-              </tr>
-              <tr>
-                <td><strong>Komposisi Tim</strong></td>
-                <td>Beranggotakan <strong>2 hingga 4 orang mahasiswa</strong> aktif S1 dengan 1 orang sebagai Ketua Tim.</td>
-              </tr>
-              <tr>
-                <td><strong>Asal Kampus</strong></td>
-                <td>Wajib berasal dari <strong>perguruan tinggi yang sama</strong> (boleh kolaborasi beda jurusan dan angkatan).</td>
-              </tr>
-              <tr>
-                <td><strong>Batas Pendaftaran</strong></td>
-                <td>Setiap tim hanya dapat mendaftarkan 1 karya, dan setiap mahasiswa hanya boleh berada di 1 tim.</td>
-              </tr>
-              <tr>
-                <td><strong>Biaya Registrasi</strong></td>
-                <td><strong>Rp50.000,-</strong> per tim.</td>
-              </tr>
-            </tbody>
-          </table>
+  <!-- DELIVERABLES -->
+  <section class="section" id="deliverables">
+    <div class="section-header reveal">
+      <div class="section-badge">// 03 &mdash; submission</div>
+      <h2 class="section-title">Berkas yang Wajib Dikumpulkan</h2>
+      <p class="section-desc">Tiga komponen luaran yang wajib diserahkan saat pengumpulan karya.</p>
+    </div>
+
+    <div class="deliverables-grid">
+      <div class="glass-card reveal">
+        <div class="dlv-number">Luaran 01</div>
+        <div class="dlv-title">📄 Dokumen Ringkasan PDF</div>
+        <div class="dlv-desc">File PDF 5–7 halaman: latar belakang, proses bisnis (flowchart), arsitektur sistem, ERD basis data, matriks fitur RBAC, dan screenshot antarmuka.</div>
+      </div>
+      <div class="glass-card reveal">
+        <div class="dlv-number">Luaran 02</div>
+        <div class="dlv-title">🌐 Live URL & GitHub Repo</div>
+        <div class="dlv-desc">Link hosting publik, repositori GitHub dengan README.md berstandar resmi, serta akun demo (username & password) untuk minimal 2 role pengguna.</div>
+      </div>
+      <div class="glass-card reveal">
+        <div class="dlv-number">Luaran 03</div>
+        <div class="dlv-title">🎥 Video Demo ≤ 3 Menit</div>
+        <div class="dlv-desc">Video simulasi fitur nyata di website, menjelaskan alur proses bisnis dan manfaat solusi. Diunggah ke YouTube / Google Drive (Publik / Unlisted).</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section" id="timeline">
+    <div class="section-header reveal">
+      <div class="section-badge">// 04 &mdash; timeline</div>
+      <h2 class="section-title">Jadwal Penting</h2>
+      <p class="section-desc">Timeline resmi pelaksanaan AXIS 2026 — GALAKSI 2026.</p>
+    </div>
+
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">20 November 2026</div>
+          <div class="tl-title">Publikasi Lomba Resmi</div>
+          <div class="tl-desc">Pembukaan sosialisasi kompetisi AXIS 2026.</div>
         </div>
-      </section>
-
-      <!-- 3. Kategori Studi Kasus -->
-      <section id="kategori">
-        <h2>📂 3. Tema dan Kategori Studi Kasus</h2>
-        <p>Setiap tim wajib memilih salah satu dari tiga kategori studi kasus berikut:</p>
-
-        <div class="category-grid">
-          <!-- Kategori A -->
-          <div class="cat-card">
-            <div>
-              <span class="cat-badge badge-a">Kategori A</span>
-              <div class="cat-title">Business & Enterprise Digitalization</div>
-              <div class="cat-body">
-                <strong>Fokus:</strong> Efisiensi operasional dan manajemen transaksi komersial.<br><br>
-                <strong>Tantangan Kasus:</strong> Kembangkan sistem manajemen operasional bisnis yang memadukan katalog produk, transaksi, dan pergerakan persediaan/stok secara akurat untuk meminimalisasi kesalahan pencatatan.
-              </div>
-            </div>
-          </div>
-
-          <!-- Kategori B -->
-          <div class="cat-card">
-            <div>
-              <span class="cat-badge badge-b">Kategori B</span>
-              <div class="cat-title">Organizational Management & Governance</div>
-              <div class="cat-body">
-                <strong>Fokus:</strong> Administrasi organisasi, tata kelola, dan transparansi proses.<br><br>
-                <strong>Tantangan Kasus:</strong> Kembangkan aplikasi web administrasi yang mencakup pengajuan layanan/surat, alur persetujuan bertingkat (*multi-level approval*), dan pelacakan status secara transparan.
-              </div>
-            </div>
-          </div>
-
-          <!-- Kategori C -->
-          <div class="cat-card">
-            <div>
-              <span class="cat-badge badge-c">Kategori C</span>
-              <div class="cat-title">Collaborative Digital Enterprise Platform</div>
-              <div class="cat-body">
-                <strong>Fokus:</strong> Platform kolaborasi tim, pembagian peran, dan manajemen aktivitas.<br><br>
-                <strong>Tantangan Kasus:</strong> Kembangkan aplikasi web manajemen proyek dan kolaborasi dengan fitur pembagian tugas (*task assignment*), pelacakan progres pekerjaan, serta hak akses berbasis peran (*RBAC*).
-              </div>
-            </div>
-          </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">20 – 30 November 2026</div>
+          <div class="tl-title">Periode Pendaftaran Tim</div>
+          <div class="tl-desc">Registrasi tim melalui Google Form. Biaya Rp50.000,- per tim.</div>
         </div>
-      </section>
-
-      <!-- 4. Ketentuan Teknis -->
-      <section id="teknis">
-        <h2>⚙️ 4. Ketentuan Teknis Pengembangan Website</h2>
-        
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Lapisan Sistem</th>
-                <th>Teknologi Wajib / Diizinkan</th>
-                <th>Keterangan</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Backend (Wajib)</strong></td>
-                <td><strong>PHP</strong> (Native atau Framework)</td>
-                <td>Boleh Native PHP, Laravel, CodeIgniter, Symfony, dll.</td>
-              </tr>
-              <tr>
-                <td><strong>Database (Wajib)</strong></td>
-                <td><strong>MySQL</strong> / MariaDB</td>
-                <td>Relasional, validasi input, transaksi CRUD konsisten.</td>
-              </tr>
-              <tr>
-                <td><strong>Frontend</strong></td>
-                <td>HTML5, CSS3, JavaScript</td>
-                <td>Bebas: Tailwind CSS, Bootstrap, jQuery, Vue/React, dll.</td>
-              </tr>
-            </tbody>
-          </table>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">20 Nov – 9 Des 2026 (23.59 WIB)</div>
+          <div class="tl-title">Pengembangan & Submit Karya</div>
+          <div class="tl-desc">Deadline pengumpulan dokumen, link web, repo GitHub, dan video demo.</div>
         </div>
-
-        <h3>Standar Minimum yang Harus Dipenuhi:</h3>
-        <ol>
-          <li><strong>Tautan Deployment Aktif:</strong> Website dideploy pada hosting publik dan dapat diakses juri selama periode evaluasi.</li>
-          <li><strong>Fungsional Penuh:</strong> Fitur inti bekerja nyata dari input sampai output (bukan sekadar prototipe mockup statis).</li>
-          <li><strong>Integrasi MySQL & CRUD:</strong> Mengimplementasikan manipulasi data Create, Read, Update, Delete secara konsisten.</li>
-          <li><strong>Autentikasi Multi-Peran:</strong> Memiliki sistem login dengan minimal <strong>2 peran pengguna berbeda</strong> dengan pembatasan hak akses yang tegas.</li>
-          <li><strong>Responsif:</strong> Tampilan website beradaptasi proporsional pada desktop maupun smartphone.</li>
-          <li><strong>Keamanan Dasar:</strong> Menerapkan sanitasi input (proteksi dasar SQL injection & XSS) dan penanganan kesalahan (*error handling*).</li>
-        </ol>
-      </section>
-
-      <!-- 5. Berkas Luaran -->
-      <section id="luaran">
-        <h2>📦 5. Luaran dan Berkas yang Wajib Dikumpulkan</h2>
-        <div class="category-grid">
-          <div class="cat-card">
-            <span class="cat-badge badge-a">Luaran 1</span>
-            <div class="cat-title">Dokumen Ringkasan PDF</div>
-            <div class="cat-body">
-              File PDF dengan panjang <strong>tepat 5 sampai 7 halaman</strong> yang memuat latar belakang, target persona, diagram alur bisnis, diagram ERD basis data, dan screenshot antarmuka.
-            </div>
-          </div>
-          <div class="cat-card">
-            <span class="cat-badge badge-b">Luaran 2</span>
-            <div class="cat-title">Live URL & Repositori GitHub</div>
-            <div class="cat-body">
-              Tautan hosting aplikasi yang aktif serta URL repositori GitHub publik yang dilengkapi dokumentasi <code>README.md</code> dan kredensial akun uji coba juri (*demo accounts*).
-            </div>
-          </div>
-          <div class="cat-card">
-            <span class="cat-badge badge-c">Luaran 3</span>
-            <div class="cat-title">Video Demonstrasi (≤ 3 Menit)</div>
-            <div class="cat-body">
-              Video simulasi fitur nyata aplikasi web (bukan presentasi slide) yang menjelaskan alur proses bisnis dan manfaat solusi bagi pengguna. Diunggah ke YouTube/Google Drive.
-            </div>
-          </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">10 – 11 Desember 2026</div>
+          <div class="tl-title">Proses Penjurian</div>
+          <div class="tl-desc">Evaluasi live system, kode, dokumen PDF, dan video oleh dewan juri.</div>
         </div>
-      </section>
-
-      <!-- 6. Jadwal & Pendaftaran -->
-      <section id="pendaftaran">
-        <h2>📅 6. Jadwal Penting & Informasi Administratif</h2>
-        
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Agenda Kegiatan</th>
-                <th>Waktu Pelaksanaan</th>
-                <th>Keterangan</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Publikasi Lomba Resmi</td>
-                <td>Jumat, 20 November 2026</td>
-                <td>Sosialisasi panduan AXIS 2026</td>
-              </tr>
-              <tr>
-                <td><strong>Periode Pendaftaran</strong></td>
-                <td><strong>20 – 30 November 2026</strong></td>
-                <td>Registrasi tim melalui Google Form (Biaya: Rp50k)</td>
-              </tr>
-              <tr>
-                <td><strong>Pengembangan & Submit Karya</strong></td>
-                <td><strong>20 Nov – 9 Des 2026</strong></td>
-                <td>Batas akhir: <strong>9 Desember 2026 pukul 23.59 WIB</strong></td>
-              </tr>
-              <tr>
-                <td>Proses Penjurian</td>
-                <td>10 – 11 Desember 2026</td>
-                <td>Evaluasi sistem live, dokumen, kode, dan video</td>
-              </tr>
-              <tr>
-                <td><strong>Acara Puncak & Awarding</strong></td>
-                <td><strong>Sabtu, 12 Desember 2026</strong></td>
-                <td>Pengumuman pemenang pada puncak GALAKSI 2026</td>
-              </tr>
-            </tbody>
-          </table>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">Sabtu, 12 Desember 2026</div>
+          <div class="tl-title">Acara Puncak & Pengumuman Juara</div>
+          <div class="tl-desc">Awarding pada acara puncak GALAKSI 2026.</div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <!-- 7. Penilaian -->
-      <section id="penilaian">
-        <h2>⚖️ 7. Sistem dan Bobot Penilaian</h2>
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Kriteria Evaluasi</th>
-                <th>Bobot</th>
-                <th>Indikator Utama Penilaian</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Fungsionalitas & Implementasi</strong></td>
-                <td><strong>35%</strong></td>
-                <td>Kelengkapan fungsi utama, integrasi MySQL, keandalan CRUD, autentikasi multi-role, sanitasi input, dan struktur kode.</td>
-              </tr>
-              <tr>
-                <td><strong>Analisis & Perancangan Sistem</strong></td>
-                <td><strong>30%</strong></td>
-                <td>Ketajaman identifikasi masalah, relevansi solusi, perancangan proses bisnis (Flowchart), arsitektur sistem, dan ERD database.</td>
-              </tr>
-              <tr>
-                <td><strong>UI/UX dan Responsivitas</strong></td>
-                <td><strong>20%</strong></td>
-                <td>Kemudahan penggunaan (*usability*), konsistensi desain, kejelasan navigasi, dan kemampuan adaptasi pada desktop & mobile.</td>
-              </tr>
-              <tr>
-                <td><strong>Inovasi, Manfaat & Kelayakan</strong></td>
-                <td><strong>15%</strong></td>
-                <td>Kreativitas gagasan pembeda, dampak nyata pada efisiensi kerja organisasi, potensi implementasi riil, dan skalabilitas.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+  <!-- SCORING -->
+  <section class="section" id="scoring">
+    <div class="section-header reveal">
+      <div class="section-badge">// 05 &mdash; penilaian</div>
+      <h2 class="section-title">Aspek & Bobot Penilaian</h2>
+      <p class="section-desc">Karya dinilai secara objektif oleh dewan juri ahli berdasarkan empat aspek.</p>
+    </div>
 
-      <!-- 8. Etika -->
-      <section id="etika">
-        <h2>🛡️ 8. Etika dan Ketentuan Umum</h2>
-        <ul>
-          <li><strong>Orisinalitas Mutlak:</strong> Karya harus orisinal tim peserta. Penggunaan framework/library diperbolehkan dengan tetap mematuhi ketentuan lisensi terbuka masing-masing.</li>
-          <li><strong>Aksesibilitas Penjurian:</strong> Peserta wajib memastikan tautan deployment, GitHub, dan video dapat diakses publik selama periode penilaian.</li>
-          <li><strong>Keputusan Dewan Juri:</strong> Bersifat mutlak, independen, dan tidak dapat diganggu gugat.</li>
-        </ul>
-      </section>
+    <div class="score-grid">
+      <div class="glass-card score-card reveal">
+        <div class="score-pct">35%</div>
+        <div class="score-bar"><div class="score-bar-fill"></div></div>
+        <div class="score-name">Fungsionalitas & Implementasi</div>
+        <div class="score-desc">Kelengkapan fitur utama, integrasi MySQL, operasi CRUD, autentikasi multi-role, sanitasi input, dan kerapian kode.</div>
+      </div>
+      <div class="glass-card score-card reveal">
+        <div class="score-pct">30%</div>
+        <div class="score-bar"><div class="score-bar-fill"></div></div>
+        <div class="score-name">Analisis & Perancangan Sistem</div>
+        <div class="score-desc">Ketajaman identifikasi masalah, proses bisnis (Flowchart/BPMN), arsitektur sistem, dan desain ERD basis data.</div>
+      </div>
+      <div class="glass-card score-card reveal">
+        <div class="score-pct">20%</div>
+        <div class="score-bar"><div class="score-bar-fill"></div></div>
+        <div class="score-name">UI/UX & Responsivitas</div>
+        <div class="score-desc">Kemudahan penggunaan, konsistensi desain, navigasi intuitif, dan adaptasi layout di desktop dan mobile.</div>
+      </div>
+      <div class="glass-card score-card reveal">
+        <div class="score-pct">15%</div>
+        <div class="score-bar"><div class="score-bar-fill"></div></div>
+        <div class="score-name">Inovasi, Manfaat & Kelayakan</div>
+        <div class="score-desc">Kreativitas solusi, dampak efisiensi organisasi, potensi penerapan nyata, dan skalabilitas sistem.</div>
+      </div>
+    </div>
+  </section>
 
-      <!-- Lampiran Checklist -->
-      <section id="checklist">
-        <h2>✅ Checklist Kesiapan Pengumpulan</h2>
-        <p>Centang butir-butir di bawah ini untuk memastikan seluruh persyaratan karya Anda telah terpenuhi:</p>
+  <!-- REGISTRATION INFO -->
+  <section class="section" id="register">
+    <div class="section-header reveal">
+      <div class="section-badge">// 06 &mdash; registrasi</div>
+      <h2 class="section-title">Informasi Pendaftaran</h2>
+    </div>
 
-        <ul class="interactive-check">
-          <li><input type="checkbox" id="c1"><label for="c1">Tim terdiri dari 2–4 mahasiswa aktif S1 dari perguruan tinggi yang sama.</label></li>
-          <li><input type="checkbox" id="c2"><label for="c2">Aplikasi menggunakan backend PHP (Native / Framework) dan basis data MySQL.</label></li>
-          <li><input type="checkbox" id="c3"><label for="c3">Fitur utama berjalan utuh dari hulu ke hilir (bukan prototipe statis).</label></li>
-          <li><input type="checkbox" id="c4"><label for="c4">Operasi Create, Read, Update, Delete (CRUD) berfungsi dan terintegrasi MySQL.</label></li>
-          <li><input type="checkbox" id="c5"><label for="c5">Tersedia sistem autentikasi dengan minimal 2 peran pengguna berbeda (RBAC).</label></li>
-          <li><input type="checkbox" id="c6"><label for="c6">Antarmuka responsif dan nyaman digunakan pada desktop maupun smartphone.</label></li>
-          <li><input type="checkbox" id="c7"><label for="c7">Website telah dideploy online dan link dapat diakses tanpa hambatan.</label></li>
-          <li><input type="checkbox" id="c8"><label for="c8">Repositori GitHub bersifat publik dengan README lengkap dan panduan instalasi.</label></li>
-          <li><input type="checkbox" id="c9"><label for="c9">Kredensial akun uji coba juri (Role 1 & 2) telah dicantumkan di form dan README.</label></li>
-          <li><input type="checkbox" id="c10"><label for="c10">Dokumen ringkasan dalam format PDF berjumlah tepat 5 sampai 7 halaman.</label></li>
-          <li><input type="checkbox" id="c11"><label for="c11">Video demonstrasi berdurasi maksimal 3 menit dan link video dapat dibuka publik.</label></li>
-        </ul>
-      </section>
+    <div class="glass-card reveal" style="max-width: 700px; margin: 0 auto; overflow-x: auto;">
+      <table class="info-table">
+        <tbody>
+          <tr>
+            <th>Peserta</th>
+            <td>Mahasiswa aktif S1, PTN/PTS se-Indonesia (semua jurusan)</td>
+          </tr>
+          <tr>
+            <th>Komposisi Tim</th>
+            <td>2 – 4 orang mahasiswa dari perguruan tinggi yang sama</td>
+          </tr>
+          <tr>
+            <th>Biaya</th>
+            <td><strong>Rp50.000,-</strong> per tim</td>
+          </tr>
+          <tr>
+            <th>Pendaftaran</th>
+            <td><a href="https://forms.gle/5QWPv4pqVaXKXz3i7" target="_blank">https://forms.gle/5QWPv4pqVaXKXz3i7</a></td>
+          </tr>
+          <tr>
+            <th>Pengumpulan</th>
+            <td><a href="https://forms.gle/z6LmuzqaYRqVUZaNA" target="_blank">https://forms.gle/z6LmuzqaYRqVUZaNA</a></td>
+          </tr>
+          <tr>
+            <th>Narahubung</th>
+            <td><a href="https://wa.me/6285181079659" target="_blank">+62 851-8107-9659 (WhatsApp)</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-      <!-- Lampiran Info Tim -->
-      <section id="format-tim">
-        <h2>📋 Lampiran Format Lembar Informasi Tim & Karya</h2>
-        <pre>
-1.  Nama Tim                     : [Nama Tim]
-2.  Asal Perguruan Tinggi        : [Nama Kampus / Universitas]
-3.  Nama Ketua Tim               : [Nama Lengkap Ketua] (NIM: __________)
-4.  Nama Anggota 2               : [Nama Anggota 2] (NIM: __________)
-5.  Nama Anggota 3 (jika ada)    : [Nama Anggota 3] (NIM: __________)
-6.  Nama Anggota 4 (jika ada)    : [Nama Anggota 4] (NIM: __________)
-7.  Program Studi                : [Program Studi]
-8.  Judul Karya                  : [Judul Aplikasi Web]
-9.  Kategori Studi Kasus         : [Kategori A / B / C]
-10. Tautan Aplikasi (Live URL)   : https://...
-11. Tautan Repositori GitHub     : https://github.com/...
-12. Tautan Video Demonstrasi     : https://... (Maks. 3 Menit)
-13. Akun Demonstrasi (Login)     :
-    - Peran 1 (Admin/Pengelola)  : Username: [...] | Password: [...]
-    - Peran 2 (Staff/User)       : Username: [...] | Password: [...]
-14. Ringkasan Masalah & Solusi   : [2-3 Kalimat ringkas]
-15. Fitur Utama Aplikasi         : [Daftar 3-5 fitur unggulan]</pre>
-      </section>
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-box reveal">
+      <div class="cta-title">Siap Berkompetisi?</div>
+      <p class="cta-desc">Tunjukkan kemampuan terbaik tim Anda dalam membangun solusi web yang inovatif, fungsional, dan berdampak nyata di panggung nasional GALAKSI 2026.</p>
+      <div class="hero-actions" style="animation: none;">
+        <a href="https://forms.gle/5QWPv4pqVaXKXz3i7" target="_blank" class="btn btn-glow">🚀 Daftar Sekarang</a>
+        <a href="./GUIDEBOOK.md" class="btn btn-glass">📖 Baca Guidebook Lengkap</a>
+      </div>
+    </div>
+  </section>
 
-      <footer style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.88rem;">
-        Panitia Pelaksana AXIS 2026 | National Web Development Competition<br>
-        Rangkaian Kegiatan Resmi GALAKSI 2026 — Universitas Islam Negeri Sultan Syarif Kasim Riau
-      </footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>Panitia Pelaksana <strong>AXIS 2026</strong> — National Web Development Competition</p>
+    <p style="margin-top: 0.35rem;">Rangkaian Kegiatan Resmi <strong>GALAKSI 2026</strong> — UIN Sultan Syarif Kasim Riau</p>
+  </footer>
 
-    </main>
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    // ===== STARFIELD =====
+    (function() {
+      const c = document.getElementById('starfield');
+      const ctx = c.getContext('2d');
+      let stars = [];
+      function resize() {
+        c.width = window.innerWidth;
+        c.height = window.innerHeight;
+        init();
+      }
+      function init() {
+        stars = [];
+        const count = Math.floor((c.width * c.height) / 3500);
+        for (let i = 0; i < count; i++) {
+          stars.push({
+            x: Math.random() * c.width,
+            y: Math.random() * c.height,
+            r: Math.random() * 1.5 + 0.3,
+            a: Math.random(),
+            da: (Math.random() - 0.5) * 0.008,
+            color: ['#ffffff','#c4b5fd','#67e8f9','#6ee7b7'][Math.floor(Math.random()*4)]
+          });
+        }
+      }
+      function draw() {
+        ctx.clearRect(0, 0, c.width, c.height);
+        stars.forEach(s => {
+          s.a += s.da;
+          if (s.a > 1 || s.a < 0.1) s.da *= -1;
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+          ctx.fillStyle = s.color;
+          ctx.globalAlpha = s.a;
+          ctx.fill();
+        });
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(draw);
+      }
+      window.addEventListener('resize', resize);
+      resize();
+      draw();
+    })();
 
-  </div>
+    // ===== BINARY RAIN =====
+    (function() {
+      const c = document.getElementById('binary-rain');
+      const ctx = c.getContext('2d');
+      let columns, drops;
+      const chars = '01{}[]<>/=;:$@#%&*()+-_~^|\\ABCDEFabcdef0123456789<?php echo $x; SELECT * FROM';
+      const fontSize = 14;
 
+      function resize() {
+        c.width = window.innerWidth;
+        c.height = window.innerHeight;
+        columns = Math.floor(c.width / fontSize);
+        drops = Array.from({length: columns}, () => Math.random() * -100);
+      }
+
+      function draw() {
+        ctx.fillStyle = 'rgba(3, 0, 20, 0.06)';
+        ctx.fillRect(0, 0, c.width, c.height);
+        const colors = ['#7c3aed', '#06b6d4', '#10b981', '#ec4899'];
+        for (let i = 0; i < columns; i++) {
+          const char = chars[Math.floor(Math.random() * chars.length)];
+          const x = i * fontSize;
+          const y = drops[i] * fontSize;
+          ctx.fillStyle = colors[i % colors.length];
+          ctx.font = `${fontSize}px JetBrains Mono, monospace`;
+          ctx.globalAlpha = Math.random() * 0.5 + 0.1;
+          ctx.fillText(char, x, y);
+          if (y > c.height && Math.random() > 0.975) {
+            drops[i] = 0;
+          }
+          drops[i] += 0.5 + Math.random() * 0.5;
+        }
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', resize);
+      resize();
+      draw();
+    })();
+
+    // ===== NAVBAR SCROLL EFFECT =====
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // ===== SCROLL REVEAL =====
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
