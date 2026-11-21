@@ -2,7 +2,7 @@
 
 # 🌐 AXIS 2026
 ### **Application eXcellence in Information Systems**
-#### *National Web Development Competition — GALAKSI 2026*
+#### *National Web Development Competition*
 
 <p align="center">
   <em>"Where Innovation Meets Web Technology"</em>
@@ -27,7 +27,7 @@
 - 📖 **[Guidebook Peserta Format Web (guidebook.html)](./guidebook.html)**
 - 📘 **[Guidebook Peserta Format Markdown (GUIDEBOOK.md)](./GUIDEBOOK.md)**
 - 📦 **[Template Repositori Pengumpulan (submission-template)](https://github.com/axis-competition/submission-template)**
-- 📝 **[Form Pendaftaran Resmi](https://forms.gle/5QWPv4pqVaXKXz3i7)** *(Dibuka 20 – 30 November 2026)*
+- 📝 **[Form Pendaftaran Resmi](https://forms.gle/5QWPv4pqVaXKXz3i7)** *(Dibuka 20 - 30 November 2026)*
 - 📤 **[Form Pengumpulan Karya](https://forms.gle/z6LmuzqaYRqVUZaNA)** *(Batas: 9 Desember 2026 pukul 23.59 WIB)*
 - 💬 **Narahubung Resmi (WhatsApp)**: **[+62 851-8107-9659](https://wa.me/6285181079659)**
 
@@ -71,7 +71,7 @@ Stack Wajib:
 ```
 
 ### Standar Minimum Aplikasi:
-- 🌐 **Live Deployment**: Website dihosting publik dan aktif selama periode penjurian (10–11 Desember 2026).
+- 🌐 **Live Deployment**: Website dihosting publik dan aktif selama periode penjurian (10-11 Desember 2026).
 - ⚙️ **Fungsional & Interaktif**: Fitur utama berjalan nyata dari hulu ke hilir (bukan sekadar prototipe statis).
 - 📱 **Responsif**: Tampilan antarmuka nyaman digunakan pada resolusi *desktop* maupun *mobile*.
 - 🗄️ **Integrasi MySQL & CRUD**: Mengimplementasikan manipulasi data Create, Read, Update, Delete secara konsisten.
@@ -84,7 +84,7 @@ Stack Wajib:
 
 Saat pengumpulan karya, tim wajib menyerahkan:
 
-1. **📄 Dokumen Ringkasan Karya (PDF 5–7 Halaman)**:
+1. **📄 Dokumen Ringkasan Karya (PDF 5-7 Halaman)**:
    - Sesuai dengan [Lampiran A Guidebook](./GUIDEBOOK.md#lampiran-a-rancangan-struktur-dokumen-ringkasan). Memuat identitas tim, latar belakang masalah, analisis kebutuhan, proses bisnis, arsitektur & ERD basis data, tech stack, dan tangkapan layar UI.
 2. **🌐 Tautan Live Deployment & Repositori GitHub**:
    - URL website aktif yang dapat diuji juri secara langsung.
@@ -113,9 +113,9 @@ timeline
 | Tahapan | Jadwal | Keterangan |
 | :--- | :--- | :--- |
 | **Publikasi Lomba** | 20 November 2026 | Pembukaan sosialisasi kompetisi |
-| **Pendaftaran Peserta** | **20 – 30 November 2026** | Mengisi [Form Pendaftaran](https://forms.gle/5QWPv4pqVaXKXz3i7) |
-| **Pengembangan & Submit** | **20 Nov – 9 Des 2026** | Batas pengumpulan: **9 Desember 2026, 23.59 WIB** |
-| **Penjurian** | 10 – 11 Desember 2026 | Penilaian menyeluruh oleh tim juri |
+| **Pendaftaran Peserta** | **20 - 30 November 2026** | Mengisi [Form Pendaftaran](https://forms.gle/5QWPv4pqVaXKXz3i7) |
+| **Pengembangan & Submit** | **20 Nov - 9 Des 2026** | Batas pengumpulan: **9 Desember 2026, 23.59 WIB** |
+| **Penjurian** | 10 - 11 Desember 2026 | Penilaian menyeluruh oleh tim juri |
 | **Pengumuman Juara** | **Sabtu, 12 Desember 2026** | Diumumkan pada Acara Puncak GALAKSI 2026 |
 
 ---
@@ -133,10 +133,10 @@ timeline
 
 ## 🗂️ Berkas & Sumber Daya Resmi
 
-- **[index.html](./index.html)** — Landing page animasi bertema galaksi & coding IT (Live di [GitHub Pages](https://axis-competition.github.io/axis-2026/))
-- **[guidebook.html](./guidebook.html)** — Buku panduan lengkap versi web & siap cetak PDF
-- **[GUIDEBOOK.md](./GUIDEBOOK.md)** — Buku panduan lengkap versi Markdown
-- **[submission-template](https://github.com/axis-competition/submission-template)** — Repositori template resmi untuk pengumpulan karya peserta
+- **[index.html](./index.html)** - Landing page animasi bertema galaksi & coding IT (Live di [GitHub Pages](https://axis-competition.github.io/axis-2026/))
+- **[guidebook.html](./guidebook.html)** - Buku panduan lengkap versi web & siap cetak PDF
+- **[GUIDEBOOK.md](./GUIDEBOOK.md)** - Buku panduan lengkap versi Markdown
+- **[submission-template](https://github.com/axis-competition/submission-template)** - Repositori template resmi untuk pengumpulan karya peserta
 
 ---
 

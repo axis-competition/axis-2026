@@ -2,7 +2,7 @@
 
 # 📘 BUKU PANDUAN RESMI PESERTA
 ## AXIS 2026 (Application eXcellence in Information Systems)
-### *National Web Development Competition | GALAKSI 2026*
+### *National Web Development Competition*
 
 <p align="center">
   <em>“Where Innovation Meets Web Technology”</em>
@@ -38,15 +38,15 @@
 | No | Bagian / Bab | Hal Utama yang Dibahas |
 | :-: | :--- | :--- |
 | **01** | [**Profil & Tujuan Kompetisi**](#1-profil-dan-tujuan-kompetisi) | Latar belakang, tujuan strategis, dan identitas lomba |
-| **02** | [**Sasaran & Ketentuan Tim**](#2-sasaran-peserta-dan-ketentuan-tim) | Syarat mahasiswa S1, kuota tim (2–4 orang), dan orisinalitas |
+| **02** | [**Sasaran & Ketentuan Tim**](#2-sasaran-peserta-dan-ketentuan-tim) | Syarat mahasiswa S1, kuota tim (2-4 orang), dan orisinalitas |
 | **03** | [**Tema & Kategori Studi Kasus**](#3-tema-dan-kategori-studi-kasus) | Kategori A (Bisnis), B (Organisasi), & C (Kolaborasi) |
 | **04** | [**Ketentuan Teknis Aplikasi**](#4-ketentuan-teknis-pengembangan-website) | Kewajiban PHP & MySQL, standar CRUD, keamanan & RBAC |
-| **05** | [**Luaran yang Wajib Dikumpulkan**](#5-luaran-dan-berkas-yang-wajib-dikumpulkan) | PDF ringkasan 5–7 hal, Live URL, GitHub repo, & video 3 menit |
+| **05** | [**Luaran yang Wajib Dikumpulkan**](#5-luaran-dan-berkas-yang-wajib-dikumpulkan) | PDF ringkasan 5-7 hal, Live URL, GitHub repo, & video 3 menit |
 | **06** | [**Pendaftaran, Biaya & Jadwal**](#6-pendaftaran-dan-mekanisme-pengumpulan) | Timeline kompetisi, biaya Rp50.000/tim, alur submisi |
 | **07** | [**Sistem & Aspek Penilaian**](#7-sistem-penilaian) | Bobot 35% implementasi, 30% perancangan, 20% UI/UX, 15% inovasi |
 | **08** | [**Etika & Regulasi Umum**](#8-etika-dan-ketentuan-umum) | Aturan HKI, kesiapan akses juri, dan diskualifikasi |
 | **09** | [**Penutup**](#9-penutup) | Pernyataan penutup panitia pelaksana |
-| 📎 | [**Lampiran A: Panduan Dokumen PDF**](#lampiran-a-rancangan-struktur-dokumen-ringkasan) | Pedoman susunan isi PDF ringkasan (5–7 halaman) |
+| 📎 | [**Lampiran A: Panduan Dokumen PDF**](#lampiran-a-rancangan-struktur-dokumen-ringkasan) | Pedoman susunan isi PDF ringkasan (5-7 halaman) |
 | 📎 | [**Lampiran B: Checklist Kesiapan Submit**](#lampiran-b-checklist-kesiapan-pengumpulan) | Daftar periksa mandiri sebelum mengumpulkan karya |
 | 📎 | [**Lampiran C: Format Lembar Tim & Karya**](#lampiran-c-format-lembar-informasi-tim-dan-karya) | Format data tim siap salin (*copy-pasteable*) |
 
@@ -175,7 +175,7 @@ Tantangan era digital ini memerlukan pengembang web yang tidak hanya piawai menu
 
 Setiap tim wajib mengumpulkan **3 (tiga) komponen luaran utama**:
 
-### 📄 1. Dokumen Ringkasan Karya (PDF 5–7 Halaman)
+### 📄 1. Dokumen Ringkasan Karya (PDF 5-7 Halaman)
 * **Format**: File tunggal format PDF berukuran 5 sampai 7 halaman.
 * **Muatan Pokok**:
   1. Identitas tim, judul karya, dan ringkasan eksekutif (*executive summary*).
@@ -217,9 +217,9 @@ Setiap tim wajib mengumpulkan **3 (tiga) komponen luaran utama**:
 | Tahapan Lomba | Rentang Tanggal | Keterangan |
 | :--- | :--- | :--- |
 | **Publikasi Lomba** | Jumat, 20 November 2026 | Pembukaan sosialisasi resmi AXIS 2026 |
-| **Periode Pendaftaran** | **20 – 30 November 2026** | Pengisian form registrasi & pembayaran Rp50.000,- |
-| **Pengembangan & Submisi** | **20 Nov – 9 Des 2026** | Batas akhir pengumpulan karya: **9 Des 2026, 23.59 WIB** |
-| **Masa Penjurian** | 10 – 11 Desember 2026 | Evaluasi live system, repositori, dokumen PDF, dan video |
+| **Periode Pendaftaran** | **20 - 30 November 2026** | Pengisian form registrasi & pembayaran Rp50.000,- |
+| **Pengembangan & Submisi** | **20 Nov - 9 Des 2026** | Batas akhir pengumpulan karya: **9 Des 2026, 23.59 WIB** |
+| **Masa Penjurian** | 10 - 11 Desember 2026 | Evaluasi live system, repositori, dokumen PDF, dan video |
 | **Pengumuman Juara** | **Sabtu, 12 Desember 2026** | Acara Puncak & awarding GALAKSI 2026 |
 
 ---
@@ -241,7 +241,7 @@ Penilaian dilakukan secara objektif oleh dewan juri ahli dengan total bobot **10
 
 1. **Orisinalitas**: Karya harus merupakan buatan orisinal tim peserta. Penggunaan template atau library *open source* wajib mencantumkan atribusi lisensi yang sah. Plagiarisme akan berakibat diskualifikasi langsung.
 2. **Kesesuaian Kategori**: Aplikasi harus konsisten menjawab studi kasus kategori yang dipilih (Kategori A, B, atau C).
-3. **Ketersediaan Akses Juri**: Live link, repositori GitHub, dan video wajib dapat diakses publik selama masa penilaian (10–11 Desember 2026).
+3. **Ketersediaan Akses Juri**: Live link, repositori GitHub, dan video wajib dapat diakses publik selama masa penilaian (10-11 Desember 2026).
 4. **Keputusan Juri**: Keputusan dewan juri bersifat **final, independen, dan tidak dapat diganggu gugat**.
 
 ---
@@ -263,13 +263,13 @@ Selamat berinovasi dan raih prestasi terbaik tim Anda di panggung nasional GALAK
 <summary><b>Lihat Panduan Per Halaman</b></summary>
 <br/>
 
-* **Halaman 1 — Identitas & Executive Summary**: Judul karya, nama tim, data anggota (Nama, NIM, Prodi, Kampus), kategori studi kasus, serta ringkasan eksekutif solusi (1–2 paragraf).
-* **Halaman 2 — Latar Belakang & Persona Pengguna**: Uraian masalah operasional riil, rumusan *pain points*, target pengguna (*user persona*), serta tujuan dan manfaat solusi.
-* **Halaman 3 — Alur Proses Bisnis**: Perbandingan alur kerja sebelum vs sesudah sistem ada, disertai diagram alur kerja visual (Flowchart / Activity Diagram).
-* **Halaman 4 — Arsitektur Sistem & Basis Data**: Diagram arsitektur perangkat lunak (Client-Server-Database) dan skema relasi basis data (ERD MySQL) beserta kamus data ringkas.
-* **Halaman 5 — Matriks Fitur & Hak Akses (RBAC)**: Matriks hak akses menu/aksi untuk masing-masing peran pengguna serta penjelasan fitur-fitur kunci.
-* **Halaman 6 — Spesifikasi Teknologi & Dokumentasi Antarmuka**: Tech stack yang digunakan dan tangkapan layar antarmuka utama (desktop & mobile) disertai keterangan fungsi.
-* **Halaman 7 — Kesimpulan, Keberlanjutan & Tautan Pengujian**: Analisis dampak sistem, rencana pengembangan masa depan, serta tautan Live Web, GitHub, Video Demo, dan akun demo juri.
+* **Halaman 1 - Identitas & Executive Summary**: Judul karya, nama tim, data anggota (Nama, NIM, Prodi, Kampus), kategori studi kasus, serta ringkasan eksekutif solusi (1-2 paragraf).
+* **Halaman 2 - Latar Belakang & Persona Pengguna**: Uraian masalah operasional riil, rumusan *pain points*, target pengguna (*user persona*), serta tujuan dan manfaat solusi.
+* **Halaman 3 - Alur Proses Bisnis**: Perbandingan alur kerja sebelum vs sesudah sistem ada, disertai diagram alur kerja visual (Flowchart / Activity Diagram).
+* **Halaman 4 - Arsitektur Sistem & Basis Data**: Diagram arsitektur perangkat lunak (Client-Server-Database) dan skema relasi basis data (ERD MySQL) beserta kamus data ringkas.
+* **Halaman 5 - Matriks Fitur & Hak Akses (RBAC)**: Matriks hak akses menu/aksi untuk masing-masing peran pengguna serta penjelasan fitur-fitur kunci.
+* **Halaman 6 - Spesifikasi Teknologi & Dokumentasi Antarmuka**: Tech stack yang digunakan dan tangkapan layar antarmuka utama (desktop & mobile) disertai keterangan fungsi.
+* **Halaman 7 - Kesimpulan, Keberlanjutan & Tautan Pengujian**: Analisis dampak sistem, rencana pengembangan masa depan, serta tautan Live Web, GitHub, Video Demo, dan akun demo juri.
 
 </details>
 
