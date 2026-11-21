@@ -23,8 +23,8 @@
 ---
 
 ## 📌 Navigasi Cepat
-- 📖 **[Guidebook Peserta Lengkap (GUIDEBOOK.md)](./GUIDEBOOK.md)**
-- 🌐 **[Versi Cetak & Web Guidebook (guidebook.html)](./guidebook.html)**
+- 📖 **[Guidebook Peserta Format Markdown (GUIDEBOOK.md)](./GUIDEBOOK.md)**
+- 🌐 **[Portal Interaktif & Versi Cetak PDF (index.html)](./index.html)**
 - 📝 **[Form Pendaftaran Resmi](https://forms.gle/5QWPv4pqVaXKXz3i7)** *(Dibuka 20 – 30 November 2026)*
 - 📤 **[Form Pengumpulan Karya](https://forms.gle/z6LmuzqaYRqVUZaNA)** *(Batas: 9 Desember 2026 pukul 23.59 WIB)*
 - 📑 **[Template README Peserta](./templates/TEMPLATE_README_PESERTA.md)**

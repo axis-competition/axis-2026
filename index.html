@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AXIS 2026 — Guidebook Resmi | National Web Development Competition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --surface: #111827;
+      --surface-card: #1e293b;
+      --border: #334155;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --accent: #10b981;
+      --warning: #f59e0b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-main: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    /* Container & Layout */
+    .app-layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+      width: 290px;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: white;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+    }
+
+    .brand-title {
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      color: white;
+    }
+
+    .brand-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .nav-item a {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.65rem 0.85rem;
+      border-radius: 8px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .nav-item a:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: white;
+    }
+
+    /* Main Content */
+    .content {
+      flex: 1;
+      padding: 3rem 4rem;
+      max-width: 980px;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(16, 185, 129, 0.1) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 16px;
+      padding: 2.75rem;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      color: #93c5fd;
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(to right, #ffffff, #cbd5e1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-tagline {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+
+    .theme-banner {
+      background: rgba(15, 23, 42, 0.85);
+      border-left: 4px solid var(--accent);
+      padding: 1.15rem 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .theme-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .theme-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      font-style: italic;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      border: 1px solid var(--primary);
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--surface-card);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover {
+      background: #334155;
+    }
+
+    /* Headings & Content */
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: white;
+      margin-top: 3.5rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin-top: 2rem;
+      margin-bottom: 0.85rem;
+    }
+
+    p {
+      margin-bottom: 1.15rem;
+      color: #cbd5e1;
+    }
+
+    ul, ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.6rem;
+      color: #cbd5e1;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Tables */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 1.75rem 0;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+
+    th, td {
+      padding: 0.9rem 1.15rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: #1e293b;
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Category Cards Grid */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .cat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+    }
+
+    .cat-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary);
+      box-shadow: 0 12px 24px -10px rgba(59, 130, 246, 0.25);
+    }
+
+    .cat-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.3rem 0.75rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-a { background: rgba(59, 130, 246, 0.2); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.4); }
+    .badge-b { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .badge-c { background: rgba(245, 158, 11, 0.2); color: #fde68a; border: 1px solid rgba(245, 158, 11, 0.4); }
+
+    .cat-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .cat-body {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Callout & Alerts */
+    .callout {
+      background: rgba(30, 41, 59, 0.7);
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      font-size: 0.95rem;
+    }
+
+    .callout-success {
+      border-left-color: var(--accent);
+      background: rgba(6, 78, 59, 0.2);
+    }
+
+    /* Checklist interactive */
+    .interactive-check {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .interactive-check li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s;
+    }
+
+    .interactive-check li:hover {
+      border-color: var(--primary);
+      background: rgba(59, 130, 246, 0.05);
+    }
+
+    .interactive-check input[type="checkbox"] {
+      width: 1.15rem;
+      height: 1.15rem;
+      margin-top: 0.2rem;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    /* Pre & Code */
+    pre {
+      background: #030712;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      color: #e2e8f0;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+
+    code:not(pre code) {
+      font-family: var(--font-mono);
+      background: rgba(255, 255, 255, 0.1);
+      color: #93c5fd;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.88em;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .sidebar, .btn-group, .no-print {
+        display: none !important;
+      }
+      .content {
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .hero {
+        background: none !important;
+        border: 1px solid #ccc !important;
+        padding: 1.5rem !important;
+      }
+      h1, h2, h3 {
+        color: #000000 !important;
+        -webkit-text-fill-color: initial !important;
+      }
+      p, li, td, th {
+        color: #111111 !important;
+      }
+      table, th, td {
+        border-color: #cccccc !important;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .app-layout {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1.25rem;
+      }
+      .content {
+        padding: 2rem 1.25rem;
+      }
+      .hero {
+        padding: 1.75rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-layout">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar no-print">
+      <div class="brand">
+        <div class="brand-logo">A</div>
+        <div>
+          <div class="brand-title">AXIS 2026</div>
+          <div class="brand-subtitle">GALAKSI 2026</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero">🏠 Beranda & Tema</a></li>
+          <li class="nav-item"><a href="#profil">🎯 1. Profil & Tujuan</a></li>
+          <li class="nav-item"><a href="#ketentuan-tim">👥 2. Ketentuan Tim S1</a></li>
+          <li class="nav-item"><a href="#kategori">📂 3. Kategori Studi Kasus</a></li>
+          <li class="nav-item"><a href="#teknis">⚙️ 4. Ketentuan Teknis</a></li>
+          <li class="nav-item"><a href="#luaran">📦 5. Berkas Luaran</a></li>
+          <li class="nav-item"><a href="#pendaftaran">📅 6. Jadwal & Pendaftaran</a></li>
+          <li class="nav-item"><a href="#penilaian">⚖️ 7. Sistem Penilaian</a></li>
+          <li class="nav-item"><a href="#etika">🛡️ 8. Etika & Regulasi</a></li>
+          <li class="nav-item"><a href="#checklist">✅ Lampiran Checklist</a></li>
+          <li class="nav-item"><a href="#format-tim">📋 Lampiran Info Tim</a></li>
+        </ul>
+      </nav>
+
+      <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border);">
+        <button onclick="window.print()" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem;">
+          🖨️ Cetak / Simpan PDF
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+
+      <!-- Hero Section -->
+      <header id="hero" class="hero">
+        <div class="hero-badge">🌟 National Web Development Competition</div>
+        <h1>AXIS 2026</h1>
+        <div class="hero-tagline">Application eXcellence in Information Systems — GALAKSI 2026</div>
+
+        <div class="theme-banner">
+          <div class="theme-label">Tema Resmi Kompetisi</div>
+          <div class="theme-text">“Empowering Organizations & Digital Enterprises through Resilient Web Architectures”</div>
+        </div>
+
+        <div class="btn-group no-print">
+          <a href="https://forms.gle/5QWPv4pqVaXKXz3i7" target="_blank" class="btn btn-primary">📝 Form Pendaftaran</a>
+          <a href="https://forms.gle/z6LmuzqaYRqVUZaNA" target="_blank" class="btn btn-secondary">📤 Form Pengumpulan Karya</a>
+          <a href="https://wa.me/6285181079659" target="_blank" class="btn btn-secondary">💬 WhatsApp Panitia</a>
+        </div>
+      </header>
+
+      <!-- 1. Profil -->
+      <section id="profil">
+        <h2>🎯 1. Profil dan Tujuan Kompetisi</h2>
+        <p><strong>AXIS 2026</strong> merupakan cabang kompetisi rekayasa aplikasi web berskala nasional dalam perhelatan <strong>GALAKSI 2026</strong>. Kompetisi ini menguji integrasi antara analisis kebutuhan yang tajam, arsitektur perangkat lunak yang tangguh (<em>resilient</em>), serta penciptaan solusi berbasis web yang relevan bagi dunia usaha dan tata kelola organisasi.</p>
+        
+        <div class="callout">
+          <strong>Visi AXIS 2026:</strong> Membentuk talenta digital muda yang tidak hanya mampu melakukan <em>coding</em>, namun juga memiliki pemahaman bisnis mendalam dan kemampuan merancang arsitektur sistem yang andal dan aman.
+        </div>
+
+        <h3>Tujuan Pokok Kompetisi:</h3>
+        <ul>
+          <li><strong>Kreativitas & Keterampilan:</strong> Menempa kompetensi mahasiswa dalam rekayasa aplikasi web modern.</li>
+          <li><strong>Inovasi Aplikatif:</strong> Melahirkan purwarupa fungsional yang menjawab persoalan nyata di dunia usaha.</li>
+          <li><strong>Harmonisasi Desain & Kode:</strong> Mengasah sinkronisasi antara analisis proses bisnis, normalisasi basis data, dan fungsionalitas sistem.</li>
+          <li><strong>Standar Mutu Perangkat Lunak:</strong> Menghasilkan aplikasi yang fungsional penuh, responsif, dan mengedepankan kenyamanan pengguna (UX).</li>
+        </ul>
+      </section>
+
+      <!-- 2. Ketentuan Tim -->
+      <section id="ketentuan-tim">
+        <h2>👥 2. Sasaran Peserta dan Ketentuan Tim</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Ketentuan</th>
+                <th>Syarat Resmi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Jenjang Pendidikan</strong></td>
+                <td>Mahasiswa aktif program <strong>Sarjana (S1)</strong> PTN/PTS se-Indonesia (semua program studi).</td>
+              </tr>
+              <tr>
+                <td><strong>Komposisi Tim</strong></td>
+                <td>Beranggotakan <strong>2 hingga 4 orang mahasiswa</strong> aktif S1 dengan 1 orang sebagai Ketua Tim.</td>
+              </tr>
+              <tr>
+                <td><strong>Asal Kampus</strong></td>
+                <td>Wajib berasal dari <strong>perguruan tinggi yang sama</strong> (boleh kolaborasi beda jurusan dan angkatan).</td>
+              </tr>
+              <tr>
+                <td><strong>Batas Pendaftaran</strong></td>
+                <td>Setiap tim hanya dapat mendaftarkan 1 karya, dan setiap mahasiswa hanya boleh berada di 1 tim.</td>
+              </tr>
+              <tr>
+                <td><strong>Biaya Registrasi</strong></td>
+                <td><strong>Rp50.000,-</strong> per tim.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 3. Kategori Studi Kasus -->
+      <section id="kategori">
+        <h2>📂 3. Tema dan Kategori Studi Kasus</h2>
+        <p>Setiap tim wajib memilih salah satu dari tiga kategori studi kasus berikut:</p>
+
+        <div class="category-grid">
+          <!-- Kategori A -->
+          <div class="cat-card">
+            <div>
+              <span class="cat-badge badge-a">Kategori A</span>
+              <div class="cat-title">Business & Enterprise Digitalization</div>
+              <div class="cat-body">
+                <strong>Fokus:</strong> Efisiensi operasional dan manajemen transaksi komersial.<br><br>
+                <strong>Tantangan Kasus:</strong> Kembangkan sistem manajemen operasional bisnis yang memadukan katalog produk, transaksi, dan pergerakan persediaan/stok secara akurat untuk meminimalisasi kesalahan pencatatan.
+              </div>
+            </div>
+          </div>
+
+          <!-- Kategori B -->
+          <div class="cat-card">
+            <div>
+              <span class="cat-badge badge-b">Kategori B</span>
+              <div class="cat-title">Organizational Management & Governance</div>
+              <div class="cat-body">
+                <strong>Fokus:</strong> Administrasi organisasi, tata kelola, dan transparansi proses.<br><br>
+                <strong>Tantangan Kasus:</strong> Kembangkan aplikasi web administrasi yang mencakup pengajuan layanan/surat, alur persetujuan bertingkat (*multi-level approval*), dan pelacakan status secara transparan.
+              </div>
+            </div>
+          </div>
+
+          <!-- Kategori C -->
+          <div class="cat-card">
+            <div>
+              <span class="cat-badge badge-c">Kategori C</span>
+              <div class="cat-title">Collaborative Digital Enterprise Platform</div>
+              <div class="cat-body">
+                <strong>Fokus:</strong> Platform kolaborasi tim, pembagian peran, dan manajemen aktivitas.<br><br>
+                <strong>Tantangan Kasus:</strong> Kembangkan aplikasi web manajemen proyek dan kolaborasi dengan fitur pembagian tugas (*task assignment*), pelacakan progres pekerjaan, serta hak akses berbasis peran (*RBAC*).
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Ketentuan Teknis -->
+      <section id="teknis">
+        <h2>⚙️ 4. Ketentuan Teknis Pengembangan Website</h2>
+        
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Lapisan Sistem</th>
+                <th>Teknologi Wajib / Diizinkan</th>
+                <th>Keterangan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Backend (Wajib)</strong></td>
+                <td><strong>PHP</strong> (Native atau Framework)</td>
+                <td>Boleh Native PHP, Laravel, CodeIgniter, Symfony, dll.</td>
+              </tr>
+              <tr>
+                <td><strong>Database (Wajib)</strong></td>
+                <td><strong>MySQL</strong> / MariaDB</td>
+                <td>Relasional, validasi input, transaksi CRUD konsisten.</td>
+              </tr>
+              <tr>
+                <td><strong>Frontend</strong></td>
+                <td>HTML5, CSS3, JavaScript</td>
+                <td>Bebas: Tailwind CSS, Bootstrap, jQuery, Vue/React, dll.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Standar Minimum yang Harus Dipenuhi:</h3>
+        <ol>
+          <li><strong>Tautan Deployment Aktif:</strong> Website dideploy pada hosting publik dan dapat diakses juri selama periode evaluasi.</li>
+          <li><strong>Fungsional Penuh:</strong> Fitur inti bekerja nyata dari input sampai output (bukan sekadar prototipe mockup statis).</li>
+          <li><strong>Integrasi MySQL & CRUD:</strong> Mengimplementasikan manipulasi data Create, Read, Update, Delete secara konsisten.</li>
+          <li><strong>Autentikasi Multi-Peran:</strong> Memiliki sistem login dengan minimal <strong>2 peran pengguna berbeda</strong> dengan pembatasan hak akses yang tegas.</li>
+          <li><strong>Responsif:</strong> Tampilan website beradaptasi proporsional pada desktop maupun smartphone.</li>
+          <li><strong>Keamanan Dasar:</strong> Menerapkan sanitasi input (proteksi dasar SQL injection & XSS) dan penanganan kesalahan (*error handling*).</li>
+        </ol>
+      </section>
+
+      <!-- 5. Berkas Luaran -->
+      <section id="luaran">
+        <h2>📦 5. Luaran dan Berkas yang Wajib Dikumpulkan</h2>
+        <div class="category-grid">
+          <div class="cat-card">
+            <span class="cat-badge badge-a">Luaran 1</span>
+            <div class="cat-title">Dokumen Ringkasan PDF</div>
+            <div class="cat-body">
+              File PDF dengan panjang <strong>tepat 5 sampai 7 halaman</strong> yang memuat latar belakang, target persona, diagram alur bisnis, diagram ERD basis data, dan screenshot antarmuka.
+            </div>
+          </div>
+          <div class="cat-card">
+            <span class="cat-badge badge-b">Luaran 2</span>
+            <div class="cat-title">Live URL & Repositori GitHub</div>
+            <div class="cat-body">
+              Tautan hosting aplikasi yang aktif serta URL repositori GitHub publik yang dilengkapi dokumentasi <code>README.md</code> dan kredensial akun uji coba juri (*demo accounts*).
+            </div>
+          </div>
+          <div class="cat-card">
+            <span class="cat-badge badge-c">Luaran 3</span>
+            <div class="cat-title">Video Demonstrasi (≤ 3 Menit)</div>
+            <div class="cat-body">
+              Video simulasi fitur nyata aplikasi web (bukan presentasi slide) yang menjelaskan alur proses bisnis dan manfaat solusi bagi pengguna. Diunggah ke YouTube/Google Drive.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Jadwal & Pendaftaran -->
+      <section id="pendaftaran">
+        <h2>📅 6. Jadwal Penting & Informasi Administratif</h2>
+        
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Agenda Kegiatan</th>
+                <th>Waktu Pelaksanaan</th>
+                <th>Keterangan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Publikasi Lomba Resmi</td>
+                <td>Jumat, 20 November 2026</td>
+                <td>Sosialisasi panduan AXIS 2026</td>
+              </tr>
+              <tr>
+                <td><strong>Periode Pendaftaran</strong></td>
+                <td><strong>20 – 30 November 2026</strong></td>
+                <td>Registrasi tim melalui Google Form (Biaya: Rp50k)</td>
+              </tr>
+              <tr>
+                <td><strong>Pengembangan & Submit Karya</strong></td>
+                <td><strong>20 Nov – 9 Des 2026</strong></td>
+                <td>Batas akhir: <strong>9 Desember 2026 pukul 23.59 WIB</strong></td>
+              </tr>
+              <tr>
+                <td>Proses Penjurian</td>
+                <td>10 – 11 Desember 2026</td>
+                <td>Evaluasi sistem live, dokumen, kode, dan video</td>
+              </tr>
+              <tr>
+                <td><strong>Acara Puncak & Awarding</strong></td>
+                <td><strong>Sabtu, 12 Desember 2026</strong></td>
+                <td>Pengumuman pemenang pada puncak GALAKSI 2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 7. Penilaian -->
+      <section id="penilaian">
+        <h2>⚖️ 7. Sistem dan Bobot Penilaian</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Kriteria Evaluasi</th>
+                <th>Bobot</th>
+                <th>Indikator Utama Penilaian</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Fungsionalitas & Implementasi</strong></td>
+                <td><strong>35%</strong></td>
+                <td>Kelengkapan fungsi utama, integrasi MySQL, keandalan CRUD, autentikasi multi-role, sanitasi input, dan struktur kode.</td>
+              </tr>
+              <tr>
+                <td><strong>Analisis & Perancangan Sistem</strong></td>
+                <td><strong>30%</strong></td>
+                <td>Ketajaman identifikasi masalah, relevansi solusi, perancangan proses bisnis (Flowchart), arsitektur sistem, dan ERD database.</td>
+              </tr>
+              <tr>
+                <td><strong>UI/UX dan Responsivitas</strong></td>
+                <td><strong>20%</strong></td>
+                <td>Kemudahan penggunaan (*usability*), konsistensi desain, kejelasan navigasi, dan kemampuan adaptasi pada desktop & mobile.</td>
+              </tr>
+              <tr>
+                <td><strong>Inovasi, Manfaat & Kelayakan</strong></td>
+                <td><strong>15%</strong></td>
+                <td>Kreativitas gagasan pembeda, dampak nyata pada efisiensi kerja organisasi, potensi implementasi riil, dan skalabilitas.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 8. Etika -->
+      <section id="etika">
+        <h2>🛡️ 8. Etika dan Ketentuan Umum</h2>
+        <ul>
+          <li><strong>Orisinalitas Mutlak:</strong> Karya harus orisinal tim peserta. Penggunaan framework/library diperbolehkan dengan tetap mematuhi ketentuan lisensi terbuka masing-masing.</li>
+          <li><strong>Aksesibilitas Penjurian:</strong> Peserta wajib memastikan tautan deployment, GitHub, dan video dapat diakses publik selama periode penilaian.</li>
+          <li><strong>Keputusan Dewan Juri:</strong> Bersifat mutlak, independen, dan tidak dapat diganggu gugat.</li>
+        </ul>
+      </section>
+
+      <!-- Lampiran Checklist -->
+      <section id="checklist">
+        <h2>✅ Checklist Kesiapan Pengumpulan</h2>
+        <p>Centang butir-butir di bawah ini untuk memastikan seluruh persyaratan karya Anda telah terpenuhi:</p>
+
+        <ul class="interactive-check">
+          <li><input type="checkbox" id="c1"><label for="c1">Tim terdiri dari 2–4 mahasiswa aktif S1 dari perguruan tinggi yang sama.</label></li>
+          <li><input type="checkbox" id="c2"><label for="c2">Aplikasi menggunakan backend PHP (Native / Framework) dan basis data MySQL.</label></li>
+          <li><input type="checkbox" id="c3"><label for="c3">Fitur utama berjalan utuh dari hulu ke hilir (bukan prototipe statis).</label></li>
+          <li><input type="checkbox" id="c4"><label for="c4">Operasi Create, Read, Update, Delete (CRUD) berfungsi dan terintegrasi MySQL.</label></li>
+          <li><input type="checkbox" id="c5"><label for="c5">Tersedia sistem autentikasi dengan minimal 2 peran pengguna berbeda (RBAC).</label></li>
+          <li><input type="checkbox" id="c6"><label for="c6">Antarmuka responsif dan nyaman digunakan pada desktop maupun smartphone.</label></li>
+          <li><input type="checkbox" id="c7"><label for="c7">Website telah dideploy online dan link dapat diakses tanpa hambatan.</label></li>
+          <li><input type="checkbox" id="c8"><label for="c8">Repositori GitHub bersifat publik dengan README lengkap dan panduan instalasi.</label></li>
+          <li><input type="checkbox" id="c9"><label for="c9">Kredensial akun uji coba juri (Role 1 & 2) telah dicantumkan di form dan README.</label></li>
+          <li><input type="checkbox" id="c10"><label for="c10">Dokumen ringkasan dalam format PDF berjumlah tepat 5 sampai 7 halaman.</label></li>
+          <li><input type="checkbox" id="c11"><label for="c11">Video demonstrasi berdurasi maksimal 3 menit dan link video dapat dibuka publik.</label></li>
+        </ul>
+      </section>
+
+      <!-- Lampiran Info Tim -->
+      <section id="format-tim">
+        <h2>📋 Lampiran Format Lembar Informasi Tim & Karya</h2>
+        <pre>
+1.  Nama Tim                     : [Nama Tim]
+2.  Asal Perguruan Tinggi        : [Nama Kampus / Universitas]
+3.  Nama Ketua Tim               : [Nama Lengkap Ketua] (NIM: __________)
+4.  Nama Anggota 2               : [Nama Anggota 2] (NIM: __________)
+5.  Nama Anggota 3 (jika ada)    : [Nama Anggota 3] (NIM: __________)
+6.  Nama Anggota 4 (jika ada)    : [Nama Anggota 4] (NIM: __________)
+7.  Program Studi                : [Program Studi]
+8.  Judul Karya                  : [Judul Aplikasi Web]
+9.  Kategori Studi Kasus         : [Kategori A / B / C]
+10. Tautan Aplikasi (Live URL)   : https://...
+11. Tautan Repositori GitHub     : https://github.com/...
+12. Tautan Video Demonstrasi     : https://... (Maks. 3 Menit)
+13. Akun Demonstrasi (Login)     :
+    - Peran 1 (Admin/Pengelola)  : Username: [...] | Password: [...]
+    - Peran 2 (Staff/User)       : Username: [...] | Password: [...]
+14. Ringkasan Masalah & Solusi   : [2-3 Kalimat ringkas]
+15. Fitur Utama Aplikasi         : [Daftar 3-5 fitur unggulan]</pre>
+      </section>
+
+      <footer style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.88rem;">
+        Panitia Pelaksana AXIS 2026 | National Web Development Competition<br>
+        Rangkaian Kegiatan Resmi GALAKSI 2026 — Universitas Islam Negeri Sultan Syarif Kasim Riau
+      </footer>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
