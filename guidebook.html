@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guidebook Peserta — AXIS 2026 | GALAKSI 2026</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Guidebook Peserta | AXIS 2026 | GALAKSI 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -36,6 +39,7 @@
       color: var(--white);
       line-height: 1.8;
       padding: 0;
+      overflow-x: hidden;
     }
 
     p {
@@ -129,14 +133,24 @@
       font-size: 0.82rem;
       color: var(--g3);
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       line-height: 1.6;
       margin: 1.25rem 0;
     }
 
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
     table {
       width: 100%;
+      min-width: 500px;
       border-collapse: collapse;
-      margin: 1.5rem 0;
       font-size: 0.92rem;
     }
 
@@ -196,6 +210,7 @@
       color: var(--g5);
       font-size: 1.05rem;
       margin-bottom: 1.5rem;
+      line-height: 1.6;
     }
 
     .back-nav {
@@ -305,10 +320,20 @@
       margin: 1.25rem 0;
     }
 
+    /* ===== MOBILE RESPONSIVE ===== */
     @media (max-width: 600px) {
-      .wrap { padding: 2rem 1.25rem; }
-      h1 { font-size: 1.8rem; }
-      h2 { font-size: 1.3rem; }
+      .wrap { padding: 1.75rem 1rem 3.5rem; }
+      .header { padding: 2rem 0 1.5rem; margin-bottom: 1.75rem; }
+      h1 { font-size: 1.85rem; }
+      .header .sub { font-size: 0.92rem; }
+      h2 { font-size: 1.25rem; margin-top: 2.5rem; }
+      .back-nav { flex-direction: column; gap: 0.65rem; align-items: stretch; }
+      .back-link, .btn-print { justify-content: center; width: 100%; padding: 0.65rem; }
+      .toc { padding: 1.15rem 1rem; }
+      .card-box { padding: 1.15rem 1rem; }
+      blockquote { padding: 0.75rem 1rem; text-align: left; }
+      p, li { text-align: left; }
+      pre { font-size: 0.75rem; padding: 1rem 0.75rem; }
     }
 
     @media print {
@@ -341,7 +366,7 @@
       <span class="material-symbols-rounded">menu_book</span> Guidebook Resmi Peserta
     </div>
     <h1>AXIS 2026</h1>
-    <div class="sub">Application eXcellence in Information Systems<br>National Web Development Competition — GALAKSI 2026</div>
+    <div class="sub">Application eXcellence in Information Systems<br>National Web Development Competition | GALAKSI 2026</div>
     <blockquote style="text-align:center;border-left:none;border-top:1px solid var(--border);border-bottom:1px solid var(--border);border-radius:0;margin-top:1.5rem;">
       <strong style="color:var(--g2);">"Empowering Organizations & Digital Enterprises through Resilient Web Architectures"</strong>
     </blockquote>
@@ -359,9 +384,9 @@
       <li><a href="#s7">Sistem Penilaian</a></li>
       <li><a href="#s8">Etika dan Ketentuan Umum</a></li>
       <li><a href="#s9">Penutup</a></li>
-      <li><a href="#la">Lampiran A — Panduan Dokumen Ringkasan PDF</a></li>
-      <li><a href="#lb">Lampiran B — Checklist Kesiapan Pengumpulan</a></li>
-      <li><a href="#lc">Lampiran C — Format Lembar Informasi Tim & Karya</a></li>
+      <li><a href="#la">Lampiran A: Panduan Dokumen Ringkasan PDF</a></li>
+      <li><a href="#lb">Lampiran B: Checklist Kesiapan Pengumpulan</a></li>
+      <li><a href="#lc">Lampiran C: Format Lembar Informasi Tim & Karya</a></li>
     </ol>
   </nav>
 
@@ -379,20 +404,22 @@
   </ul>
 
   <h3>Identitas Kompetisi:</h3>
-  <table>
-    <tr><th>Komponen</th><th>Rincian Resmi</th></tr>
-    <tr><td><strong>Nama Kompetisi</strong></td><td>AXIS 2026 (Application eXcellence in Information Systems)</td></tr>
-    <tr><td><strong>Bidang Kompetisi</strong></td><td>National Web Development Competition</td></tr>
-    <tr><td><strong>Tagline</strong></td><td><em>"Where Innovation Meets Web Technology"</em></td></tr>
-    <tr><td><strong>Kegiatan Induk</strong></td><td>GALAKSI 2026</td></tr>
-    <tr><td><strong>Skala Kompetisi</strong></td><td>Nasional — Perguruan Tinggi se-Indonesia</td></tr>
-  </table>
+  <div class="table-container">
+    <table>
+      <tr><th>Komponen</th><th>Rincian Resmi</th></tr>
+      <tr><td><strong>Nama Kompetisi</strong></td><td>AXIS 2026 (Application eXcellence in Information Systems)</td></tr>
+      <tr><td><strong>Bidang Kompetisi</strong></td><td>National Web Development Competition</td></tr>
+      <tr><td><strong>Tagline</strong></td><td><em>"Where Innovation Meets Web Technology"</em></td></tr>
+      <tr><td><strong>Kegiatan Induk</strong></td><td>GALAKSI 2026</td></tr>
+      <tr><td><strong>Skala Kompetisi</strong></td><td>Nasional | Perguruan Tinggi se-Indonesia</td></tr>
+    </table>
+  </div>
 
   <!-- 2 -->
   <h2 id="s2"><span class="material-symbols-rounded">groups</span> 2. Sasaran Peserta dan Ketentuan Tim</h2>
   <ul>
     <li>Terbuka bagi mahasiswa aktif jenjang <strong>Sarjana (S1)</strong> dari Perguruan Tinggi Negeri (PTN) maupun Swasta (PTS) di seluruh Indonesia tanpa batasan program studi.</li>
-    <li>Setiap tim terdiri dari <strong>2 hingga 4 orang mahasiswa aktif S1</strong> dari perguruan tinggi yang sama (boleh lintas fakultas, program studi, maupun angkatan).</li>
+    <li>Setiap tim terdiri dari <strong>2 sampai 4 orang mahasiswa aktif S1</strong> dari perguruan tinggi yang sama (boleh lintas fakultas, program studi, maupun angkatan).</li>
     <li>Salah satu anggota tim bertindak sebagai <strong>Ketua Tim</strong>.</li>
     <li>Setiap mahasiswa hanya boleh terdaftar dalam <strong>1 (satu) tim</strong>, dan setiap tim hanya boleh mendaftarkan <strong>1 (satu) karya aplikasi web</strong>.</li>
     <li>Karya yang diajukan wajib orisinal, belum pernah memenangkan kompetisi sejenis sebelumnya, dan tidak melanggar hak kekayaan intelektual (HKI) pihak ketiga.</li>
@@ -404,31 +431,33 @@
   <p>Setiap tim peserta <strong>wajib memilih 1 (satu) dari 3 (tiga) kategori</strong> studi kasus di bawah ini sebagai fokus solusi web yang dibangun:</p>
 
   <div class="card-box">
-    <h3>Kategori A — Business & Enterprise Digitalization</h3>
+    <h3>Kategori A: Business & Enterprise Digitalization</h3>
     <p><strong>Fokus:</strong> Digitalisasi proses bisnis, operasional komersial, pencatatan transaksi terintegrasi, dan manajemen persediaan pada lingkungan organisasi bisnis atau UKM.</p>
     <blockquote>Kembangkan aplikasi web manajemen operasional bisnis yang mengintegrasikan pengelolaan katalog produk, pencatatan transaksi penjualan/pembelian, dan pergerakan persediaan (inventory) untuk meningkatkan efektivitas kerja serta mengurangi kesalahan pencatatan.</blockquote>
   </div>
 
   <div class="card-box">
-    <h3>Kategori B — Organizational Management & Governance</h3>
+    <h3>Kategori B: Organizational Management & Governance</h3>
     <p><strong>Fokus:</strong> Tata kelola administrasi organisasi, manajemen pelayanan internal/eksternal, alur persetujuan berkas (approval workflow), dan transparansi operasional.</p>
     <blockquote>Kembangkan aplikasi web manajemen administrasi organisasi yang mencakup pengajuan layanan atau permohonan berkas, proses persetujuan berjenjang (multi-level approval), dan pemantauan status secara transparan.</blockquote>
   </div>
 
   <div class="card-box">
-    <h3>Kategori C — Collaborative Digital Enterprise Platform</h3>
+    <h3>Kategori C: Collaborative Digital Enterprise Platform</h3>
     <p><strong>Fokus:</strong> Platform kolaborasi tim kerja, pembagian penugasan, pelacakan progres, dan pengaturan kontrol akses peran pengguna.</p>
     <blockquote>Kembangkan aplikasi web manajemen proyek dan kolaborasi dengan fitur pembagian tugas (task assignment), pemantauan progres pekerjaan, serta pengaturan hak akses berdasarkan peran pengguna.</blockquote>
   </div>
 
   <!-- 4 -->
   <h2 id="s4"><span class="material-symbols-rounded">code</span> 4. Ketentuan Teknis Pengembangan Website</h2>
-  <table>
-    <tr><th>Lapisan Sistem</th><th>Spesifikasi Teknologi</th><th>Ketentuan</th></tr>
-    <tr><td><strong>Backend (Wajib)</strong></td><td>PHP</td><td>Native PHP atau Framework (Laravel, CodeIgniter, Symfony, dll).</td></tr>
-    <tr><td><strong>Database (Wajib)</strong></td><td>MySQL / MariaDB</td><td>Relasional, validasi input terintegrasi, operasi CRUD konsisten.</td></tr>
-    <tr><td><strong>Frontend</strong></td><td>HTML5, CSS3, JavaScript</td><td>Bebas: Tailwind CSS, Bootstrap, jQuery, Vue, React, dll.</td></tr>
-  </table>
+  <div class="table-container">
+    <table>
+      <tr><th>Lapisan Sistem</th><th>Spesifikasi Teknologi</th><th>Ketentuan</th></tr>
+      <tr><td><strong>Backend (Wajib)</strong></td><td>PHP</td><td>Native PHP atau Framework (Laravel, CodeIgniter, Symfony, dll).</td></tr>
+      <tr><td><strong>Database (Wajib)</strong></td><td>MySQL / MariaDB</td><td>Relasional, validasi input terintegrasi, operasi CRUD konsisten.</td></tr>
+      <tr><td><strong>Frontend</strong></td><td>HTML5, CSS3, JavaScript</td><td>Bebas: Tailwind CSS, Bootstrap, jQuery, Vue, React, dll.</td></tr>
+    </table>
+  </div>
 
   <h3>Standar Minimum Aplikasi:</h3>
   <ol>
@@ -445,7 +474,7 @@
   <!-- 5 -->
   <h2 id="s5"><span class="material-symbols-rounded">inventory_2</span> 5. Luaran dan Berkas yang Wajib Dikumpulkan</h2>
   
-  <h3>5.1 Dokumen Ringkasan Karya (PDF 5–7 Halaman)</h3>
+  <h3>5.1 Dokumen Ringkasan Karya (PDF 5-7 Halaman)</h3>
   <p>Format file PDF tunggal berukuran tepat 5 sampai 7 halaman yang memuat identitas tim, latar belakang masalah, identifikasi target pengguna, perancangan alur proses bisnis (flowchart), arsitektur sistem, skema ERD basis data MySQL, spesifikasi teknologi, dan tangkapan layar antarmuka utama.</p>
 
   <h3>5.2 Tautan Live Deployment & Repositori GitHub</h3>
@@ -460,52 +489,58 @@
 
   <!-- 6 -->
   <h2 id="s6"><span class="material-symbols-rounded">calendar_month</span> 6. Pendaftaran dan Mekanisme Pengumpulan</h2>
-  <table>
-    <tr><th>Butir Informasi</th><th>Keterangan Resmi</th></tr>
-    <tr><td><strong>Biaya Registrasi</strong></td><td>Rp50.000,- per tim</td></tr>
-    <tr><td><strong>Formulir Pendaftaran</strong></td><td><a href="https://forms.gle/5QWPv4pqVaXKXz3i7" target="_blank">https://forms.gle/5QWPv4pqVaXKXz3i7</a></td></tr>
-    <tr><td><strong>Formulir Pengumpulan</strong></td><td><a href="https://forms.gle/z6LmuzqaYRqVUZaNA" target="_blank">https://forms.gle/z6LmuzqaYRqVUZaNA</a></td></tr>
-    <tr><td><strong>Template Submission</strong></td><td><a href="https://github.com/axis-competition/submission-template" target="_blank">github.com/axis-competition/submission-template</a></td></tr>
-    <tr><td><strong>Narahubung WhatsApp</strong></td><td><a href="https://wa.me/6285181079659" target="_blank">+62 851-8107-9659</a></td></tr>
-  </table>
+  <div class="table-container">
+    <table>
+      <tr><th>Butir Informasi</th><th>Keterangan Resmi</th></tr>
+      <tr><td><strong>Biaya Registrasi</strong></td><td>Rp50.000,- per tim</td></tr>
+      <tr><td><strong>Formulir Pendaftaran</strong></td><td><a href="https://forms.gle/5QWPv4pqVaXKXz3i7" target="_blank">https://forms.gle/5QWPv4pqVaXKXz3i7</a></td></tr>
+      <tr><td><strong>Formulir Pengumpulan</strong></td><td><a href="https://forms.gle/z6LmuzqaYRqVUZaNA" target="_blank">https://forms.gle/z6LmuzqaYRqVUZaNA</a></td></tr>
+      <tr><td><strong>Template Submission</strong></td><td><a href="https://github.com/axis-competition/submission-template" target="_blank">github.com/axis-competition/submission-template</a></td></tr>
+      <tr><td><strong>Narahubung WhatsApp</strong></td><td><a href="https://wa.me/6285181079659" target="_blank">+62 851-8107-9659</a></td></tr>
+    </table>
+  </div>
 
   <h3>Jadwal Pelaksanaan Kompetisi:</h3>
-  <table>
-    <tr><th>Tahapan Kegiatan</th><th>Jadwal Pelaksanaan</th></tr>
-    <tr><td>Publikasi Lomba Resmi</td><td>Jumat, 20 November 2026</td></tr>
-    <tr><td><strong>Periode Pendaftaran</strong></td><td><strong>20 – 30 November 2026</strong></td></tr>
-    <tr><td><strong>Pengembangan & Submit Karya</strong></td><td><strong>20 Nov – 9 Des 2026, 23.59 WIB</strong></td></tr>
-    <tr><td>Masa Penjurian</td><td>10 – 11 Desember 2026</td></tr>
-    <tr><td><strong>Acara Puncak & Awarding</strong></td><td><strong>Sabtu, 12 Desember 2026</strong></td></tr>
-  </table>
+  <div class="table-container">
+    <table>
+      <tr><th>Tahapan Kegiatan</th><th>Jadwal Pelaksanaan</th></tr>
+      <tr><td>Publikasi Lomba Resmi</td><td>Jumat, 20 November 2026</td></tr>
+      <tr><td><strong>Periode Pendaftaran</strong></td><td><strong>20 - 30 November 2026</strong></td></tr>
+      <tr><td><strong>Pengembangan & Submit Karya</strong></td><td><strong>20 Nov - 9 Des 2026, 23.59 WIB</strong></td></tr>
+      <tr><td>Masa Penjurian</td><td>10 - 11 Desember 2026</td></tr>
+      <tr><td><strong>Acara Puncak & Awarding</strong></td><td><strong>Sabtu, 12 Desember 2026</strong></td></tr>
+    </table>
+  </div>
 
   <!-- 7 -->
   <h2 id="s7"><span class="material-symbols-rounded">analytics</span> 7. Sistem Penilaian</h2>
   <p>Evaluasi karya dilakukan secara objektif oleh dewan juri ahli dengan total bobot 100%:</p>
-  <table>
-    <tr><th>Aspek Evaluasi</th><th>Bobot</th><th>Kriteria Penilaian Utama</th></tr>
-    <tr><td><strong>Fungsionalitas & Implementasi</strong></td><td><strong>35%</strong></td><td>Kelengkapan fungsi inti, integritas data MySQL, operasi CRUD, autentikasi multi-role, stabilitas error handling, dan kerapian struktur kode.</td></tr>
-    <tr><td><strong>Analisis & Perancangan Sistem</strong></td><td><strong>30%</strong></td><td>Ketajaman identifikasi masalah, relevansi solusi, alur proses bisnis (Flowchart/BPMN), arsitektur perangkat lunak, dan diagram ERD basis data.</td></tr>
-    <tr><td><strong>UI/UX dan Responsivitas</strong></td><td><strong>20%</strong></td><td>Kemudahan penggunaan (usability), konsistensi desain antarmuka, kejelasan sistem navigasi, dan adaptasi layout pada desktop & mobile.</td></tr>
-    <tr><td><strong>Inovasi, Manfaat & Kelayakan</strong></td><td><strong>15%</strong></td><td>Orisinalitas gagasan pembeda, dampak nyata pada efisiensi kerja organisasi, potensi adopsi operasional, dan skalabilitas sistem.</td></tr>
-  </table>
+  <div class="table-container">
+    <table>
+      <tr><th>Aspek Evaluasi</th><th>Bobot</th><th>Kriteria Penilaian Utama</th></tr>
+      <tr><td><strong>Fungsionalitas & Implementasi</strong></td><td><strong>35%</strong></td><td>Kelengkapan fungsi inti, integritas data MySQL, operasi CRUD, autentikasi multi-role, stabilitas error handling, dan kerapian struktur kode.</td></tr>
+      <tr><td><strong>Analisis & Perancangan Sistem</strong></td><td><strong>30%</strong></td><td>Ketajaman identifikasi masalah, relevansi solusi, alur proses bisnis (Flowchart/BPMN), arsitektur perangkat lunak, dan diagram ERD basis data.</td></tr>
+      <tr><td><strong>UI/UX dan Responsivitas</strong></td><td><strong>20%</strong></td><td>Kemudahan penggunaan (usability), konsistensi desain antarmuka, kejelasan sistem navigasi, dan adaptasi layout pada desktop & mobile.</td></tr>
+      <tr><td><strong>Inovasi, Manfaat & Kelayakan</strong></td><td><strong>15%</strong></td><td>Orisinalitas gagasan pembeda, dampak nyata pada efisiensi kerja organisasi, potensi adopsi operasional, dan skalabilitas sistem.</td></tr>
+    </table>
+  </div>
 
   <!-- 8 -->
   <h2 id="s8"><span class="material-symbols-rounded">gavel</span> 8. Etika dan Ketentuan Umum</h2>
   <ul>
     <li><strong>Orisinalitas Mutlak:</strong> Karya harus merupakan kreasi orisinal tim peserta. Penggunaan framework dan library open-source wajib mematuhi ketentuan lisensi masing-masing. Segala bentuk plagiarisme akan berakibat diskualifikasi langsung.</li>
     <li><strong>Kesesuaian Kategori:</strong> Aplikasi harus konsisten menjawab persoalan pada kategori studi kasus yang dipilih.</li>
-    <li><strong>Aksesibilitas Penjurian:</strong> Seluruh tautan (live deployment, GitHub, dan video) wajib dapat dibuka publik tanpa kendala selama masa penjurian (10–11 Desember 2026).</li>
+    <li><strong>Aksesibilitas Penjurian:</strong> Seluruh tautan (live deployment, GitHub, dan video) wajib dapat dibuka publik tanpa kendala selama masa penjurian (10 - 11 Desember 2026).</li>
     <li><strong>Keputusan Juri:</strong> Bersifat <strong>final, independen, dan tidak dapat diganggu gugat</strong> oleh pihak manapun.</li>
   </ul>
 
   <!-- 9 -->
   <h2 id="s9"><span class="material-symbols-rounded">verified</span> 9. Penutup</h2>
   <p>AXIS 2026 diselenggarakan untuk menjadi panggung apresiasi talenta rekayasa perangkat lunak mahasiswa Indonesia. Melalui integrasi analisis kebutuhan yang komprehensif dan implementasi web yang tangguh, kompetisi ini diharapkan melahirkan solusi digital yang siap mendukung kemajuan organisasi dan dunia usaha.</p>
-  <blockquote><strong>"Where Innovation Meets Web Technology"</strong> — Selamat berkarya dan tunjukkan performa terbaik tim Anda di GALAKSI 2026!</blockquote>
+  <blockquote><strong>"Where Innovation Meets Web Technology"</strong> : Selamat berkarya dan tunjukkan performa terbaik tim Anda di GALAKSI 2026!</blockquote>
 
   <!-- LAMPIRAN A -->
-  <h2 id="la"><span class="material-symbols-rounded">article</span> Lampiran A — Panduan Dokumen Ringkasan PDF (5–7 Halaman)</h2>
+  <h2 id="la"><span class="material-symbols-rounded">article</span> Lampiran A: Panduan Dokumen Ringkasan PDF (5-7 Halaman)</h2>
   <ul>
     <li><strong>Halaman 1:</strong> Identitas tim, kategori lomba yang dipilih, dan executive summary (ringkasan masalah dan solusi).</li>
     <li><strong>Halaman 2:</strong> Latar belakang masalah operasional riil, profil target pengguna (*user persona*), serta tujuan dan manfaat solusi.</li>
@@ -517,7 +552,7 @@
   </ul>
 
   <!-- LAMPIRAN B -->
-  <h2 id="lb"><span class="material-symbols-rounded">checklist</span> Lampiran B — Checklist Kesiapan Pengumpulan</h2>
+  <h2 id="lb"><span class="material-symbols-rounded">checklist</span> Lampiran B: Checklist Kesiapan Pengumpulan</h2>
   <ul class="checklist">
     <li><span class="material-symbols-rounded">check_box_outline_blank</span> Tim terdiri atas 2 sampai 4 mahasiswa aktif jenjang S1 dari perguruan tinggi yang sama.</li>
     <li><span class="material-symbols-rounded">check_box_outline_blank</span> Setiap anggota tim tidak terdaftar di tim lain pada kompetisi AXIS 2026.</li>
@@ -536,7 +571,7 @@
   </ul>
 
   <!-- LAMPIRAN C -->
-  <h2 id="lc"><span class="material-symbols-rounded">assignment</span> Lampiran C — Format Lembar Informasi Tim dan Karya</h2>
+  <h2 id="lc"><span class="material-symbols-rounded">assignment</span> Lampiran C: Format Lembar Informasi Tim dan Karya</h2>
   <pre>
 1.  Nama Tim                     : [Nama Tim]
 2.  Asal Perguruan Tinggi        : [Nama Perguruan Tinggi / Universitas]
