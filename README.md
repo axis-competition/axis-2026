@@ -2,7 +2,7 @@
 
 # 🌐 AXIS 2026
 ### **Application eXcellence in Information Systems**
-#### *National Web Development Competition*
+#### *National Frontend Development Competition*
 
 <p align="center">
   <em>"Where Innovation Meets Web Technology"</em>
@@ -11,13 +11,13 @@
 [![Status](https://img.shields.io/badge/Status-Registration_Open-success?style=for-the-badge&logo=github)](https://forms.gle/5QWPv4pqVaXKXz3i7)
 [![Website](https://img.shields.io/badge/Website-axis--2026-black?style=for-the-badge&logo=googlechrome)](https://axis-competition.github.io/axis-2026/)
 [![Guidebook](https://img.shields.io/badge/Guidebook-Online_Reader-black?style=for-the-badge&logo=gitbook)](https://axis-competition.github.io/axis-2026/guidebook.html)
-[![Tech Stack](https://img.shields.io/badge/Stack-PHP_%7C_MySQL-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://github.com/axis-competition/axis-2026)
+
 [![Target](https://img.shields.io/badge/Peserta-Mahasiswa_S1-black?style=for-the-badge&logo=academia)](https://github.com/axis-competition/axis-2026)
 
 <br>
 
 > **Tema Resmi:**  
-> *"Empowering Organizations & Digital Enterprises through Resilient Web Architectures"*
+> *"Empowering Organizations & Digital Enterprises through Innovative and User-Centered Web Interfaces"*
 
 <br>
 
@@ -52,8 +52,8 @@ Kompetisi ini menantang mahasiswa untuk membangun solusi sistem informasi berbas
 
 ### Aspek Kunci Kompetisi:
 1. **Analisis Kebutuhan**: Ketajaman identifikasi masalah operasional dan perumusan fitur komputasional yang relevan.
-2. **Perancangan Arsitektur**: Rancangan database relasional MySQL yang terstruktur, alur proses bisnis (*Flowchart / BPMN*), dan modularitas sistem.
-3. **Kualitas Rekayasa Web**: Penerapan ekosistem wajib **PHP & MySQL** dengan antarmuka responsif, operasi CRUD yang aman, dan hak akses berbasis peran (*RBAC*).
+2. **Perancangan antarmuka**: Kesesuaian kebutuhan pengguna, alur navigasi, dan rancangan layar.
+3. **Implementasi frontend**: Keberhasilan alur utama, respons interaksi, validasi, dan kerapian kode.
 
 ---
 
@@ -78,16 +78,16 @@ Peserta wajib memilih salah satu dari 3 (tiga) lintasan studi kasus berikut:
 | :---: | :--- | :--- |
 | **A** | **Business & Enterprise Digitalization** | Digitalisasi proses bisnis komersial: katalog barang, pencatatan transaksi pembelian/penjualan, integrasi stok persediaan, dan laporan operasional terpadu. |
 | **B** | **Organizational Management & Governance** | Tata kelola administrasi internal/publik: portal pengajuan surat/layanan, verifikasi dokumen, alur persetujuan berjenjang (*approval flow*), dan pelacakan status permohonan transparan. |
-| **C** | **Collaborative Digital Enterprise Platform** | Platform kerja kolaboratif tim: pembagian penugasan (*task assignment*), pemantauan progres proyek (*progress tracking*), dan kontrol akses menu berbasis peran pengguna (*RBAC*). |
+| **C** | **Collaborative Digital Enterprise Platform** | Platform kerja kolaboratif tim: pembagian penugasan (*task assignment*), pemantauan progres proyek (*progress tracking*), dan ringkasan aktivitas tim. |
 
 ---
 
 ## ⚙️ Ketentuan Teknologi & Standar Minimum
 
 ```
-Stack Teknologi Wajib:
-├── Backend  : PHP (Native atau Framework: Laravel, CodeIgniter, Symfony, dll)
-├── Database : MySQL / MariaDB (Relasional, integritas data CRUD, validasi input)
+Data contoh dapat disediakan melalui JSON lokal, penyimpanan browser, atau API.
+
+
 └── Frontend : HTML5, CSS3, JavaScript (Bebas: Tailwind CSS, Bootstrap, Vue, React, dll)
 ```
 
@@ -95,9 +95,9 @@ Stack Teknologi Wajib:
 - 🌐 **Live Deployment**: Website aktif pada URL publik (hosting/VPS/PaaS gratis/berbayar) selama masa penjurian.
 - ⚙️ **Fungsionalitas Nyata**: Seluruh fitur utama berjalan dari hulu ke hilir (bukan sekadar prototipe UI statis).
 - 📱 **Responsif Lintas Perangkat**: Antarmuka nyaman diakses dan adaptif pada resolusi desktop maupun smartphone.
-- 🗄️ **Operasi Database Penuh**: Implementasi CRUD (*Create, Read, Update, Delete*) terintegrasi MySQL.
-- 🔐 **Autentikasi Multi-Role**: Sistem otentikasi login dengan minimal **2 peran pengguna berbeda** (misal: *Admin* & *User/Staff*).
-- 🛡️ **Keamanan Dasar**: Dilengkapi sanitasi input, proteksi SQL Injection/XSS dasar, dan penanganan pesan error yang rapi.
+- Pengguna dapat menyelesaikan alur utama dengan data contoh.
+- Navigasi dapat digunakan dengan papan ketik dan fokus terlihat.
+- Formulir menampilkan pesan validasi dan umpan balik yang jelas.
 
 ---
 
@@ -105,14 +105,14 @@ Stack Teknologi Wajib:
 
 Saat batas akhir submisi, setiap tim wajib mengumpulkan **3 (tiga) berkas luaran**:
 
-1. **📄 Dokumen Ringkasan Karya (PDF 5 - 7 Halaman)**
+1. **📄 Dokumen Ringkasan Karya (PDF 3 sampai 5 Halaman)**
    - Mengikuti panduan format pada [Lampiran A GUIDEBOOK.md](./GUIDEBOOK.md#lampiran-a-rancangan-struktur-dokumen-ringkasan).
-   - Memuat: identitas tim, latar belakang masalah, profil pengguna, alur proses bisnis, diagram arsitektur, ERD basis data MySQL, spesifikasi teknologi, dan tangkapan layar antarmuka aplikasi.
+   - Identitas tim, masalah, target pengguna, alur interaksi, rancangan layar, teknologi, dan tangkapan layar hasil implementasi.
 
 2. **🌐 Tautan Live Deployment & Repositori GitHub**
    - **Tautan Live Web**: URL website aktif yang siap diuji fungsionalitasnya oleh dewan juri.
    - **Tautan Repositori GitHub**: Repositori kode publik yang dibuat menggunakan template resmi [submission-template](https://github.com/axis-competition/submission-template).
-   - **Akun Pengujian (Demo)**: Disertakan minimal 2 akun uji coba (username & password) untuk akses juri.
+   - Petunjuk untuk mencoba alur utama tersedia dalam README.
 
 3. **🎥 Video Demonstrasi Aplikasi (Maksimal 3 Menit)**
    - Video memperlihatkan simulasi fitur nyata pada live website.
@@ -137,8 +137,8 @@ Saat batas akhir submisi, setiap tim wajib mengumpulkan **3 (tiga) berkas luaran
 
 | Aspek Penilaian | Bobot | Indikator Utama Evaluasi Dewan Juri |
 | :--- | :---: | :--- |
-| **Fungsionalitas & Implementasi** | **35%** | Kelengkapan fitur utama, integritas operasi CRUD, relasi basis data MySQL, autentikasi multi-role, error handling, dan kebersihan kode. |
-| **Analisis Kebutuhan & Desain Sistem** | **30%** | Ketajaman analisis masalah, relevansi solusi, perancangan proses bisnis (Flowchart), diagram arsitektur sistem, dan desain ERD MySQL. |
+| **Fungsionalitas & Implementasi** | **35%** | Keberhasilan alur utama, respons interaksi, validasi, dan kerapian kode. |
+| **Analisis Kebutuhan & Desain Sistem** | **30%** | Kesesuaian kebutuhan pengguna, alur navigasi, dan rancangan layar. |
 | **UI/UX & Responsivitas Antarmuka** | **20%** | Kemudahan penggunaan (*usability*), konsistensi desain UI, navigasi intuitif, serta adaptasi layout responsif di desktop & mobile. |
 | **Inovasi & Kelayakan Solusi** | **15%** | Orisinalitas nilai tambah, dampak efisiensi nyata pada operasional organisasi/usaha, dan potensi keberlanjutan pengembangan. |
 
@@ -158,7 +158,7 @@ Saat batas akhir submisi, setiap tim wajib mengumpulkan **3 (tiga) berkas luaran
 Jika Anda membutuhkan informasi lebih lanjut mengenai teknis atau regulasi kompetisi, silakan menghubungi:
 - **WhatsApp Narahubung**: [**+62 851-8107-9659**](https://wa.me/6285181079659)
 - **Email / Media Sosial**: Terkoneksi dengan kanal informasi resmi panitia **GALAKSI 2026**
-- **Penyelenggara**: Panitia Pelaksana AXIS 2026 - *National Web Development Competition*
+- **Penyelenggara**: Panitia Pelaksana AXIS 2026 - *National Frontend Development Competition*
 
 ---
 
