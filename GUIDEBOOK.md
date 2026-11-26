@@ -2,7 +2,7 @@
 
 # 📘 BUKU PANDUAN RESMI PESERTA
 ## AXIS 2026 (Application eXcellence in Information Systems)
-### *National Frontend Development Competition*
+### *Frontend Development Competition*
 
 <p align="center">
   <em>“Where Innovation Meets Web Technology”</em>
@@ -76,7 +76,7 @@ Tantangan era digital ini memerlukan pengembang web yang tidak hanya piawai menu
 | :--- | :--- |
 | **Nama Kompetisi** | **AXIS 2026** |
 | **Kepanjangan** | *Application eXcellence in Information Systems* |
-| **Bidang Lomba** | *National Frontend Development Competition* |
+| **Bidang Lomba** | *Frontend Development Competition* |
 | **Tagline** | *“Where Innovation Meets Web Technology”* |
 | **Kegiatan Induk** | **GALAKSI 2026** |
 | **Skala Peserta** | Nasional (Perguruan Tinggi se-Indonesia) |

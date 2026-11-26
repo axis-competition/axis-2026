@@ -2,7 +2,7 @@
 
 # 🌐 AXIS 2026
 ### **Application eXcellence in Information Systems**
-#### *National Frontend Development Competition*
+#### *Frontend Development Competition*
 
 <p align="center">
   <em>"Where Innovation Meets Web Technology"</em>
@@ -158,7 +158,7 @@ Saat batas akhir submisi, setiap tim wajib mengumpulkan **3 (tiga) berkas luaran
 Jika Anda membutuhkan informasi lebih lanjut mengenai teknis atau regulasi kompetisi, silakan menghubungi:
 - **WhatsApp Narahubung**: [**+62 851-8107-9659**](https://wa.me/6285181079659)
 - **Email / Media Sosial**: Terkoneksi dengan kanal informasi resmi panitia **GALAKSI 2026**
-- **Penyelenggara**: Panitia Pelaksana AXIS 2026 - *National Frontend Development Competition*
+- **Penyelenggara**: Panitia Pelaksana AXIS 2026 - *Frontend Development Competition*
 
 ---
 
