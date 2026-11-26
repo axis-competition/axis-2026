@@ -2,7 +2,7 @@
 
 # 📘 BUKU PANDUAN RESMI PESERTA
 ## AXIS 2026 (Application eXcellence in Information Systems)
-### *National Web Development Competition*
+### *National Frontend Development Competition*
 
 <p align="center">
   <em>“Where Innovation Meets Web Technology”</em>
@@ -11,12 +11,12 @@
 [![Status Pendaftaran](https://img.shields.io/badge/Pendaftaran-20_--_30_November_2026-2563eb?style=for-the-badge&logo=googleforms&logoColor=white)](https://forms.gle/5QWPv4pqVaXKXz3i7)
 [![Biaya Registrasi](https://img.shields.io/badge/Biaya-Rp50.000_%2F_Tim-059669?style=for-the-badge&logo=cashapp&logoColor=white)](https://forms.gle/5QWPv4pqVaXKXz3i7)
 [![Jenjang Peserta](https://img.shields.io/badge/Jenjang-Mahasiswa_S1_Nasional-d97706?style=for-the-badge&logo=mortarboard&logoColor=white)](#2-sasaran-peserta-dan-ketentuan-tim)
-[![Stack Wajib](https://img.shields.io/badge/Wajib-PHP_%26_MySQL-4f46e5?style=for-the-badge&logo=php&logoColor=white)](#4-ketentuan-teknis-pengembangan-website)
+
 
 <br/>
 
 > ### 🎯 TEMA UTAMA KOMPETISI
-> ### **“Empowering Organizations & Digital Enterprises through Resilient Web Architectures”**
+> ### **“Empowering Organizations & Digital Enterprises through Innovative and User-Centered Web Interfaces”**
 
 <br/>
 
@@ -40,13 +40,13 @@
 | **01** | [**Profil & Tujuan Kompetisi**](#1-profil-dan-tujuan-kompetisi) | Latar belakang, tujuan strategis, dan identitas lomba |
 | **02** | [**Sasaran & Ketentuan Tim**](#2-sasaran-peserta-dan-ketentuan-tim) | Syarat mahasiswa S1, kuota tim (2-4 orang), dan orisinalitas |
 | **03** | [**Tema & Kategori Studi Kasus**](#3-tema-dan-kategori-studi-kasus) | Kategori A (Bisnis), B (Organisasi), & C (Kolaborasi) |
-| **04** | [**Ketentuan Teknis Aplikasi**](#4-ketentuan-teknis-pengembangan-website) | Kewajiban PHP & MySQL, standar CRUD, keamanan & RBAC |
-| **05** | [**Luaran yang Wajib Dikumpulkan**](#5-luaran-dan-berkas-yang-wajib-dikumpulkan) | PDF ringkasan 5-7 hal, Live URL, GitHub repo, & video 3 menit |
+| **04** | [**Ketentuan Teknis Aplikasi**](#4-ketentuan-teknis-pengembangan-website) | Teknologi frontend, alur interaksi, dan aksesibilitas |
+| **05** | [**Luaran yang Wajib Dikumpulkan**](#5-luaran-dan-berkas-yang-wajib-dikumpulkan) | PDF ringkasan 3 sampai 5 hal, Live URL, GitHub repo, & video 3 menit |
 | **06** | [**Pendaftaran, Biaya & Jadwal**](#6-pendaftaran-dan-mekanisme-pengumpulan) | Timeline kompetisi, biaya Rp50.000/tim, alur submisi |
 | **07** | [**Sistem & Aspek Penilaian**](#7-sistem-penilaian) | Bobot 35% implementasi, 30% perancangan, 20% UI/UX, 15% inovasi |
 | **08** | [**Etika & Regulasi Umum**](#8-etika-dan-ketentuan-umum) | Aturan HKI, kesiapan akses juri, dan diskualifikasi |
 | **09** | [**Penutup**](#9-penutup) | Pernyataan penutup panitia pelaksana |
-| 📎 | [**Lampiran A: Panduan Dokumen PDF**](#lampiran-a-rancangan-struktur-dokumen-ringkasan) | Pedoman susunan isi PDF ringkasan (5-7 halaman) |
+| 📎 | [**Lampiran A: Panduan Dokumen PDF**](#lampiran-a-rancangan-struktur-dokumen-ringkasan) | Pedoman susunan isi PDF ringkasan (3 sampai 5 halaman) |
 | 📎 | [**Lampiran B: Checklist Kesiapan Submit**](#lampiran-b-checklist-kesiapan-pengumpulan) | Daftar periksa mandiri sebelum mengumpulkan karya |
 | 📎 | [**Lampiran C: Format Lembar Tim & Karya**](#lampiran-c-format-lembar-informasi-tim-dan-karya) | Format data tim siap salin (*copy-pasteable*) |
 
@@ -66,7 +66,7 @@ Tantangan era digital ini memerlukan pengembang web yang tidak hanya piawai menu
 ### 1.2 Tujuan Kompetisi
 * 🚀 **Kreativitas & Keterampilan**: Mengasah keahlian mahasiswa dalam rekayasa aplikasi web modern.
 * 💡 **Inovasi Aplikatif**: Mendorong penciptaan solusi perangkat lunak yang relevan dengan persoalan nyata.
-* 📐 **Kompetensi Terpadu**: Melatih harmonisasi antara analisis kebutuhan, desain basis data, dan implementasi kode.
+* 📐 **Kompetensi Terpadu**: Melatih harmonisasi antara analisis kebutuhan, desain antarmuka, dan implementasi kode.
 * ⭐ **Standar Kualitas**: Menghasilkan sistem web yang fungsional, andal (*resilient*), responsif, dan mudah digunakan.
 * 🤝 **Kolaborasi Nasional**: Mempererat jejaring serta ruang kompetisi sehat bagi mahasiswa tingkat nasional.
 
@@ -76,7 +76,7 @@ Tantangan era digital ini memerlukan pengembang web yang tidak hanya piawai menu
 | :--- | :--- |
 | **Nama Kompetisi** | **AXIS 2026** |
 | **Kepanjangan** | *Application eXcellence in Information Systems* |
-| **Bidang Lomba** | *National Web Development Competition* |
+| **Bidang Lomba** | *National Frontend Development Competition* |
 | **Tagline** | *“Where Innovation Meets Web Technology”* |
 | **Kegiatan Induk** | **GALAKSI 2026** |
 | **Skala Peserta** | Nasional (Perguruan Tinggi se-Indonesia) |
@@ -125,15 +125,15 @@ Tantangan era digital ini memerlukan pengembang web yang tidak hanya piawai menu
 ### 👥 Kategori C: Collaborative Digital Enterprise Platform
 * **Fokus**: Platform kolaborasi kerja tim, distribusi penugasan proyek, sinkronisasi aktivitas, dan pembatasan peran kerja terpadu.
 * **Tantangan Studi Kasus**:
-  > *Kembangkan aplikasi web manajemen proyek dan kolaborasi dengan fitur pembagian tugas (task assignment), pemantauan progres pekerjaan (progress tracking), serta pengaturan hak akses berdasarkan peran pengguna.*
-* **Contoh Fitur Solutif**: Kanban task board, pelacakan deadline & milestone, komentar/diskusi penugasan, matriks perizinan peran (*RBAC*), dan ringkasan produktivitas tim.
+  > *Kembangkan aplikasi web manajemen proyek dan kolaborasi dengan fitur pembagian tugas (task assignment), pemantauan progres pekerjaan (progress tracking), serta ringkasan aktivitas tim.*
+* **Contoh Fitur Solutif**: Kanban task board, pelacakan deadline & milestone, komentar/diskusi penugasan, ringkasan aktivitas tim, dan ringkasan produktivitas tim.
 
 <br/>
 
 > [!TIP]
 > **Prinsip Utama Pengembangan Karya**:
 > 1. Mulai dari **masalah nyata** dan **persona pengguna** yang jelas.
-> 2. Jaga **konsistensi benang merah**: Masalah $\rightarrow$ Desain Proses Bisnis $\rightarrow$ ERD Database $\rightarrow$ Fitur Aplikasi.
+> 2. Jaga **konsistensi benang merah**: Masalah $\rightarrow$ Desain Proses Bisnis $\rightarrow$ Rancangan Layar $\rightarrow$ Fitur Aplikasi.
 > 3. Prioritaskan kestabilan fungsi inti sebelum menambahkan fitur pelengkap.
 
 ---
@@ -144,12 +144,12 @@ Tantangan era digital ini memerlukan pengembang web yang tidak hanya piawai menu
 
 | Komponen | Spesifikasi Teknologi | Ketentuan Panitia |
 | :--- | :--- | :--- |
-| **Backend (Wajib)** | **PHP** | Wajib menggunakan bahasa PHP. Boleh **Native PHP** maupun Framework modern (**Laravel**, **CodeIgniter**, **Symfony**, dll). |
-| **Database (Wajib)** | **MySQL** / MariaDB | Wajib menggunakan MySQL/MariaDB dengan relasi tabel terstruktur, operasi CRUD, dan validasi data. |
+
+| **Data demonstrasi** | JSON lokal, penyimpanan browser, atau API | Pilih sesuai kebutuhan alur pengguna. |
 | **Frontend** | Bebas | HTML5, CSS3, JavaScript. Diperbolehkan memakai CSS framework (**Tailwind CSS**, **Bootstrap**) dan library interaktif. |
 
 > [!NOTE]
-> Penggunaan framework modern (misalnya Laravel vs Native PHP) **tidak otomatis menambah nilai penilaian**. Dewan juri fokus pada ketepatan arsitektur, kerapian struktur kode, kestabilan logika, dan penanganan kesalahan.
+> Peserta bebas memilih framework atau menggunakan JavaScript tanpa framework.
 
 ### 4.2 Standar Minimum Sistem yang Dinilai
 
@@ -158,13 +158,13 @@ Tantangan era digital ini memerlukan pengembang web yang tidak hanya piawai menu
 │                       STANDAR MINIMUM APLIKASI WEB                          │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │  1. Live Deployment   : Website aktif pada URL publik selama masa penjurian │
-│  2. Fungsional Penuh  : Seluruh proses bisnis berjalan nyata (bukan dummy)   │
+│  2. Alur utama dapat dicoba dari awal hingga selesai.
 │  3. Interaktif        : Terjadi interaksi data dinamis timbal balik         │
 │  4. Responsif         : Nyaman digunakan pada desktop maupun smartphone     │
-│  5. Integrasi MySQL   : Data tersimpan konsisten dengan validasi input      │
-│  6. Operasi CRUD      : Create, Read, Update, Delete berfungsi tepat alur    │
-│  7. Multi-Role RBAC   : Minimal 2 peran pengguna dengan hak akses berbeda   │
-│  8. Keamanan Dasar    : Sanitasi input, proteksi SQL Injection, error page  │
+│  5. Data contoh dapat disediakan melalui JSON lokal, penyimpanan browser, atau API.
+│  6. Pengguna dapat menyelesaikan alur utama dengan data contoh.
+│  7. Navigasi dapat digunakan dengan papan ketik dan fokus terlihat.
+│  8. Formulir menampilkan pesan validasi dan umpan balik yang jelas.
 │  9. Kepatuhan HKI     : Mematuhi ketentuan lisensi pustaka open-source      │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -175,14 +175,14 @@ Tantangan era digital ini memerlukan pengembang web yang tidak hanya piawai menu
 
 Setiap tim wajib mengumpulkan **3 (tiga) komponen luaran utama**:
 
-### 📄 1. Dokumen Ringkasan Karya (PDF 5-7 Halaman)
-* **Format**: File tunggal format PDF berukuran 5 sampai 7 halaman.
+### 📄 1. Dokumen Ringkasan Karya (PDF 3 sampai 5 Halaman)
+* **Format**: File tunggal format PDF berukuran 3 sampai 5 halaman.
 * **Muatan Pokok**:
   1. Identitas tim, judul karya, dan ringkasan eksekutif (*executive summary*).
   2. Latar belakang masalah, identifikasi kebutuhan, dan profil target pengguna.
   3. Perancangan alur proses bisnis (Flowchart / Activity Diagram).
-  4. Arsitektur sistem dan desain basis data (*Entity Relationship Diagram / ERD*).
-  5. Matriks fitur dan pembagian hak akses peran (*RBAC*).
+  4. Peta navigasi dan rancangan layar utama.
+  5. Fitur utama dan contoh interaksi pengguna.
   6. Spesifikasi teknologi dan dokumentasi tangkapan layar antarmuka utama (*UI screenshots*).
   7. Rencana keberlanjutan solusi dan pencantuman tautan pengujian juri.
 *(Panduan struktur halaman lengkap dapat dibaca pada [Lampiran A](#lampiran-a-rancangan-struktur-dokumen-ringkasan)).*
@@ -190,12 +190,12 @@ Setiap tim wajib mengumpulkan **3 (tiga) komponen luaran utama**:
 ### 🌐 2. Tautan Live Deployment & Repositori GitHub
 * **Live Deployment**: Website dapat diakses juri secara publik tanpa kendala jaringan privat/localhost.
 * **Repositori GitHub**: Repositori berstatus publik yang memuat source code rapi dan file `README.md` berstandar resmi (gunakan template resmi di [axis-competition/submission-template](https://github.com/axis-competition/submission-template)).
-* **Akun Demonstrasi**: Menyediakan minimal 2 pasang username/password untuk masing-masing peran pengguna di formulir dan file README.
+* Petunjuk untuk mencoba alur utama tersedia dalam README.
 
 ### 🎥 3. Video Demonstrasi Aplikasi (Maksimal 3 Menit)
 * Durasi video **maksimal 3 menit**.
 * Menampilkan fitur nyata aplikasi yang sedang berjalan (bukan slide show presentasi statis).
-* **Alur Video**: Masalah yang diangkat $\rightarrow$ Solusi yang ditawarkan $\rightarrow$ Demo fungsi utama & simulasi peran pengguna $\rightarrow$ Manfaat bagi pengguna.
+* **Alur Video**: Masalah yang diangkat $\rightarrow$ Solusi yang ditawarkan $\rightarrow$ Demo fungsi utama & alur interaksi pengguna $\rightarrow$ Manfaat bagi pengguna.
 * Video diunggah ke YouTube atau Google Drive dengan status akses *Public* atau *Unlisted*.
 
 ---
@@ -230,8 +230,8 @@ Penilaian dilakukan secara objektif oleh dewan juri ahli dengan total bobot **10
 
 | Aspek Penilaian | Bobot | Kriteria Evaluasi Utama |
 | :--- | :---: | :--- |
-| **Fungsionalitas & Implementasi** | **35%** | • Keberhasilan fungsi utama sesuai studi kasus<br>• Keandalan CRUD & konsistensi data MySQL<br>• Ketegasan sistem login & multi-role authorization<br>• Stabilitas aplikasi, sanitasi input, dan penanganan error |
-| **Analisis & Perancangan Sistem** | **30%** | • Ketajaman identifikasi masalah & relevansi solusi<br>• Kejelasan profil target pengguna (*persona*)<br>• Kualitas diagram proses bisnis (Flowchart/BPMN)<br>• Arsitektur perangkat lunak & struktur relasi tabel (ERD) |
+| **Fungsionalitas & Implementasi** | **35%** | Keberhasilan alur utama, respons interaksi, validasi, dan kerapian kode. |
+| **Analisis & Perancangan Sistem** | **30%** | Kesesuaian kebutuhan pengguna, alur navigasi, dan rancangan layar. |
 | **UI/UX dan Responsivitas** | **20%** | • Kemudahan dan kejelasan alur penggunaan (*usability*)<br>• Konsistensi visual, tata letak, dan sistem navigasi<br>• Responsivitas antarmuka pada layar desktop dan ponsel |
 | **Inovasi, Manfaat & Kelayakan** | **15%** | • Orisinalitas ide dan nilai pembeda solusi<br>• Dampak nyata terhadap efisiensi operasional organisasi<br>• Potensi penerapan nyata dan kemudahan pemeliharaan (*scalability*) |
 
@@ -257,19 +257,17 @@ Selamat berinovasi dan raih prestasi terbaik tim Anda di panggung nasional GALAK
 <br/>
 
 ## Lampiran A: Rancangan Struktur Dokumen Ringkasan
-*(Panduan Penyusunan Dokumen PDF 5 sampai 7 Halaman)*
+*(Panduan Penyusunan Dokumen PDF 3 sampai 5 Halaman)*
 
 <details open>
 <summary><b>Lihat Panduan Per Halaman</b></summary>
 <br/>
 
-* **Halaman 1 - Identitas & Executive Summary**: Judul karya, nama tim, data anggota (Nama, NIM, Prodi, Kampus), kategori studi kasus, serta ringkasan eksekutif solusi (1-2 paragraf).
-* **Halaman 2 - Latar Belakang & Persona Pengguna**: Uraian masalah operasional riil, rumusan *pain points*, target pengguna (*user persona*), serta tujuan dan manfaat solusi.
-* **Halaman 3 - Alur Proses Bisnis**: Perbandingan alur kerja sebelum vs sesudah sistem ada, disertai diagram alur kerja visual (Flowchart / Activity Diagram).
-* **Halaman 4 - Arsitektur Sistem & Basis Data**: Diagram arsitektur perangkat lunak (Client-Server-Database) dan skema relasi basis data (ERD MySQL) beserta kamus data ringkas.
-* **Halaman 5 - Matriks Fitur & Hak Akses (RBAC)**: Matriks hak akses menu/aksi untuk masing-masing peran pengguna serta penjelasan fitur-fitur kunci.
-* **Halaman 6 - Spesifikasi Teknologi & Dokumentasi Antarmuka**: Tech stack yang digunakan dan tangkapan layar antarmuka utama (desktop & mobile) disertai keterangan fungsi.
-* **Halaman 7 - Kesimpulan, Keberlanjutan & Tautan Pengujian**: Analisis dampak sistem, rencana pengembangan masa depan, serta tautan Live Web, GitHub, Video Demo, dan akun demo juri.
+Susun tiga bagian berikut dalam 3 sampai 5 halaman.
+
+* Identitas tim, kategori, masalah, dan target pengguna.
+* Alur pengguna, rancangan layar, dan alasan pemilihan desain.
+* Implementasi dan hasil uji, termasuk teknologi, tangkapan layar desktop dan seluler, serta tautan demo, repositori, dan video.
 
 </details>
 
@@ -284,15 +282,15 @@ Selamat berinovasi dan raih prestasi terbaik tim Anda di panggung nasional GALAK
 - [ ] Tim beranggotakan 2 sampai 4 mahasiswa aktif jenjang S1 dari universitas yang sama.
 - [ ] Setiap anggota tim tidak terdaftar di tim lain pada kompetisi AXIS 2026.
 - [ ] Memilih 1 kategori studi kasus yang sesuai (Kategori A / B / C).
-- [ ] Aplikasi dibangun dengan backend PHP (Native atau Framework) dan basis data MySQL.
+- [ ] Website frontend dapat dijalankan di browser.
 - [ ] Fitur utama sistem berfungsi penuh dari awal hingga selesai (bukan prototipe statis).
-- [ ] Fitur CRUD (Create, Read, Update, Delete) berjalan normal dan terintegrasi ke MySQL.
-- [ ] Memiliki sistem autentikasi dengan minimal 2 peran pengguna berbeda hak akses (RBAC).
+- [ ] Pengguna dapat menyelesaikan alur utama dengan data contoh.
+- [ ] Navigasi dapat digunakan dengan papan ketik dan fokus terlihat.
 - [ ] Tampilan website responsif dan nyaman digunakan di desktop maupun smartphone.
 - [ ] Website telah dideploy online dan URL publik dapat dibuka tanpa hambatan.
 - [ ] Repositori GitHub bersifat publik dan dilengkapi file `README.md` berstandar resmi.
-- [ ] Akun demo (username dan password) telah disediakan untuk setiap peran.
-- [ ] Dokumen ringkasan dalam format PDF berjumlah tepat 5 sampai 7 halaman.
+- [ ] Petunjuk untuk mencoba alur utama tersedia dalam README.
+- [ ] Dokumen ringkasan dalam format PDF berjumlah tepat 3 sampai 5 halaman.
 - [ ] Video demonstrasi berdurasi maksimal 3 menit dan dapat diputar secara publik/unlisted.
 - [ ] Seluruh tautan telah dicek melalui mode *Incognito* / *Private Browser*.
 
@@ -322,9 +320,9 @@ Selamat berinovasi dan raih prestasi terbaik tim Anda di panggung nasional GALAK
 10. Tautan Aplikasi (Live URL)   : https://...
 11. Tautan Repositori GitHub     : https://github.com/...
 12. Tautan Video Demonstrasi     : https://... (Maksimal 3 Menit)
-13. Akun Demonstrasi (Login)     :
-    - Peran 1 (Admin/Pengelola)  : Username: [...] | Password: [...]
-    - Peran 2 (Staff/User)       : Username: [...] | Password: [...]
+13. Langkah mencoba fitur utama  : [...]
+
+
 14. Ringkasan Masalah & Solusi   :
     [Tuliskan 2-3 kalimat mengenai masalah yang diangkat dan solusi website Anda]
 15. Fitur Utama Aplikasi         :
